@@ -19,3 +19,13 @@ const countries = [
     'Syria','Taiwan','Tajikistan','Tanzania','Thailand','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu',
     'Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan','Vanuatu','Vatican City',
     'Venezuela','Vietnam','Yemen','Zambia','Zimbabwe']
+
+    const country = (countries) => {
+        const x = [];
+        for(let i = 0; i < countries.length; i++){
+            if(countries[i].includes(''))
+            x.push(countries[i]);  
+        }
+        return x;
+        }
+        console.log(country(countries));
