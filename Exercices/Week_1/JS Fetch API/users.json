@@ -1,0 +1,26 @@
+[
+    {
+        "username": "john",
+        "firstName": "John",
+        "lastName": "Doe",
+        "gender": "Male",
+        "profileURL": "https://picsum.photos/200/300",
+        "email": "john.doe@example.com"
+    },
+    {
+        "username": "jane",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "gender": "Female",
+        "profileURL": "https://picsum.photos/200/300",
+        "email": "jane.doe@example.com"
+    },
+    {
+        "username": "abrahamlincoln",
+        "firstName": "Abraham",
+        "lastName": "Lincoln",
+        "gender": "Male",
+        "profileURL": "https://picsum.photos/200/300",
+        "email": "abrahamlincoln@example.com"
+    }
+]

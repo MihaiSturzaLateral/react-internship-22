@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../Downloads/website_starter"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "website_starter"
+	}
+}
