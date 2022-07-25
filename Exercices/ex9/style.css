@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.container {
+	background-image: linear-gradient( 180deg,  rgba(247,247,247,1) 23.8%, rgba(209,65,30,0.75) 92% );
+	font-family: 'Open Sans', sans-serif;
+}
+
+.navbar{
+	height: 125px;
+    padding: 0px 50px;
+    background-color: #d1411e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.list{
+	padding: 0;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	color: white;
+}
+
+.listItem{
+	margin: 35px;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.wrapper {
+	padding: 20px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+
+.result {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	height: 400px;
+	width: 300px;
+	border: 3px solid teal;
+	padding: 5px;
+	margin: 10px;
+}
+
+.result img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.buttonBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	background-color: teal;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+button:focus {
+	outline: none
+}
+
+.footer{
+	display: flex;
+	background-color: #222;
+	justify-content: center;
+}
+
+.wrapper a {
+	color: #fff;
+}
+
+.hover-fx {
+	font-size: 2rem;
+	display: inline-block;
+	cursor: pointer;
+	margin: 15px;
+	width: 80px;
+	height: 80px;
+	line-height: 84px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: 300ms;
+}
+
+.hover-fx:after{
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	box-sizing: content-box;
+	box-shadow: 0 0 0 3px #fff;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 300ms;
+}
+
+.hover-fx:hover{
+	background-color: #fff;
+	color: #151515;
+}
+
+.hover-fx:hover:after{
+	opacity: 1;
+	transform: scale(1.15);
+}
