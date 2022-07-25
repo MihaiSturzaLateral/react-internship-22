@@ -1,0 +1,75 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* add your styles here */
+p {
+  color: red;
+}
+
+nav {
+  width: 100%;
+
+}
+
+nav ul {
+  border-radius: 20px;
+  list-style-type: none;
+  margin-top: 3em;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 3em;
+  overflow: hidden;
+  background-color: #ded5d1;
+}
+
+nav li {
+  width: 33%;
+  float: left;
+}
+
+.line1,
+.line2,
+.line3 {
+  border-right-style: solid;
+  border-color: white;
+  border-width: thin;
+}
+
+nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+li.line2,
+li.line3 {
+  display: inline-block;
+}
+
+#but {
+  margin: 2em;
+  background-color: #ded5d1;
+  border-radius: 20px;
+  font-size: 1.5em;
+
+}
+
+#image {
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  background-color: #ded5d1;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2em;
+}
