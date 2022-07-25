@@ -347,11 +347,54 @@ console.log(dog2.getBreed);
 // 9. Use this API link https://jsonplaceholder.typicode.com/photos  fetch data (only images) and display (insert) them into a div with document.createElement('img’). Call this API using a button, add an event listener for it. You can play around creating also a menu bar, footer, some cool content to display the images.
 //As you know, an API request returns a promise (with fetch) - you should also implement this request using async await concept.
 
-const fetchTheData = async function () {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/photos`);
-  const data = await res.json();
-  console.log(data);
-  return await data;
-};
+const theContainer = document.querySelector(".container");
+const theBox = document.querySelector(".box");
+const theFooter = document.querySelector(".footer");
+const btn = document.createElement("button");
+const imgs = document.createElement("img");
+const theNav = document.createElement("div");
+theBox.insertAdjacentElement("beforebegin", theNav);
+theNav.style.height = "5rem";
+theNav.style.width = "100vw";
+theNav.style.margin = "0";
+theNav.style.backgroundColor = "#189ad3";
+theNav.innerHTML = "<h1>API with 5000 images</h1>";
+theNav.style.display = "grid";
+theNav.style.placeItems = "center";
+theNav.style.color = "#fff";
+btn.style.padding = ".8rem 1rem";
+btn.style.borderColor = "transparent";
+btn.style.backgroundColor = "#7FFFD4";
+btn.style.fontWeight = "400";
+btn.style.fontSize = "1.1rem";
+btn.style.color = "#555";
+btn.style.cursor = "pointer";
+theBox.appendChild(btn);
+theBox.appendChild(imgs);
+imgs.style.display = "block";
+imgs.style.margin = "0 auto";
+btn.innerText = "Call API";
+theContainer.insertAdjacentElement("afterend", theFooter);
+theFooter.style.height = "3rem";
+theFooter.style.nav = "100vw";
+theFooter.style.backgroundColor = "#333";
+theFooter.innerHTML = "<h3>&copy; API Photos 2022</h3>";
+theFooter.style.display = "grid";
+theFooter.style.placeItems = "center";
+theFooter.style.color = "#fff";
 
-fetchTheData();
+imgs.classList.add("imgC");
+btn.classList.add("btn");
+
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const fetchTheData = async function () {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+    const data = await res.json();
+    console.log(data);
+    imgs.src = `${data[Math.trunc(Math.random() * 5000)].url}`;
+    return await data;
+  };
+
+  fetchTheData();
+});
