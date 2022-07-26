@@ -1,0 +1,22 @@
+1. Create an array with ages (numbers)
+ and sort the array.
+Find the min and the max age.(Print them to the console)
+
+2. Create an array with countries and find the countries that contain only 5 characters.(Print them to the console) Spain, China, India, Japan…
+
+3. Transform elements from that array to be upper case using for, do while and while loop. (Print them to the console) You can try also with map() function.
+
+4. Implement a function that takes a mark as parameter and returns true if mark is greater than 4, returns false if the mark is less than 5 and returns nothing if the mark is invalid - also with an appropriate message. Implement this as an expression function, arrow function and declaration function.
+
+5. Implement an example of a callback function.
+
+6. Extract all the countries containing two or more words from the countries array and print it as array. Here is the array with countries - https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/data/countries.js
+
+
+7. Create an Animal class that has color, name, legs as parameters. Create different methods for these - constructors, getters, setters.
+
+
+  8. Define  a Dog class that extends the Animal class with a constructor(use the specific function to access all the properties from the parent class) - breed, color, name, legs as parameters. Also to have  setBreed(), setColor(), setName(), setLegs() methods- that set the breed, color, name and legs for dog with getBreed(), getColor(), getName(), getLegs() methods that return the breed, the color, name and the legs for each dog. Create an instance of the Dog class and play around with the setters and getters.(Print them to the console)
+
+9. Use this API link https://jsonplaceholder.typicode.com/photos  fetch data (only images) and display (insert) them into a div with document.createElement('img’). Call this API using a button, add an event listener for it. You can play around creating also a menu bar, footer, some cool content to display the images.
+       As you know, an API request returns a promise (with fetch) - you should also implement this request using async await concept.
