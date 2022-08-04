@@ -1,0 +1,10 @@
+#list-image {
+    display: flex;
+    flex-direction: row;
+    /* max-width: 500px; */
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}

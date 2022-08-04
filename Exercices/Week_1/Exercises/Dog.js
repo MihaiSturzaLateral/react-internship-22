@@ -1,3 +1,6 @@
+//import { Animal } from "./Animal"
+const { Animal } = require('./Animal.js')
+
 class Dog extends Animal {
     constructor(breed, color, name, legs) {
         this.breed = breed
