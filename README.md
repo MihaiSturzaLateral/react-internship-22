@@ -258,7 +258,7 @@ function Car() {
 
  ### **State and Lifecycle**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/state-and-lifecycle.html)
+- written material: [link](https://reactjs.org/docs/state-and-lifecycle.html)
 
 Each component in React has a lifecycle that you can monitor and manipulate during its three main phases.
 The three phases are: Mounting,  Updating, and  Unmounting.
