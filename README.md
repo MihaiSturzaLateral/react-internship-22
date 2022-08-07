@@ -458,7 +458,7 @@ In a typical React application, data is passed top-down (parent to child) via pr
 	  displays the label and the value passed to it. One of the buttons, when clicked,
 	  increments the value, the other decreases it by 1. 
 	   
-![Design sugestion](https://i.ibb.co/k8PdB1g/Opera-Snapshot-2022-08-07-182043-localhost.png =300x )	 
+![Design sugestion](https://i.ibb.co/k8PdB1g/Opera-Snapshot-2022-08-07-182043-localhost.png)	 
      
      2. Create a <Header/> component with 2-3 links to other pages using React Router.
       (Home Page, Photos Page, Comments Page)
@@ -478,7 +478,7 @@ https://api.nasa.gov
      - https://www.w3schools.com/react/react_router.asp 
      -  https://www.youtube.com/watch?v=bYFYF2GnMy8&list=LL&index=1 
    
-![enter image description here](https://i.ibb.co/RSfHtfR/Screenshot-2022-08-07-at-18-30-11.png =500x)
+![enter image description here](https://i.ibb.co/RSfHtfR/Screenshot-2022-08-07-at-18-30-11.png)
 
 
 ## Week 4
