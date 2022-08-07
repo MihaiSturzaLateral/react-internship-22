@@ -3,7 +3,7 @@ const { Animal } = require('./Animal.js')
 
 class Dog extends Animal {
     constructor(breed, color, name, legs) {
-        --> super method first
+        // super method first
         super(color,name,legs);
         this.breed = breed
         super(color) //wrong
