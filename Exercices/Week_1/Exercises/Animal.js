@@ -6,7 +6,7 @@
     }
 
     getAnimal() {
-        const animalName = this.color + ' ' + this.name + ' ' + this.legs
+        const animalName = this.color + ' ' + this.name + ' ' + this.legs // WRONG, this must only return a value
         return animalName
     }
 
