@@ -12,7 +12,7 @@ React Javascript library is growing its base among the developer’s community. 
 
  ### **Basic concepts for HTML5 & CSS3**
  &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
- &nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=vQWlgd7hV4A)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=vQWlgd7hV4A)
  
  What is HTML?
 [HTML](https://www.w3.org/html/)  is the language for describing the structure of Web pages. HTML gives authors the means to:
@@ -28,8 +28,8 @@ What is CSS?
 
   ###  **What is JavaScript**
 &nbsp; &nbsp; &nbsp;&nbsp; ***Resources:***
- &nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=W6NZfCO5SIk)
- &nbsp; &nbsp; -  JavaScript intro: [link](https://javascript.info/intro)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+- JavaScript intro: [link](https://javascript.info/intro)
  
 **JavaScript** is a lightweight, interpreted **programming** language. It is designed for creating network-centric applications. It is complimentary to and integrated with Java. **JavaScript** is very easy to implement because it is integrated with HTML. It is open and cross-platform.
 
@@ -39,11 +39,11 @@ What is CSS?
 
  ### **JavaScript in Browsers**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp;- Mozilla: [link](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+- Mozilla: [link](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
 
  ###  **Separation of Concerns JavaScript in Node** 
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=PFmuCDHHpwk)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=PFmuCDHHpwk)
 
 The  [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)  (SoC) is one of the most fundamental principles in software development.
 It is so crucial that 2 out of 5 SOLID principles (Single Responsibility and Interface Segregation) are direct derivations from this concept
@@ -60,8 +60,8 @@ The principle is simple: don’t write your program as one solid block, instead,
  
  ###   **Understanding Async Programming (Promises, Async, Await, Fetch, Then)** 
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=lI1ae4REbFM)
-&nbsp; &nbsp; - text tutorial: [link](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=lI1ae4REbFM)
+- text tutorial: [link](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)
 
 *JavaScript is always synchronous and single-threaded.*  If you're executing a JavaScript block of code on a page then no other JavaScript on that page will currently be executed.
 
@@ -72,7 +72,7 @@ JavaScript timers operate with this same kind of callback.
 Describing JavaScript as asynchronous is perhaps misleading. It's more accurate to say that JavaScript is synchronous and single-threaded with various callback mechanisms.
  ###   **Working with GitHub Commands**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - tutorial: [link](https://github.com/joshnh/Git-Commands)
+- tutorial: [link](https://github.com/joshnh/Git-Commands)
 
 Git is a distributed, open-source version control system. It enables developers and data scientists to track code, merge changes and revert to older versions [-AWS](https://aws.amazon.com/devops/source-control/git/). It allows you to sync changes with a remote server. Due to its flexibility and popularity, Git has become an industry standard as it supports almost all development environments, command-line tools, and operating systems.
 
@@ -84,8 +84,8 @@ Git is a distributed, open-source version control system. It enables developers 
 &nbsp;
  ###  **What is Recursion?**
  &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=6oDQaB2one8)
-&nbsp; &nbsp; - written material: [link](https://www.programiz.com/javascript/recursion)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=6oDQaB2one8)
+- written material: [link](https://www.programiz.com/javascript/recursion)
 
 A recursive function is a  [function](https://www.javascripttutorial.net/javascript-function/)  that calls itself until it doesn’t. And this technique is called recursion.
 Suppose that you have a function called  `recurse()`. The  `recurse()`  is a recursive function if it calls itself inside its body, like this:
@@ -102,16 +102,16 @@ Suppose that you have a function called  `recurse()`. The  `recurse()`  is a rec
 
  ###  **Spread operator**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=pYI-UuZVtHI)
-&nbsp; &nbsp; - written material: [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-&nbsp; &nbsp; - written material #2: [link](https://www.notion.so/The-Spread-Operator-b7608512fbd844ec9f27f31740fb7298)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=pYI-UuZVtHI)
+- written material: [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- written material #2: [link](https://www.notion.so/The-Spread-Operator-b7608512fbd844ec9f27f31740fb7298)
 
 Spread syntax (`...`) allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
 
  ###  **Destructuring**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-&nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=NIq3qLaHCIs)
+- written material: [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=NIq3qLaHCIs)
 
 The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
@@ -190,7 +190,7 @@ The destructuring assignment syntax is a JavaScript expression that makes it pos
 
  ### **React JS - React Tutorial for Beginners**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video tutorial: [Youtube link](https://www.youtube.com/watch?v=Ke90Tje7VS0)
+- video tutorial: [Youtube link](https://www.youtube.com/watch?v=Ke90Tje7VS0)
 
 React is a JavaScript library for building user interfaces.
 React is used to build single-page applications.
@@ -199,17 +199,15 @@ React allows us to create reusable UI components.
 
   ### **React Tutorial**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://www.w3schools.com/REACT/DEFAULT.ASP)
-&nbsp;
+- written material: [link](https://www.w3schools.com/REACT/DEFAULT.ASP)
 
  ### **Hello World**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/hello-world.html)
-&nbsp;
+- written material: [link](https://reactjs.org/docs/hello-world.html)
 
  ###  **Introducing JSX**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/introducing-jsx.html)
+- written material: [link](https://reactjs.org/docs/introducing-jsx.html)
 
 JSX stands for JavaScript XML. It allows us to write HTML in React.
 JSX makes it easier to write and add HTML in React and also allows us to write HTML elements in JavaScript and place them in the DOM without any  `createElement()` and/or  `appendChild()`  methods.
@@ -217,7 +215,7 @@ It converts HTML tags into react elements.
 
  ### **Rendering Elements**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/rendering-elements.html)
+- written material: [link](https://reactjs.org/docs/rendering-elements.html)
 
 Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
 
@@ -227,7 +225,7 @@ React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object). 
 
  ### **Components and Props**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/components-and-props.html)
+- written material: [link](https://reactjs.org/docs/components-and-props.html)
 
 Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
 Components come in two types, Class components, and Function components, in this tutorial we will concentrate on Function components.
@@ -270,7 +268,7 @@ The three phases are: Mounting,  Updating, and  Unmounting.
 
  ### **Handling Events**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/handling-events.html)
+- written material: [link](https://reactjs.org/docs/handling-events.html)
 
 Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:
 -   React events are named using camelCase, rather than lowercase.
@@ -293,7 +291,7 @@ function Form() {
 
  ### **Conditional Rendering**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/conditional-rendering.html)
+- written material: [link](https://reactjs.org/docs/conditional-rendering.html)
 
 Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or the [conditional operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to create elements representing the current state, and let React update the UI to match them.
 
@@ -318,7 +316,7 @@ function Greeting(props) {
 
  ### **State**
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=4ORZ1GmjaMc&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11)
+- video material: [Youtube link](https://www.youtube.com/watch?v=4ORZ1GmjaMc&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11)
 
 Each component has a built-in  `state`  object. The  `state`  object is where you store property values that belong to the component.
 
@@ -341,7 +339,7 @@ class Car extends React.Component {
 ```
  ### setState
  &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=uirRaVjRsf4&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11)
+- video material: [Youtube link](https://www.youtube.com/watch?v=uirRaVjRsf4&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11)
 
 State can be updated in response to event handlers, server responses, or prop changes. This is done using the **setState()** method. The setState() method enqueues all of the updates made to the component state and instructs React to re-render the component and its children with the updated state.
 
@@ -349,35 +347,35 @@ Always use the [setState() method](https://css-tricks.com/understanding-react-se
 
  ### Destructuring props and state
   &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=5_PdMS9CLLI&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=12 )
-&nbsp; &nbsp; - written material: [link](https://www.geeksforgeeks.org/destructuring-of-props-in-reactjs/#:~:text=In%20destructuring%2C%20It%20does%20not,makes%20the%20code%20more%20clear. )
+- video material: [Youtube link](https://www.youtube.com/watch?v=5_PdMS9CLLI&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=12 )
+- written material: [link](https://www.geeksforgeeks.org/destructuring-of-props-in-reactjs/#:~:text=In%20destructuring%2C%20It%20does%20not,makes%20the%20code%20more%20clear. )
 
 Destructuring was introduced in ES6. It’s a JavaScript feature that allows us to extract multiple pieces of data from an array or object and assign them to their own variables
 
  ### useState Hook
    &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=lAW1Jmmr9hc&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=45  )
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/hooks-state.html )
+- video material: [Youtube link](https://www.youtube.com/watch?v=lAW1Jmmr9hc&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=45  )
+- written material: [link](https://reactjs.org/docs/hooks-state.html )
 
 What is a Hook? A Hook is a special function that lets you “hook into” React features.
 For example, `useState` is a Hook that lets you add React state to function components.
 
  ### useState with previous state
  &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=d0plTCQgsXs&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=46)  
+- video material: [Youtube link](https://www.youtube.com/watch?v=d0plTCQgsXs&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=46)  
 
  ### useState with object
   &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=-3lL8oyev9w&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=47)
+- video material: [Youtube link](https://www.youtube.com/watch?v=-3lL8oyev9w&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=47)
 
  ### useState with array
    &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=RZ5wKYbOM_I&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=48)
+- video material: [Youtube link](https://www.youtube.com/watch?v=RZ5wKYbOM_I&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=48)
 
  ### useEffect Hook
   &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=0ZJgIjIuY7U)
-&nbsp; &nbsp; - written material: [link](https://reactjs.org/docs/hooks-effect.html )
+- video material: [Youtube link](https://www.youtube.com/watch?v=0ZJgIjIuY7U)
+- written material: [link](https://reactjs.org/docs/hooks-effect.html )
 
 The  `useEffect`  Hook allows you to perform side effects in your components.
 Some examples of side effects are: fetching data, directly updating the DOM, and timers.
@@ -441,14 +439,14 @@ function Timer() {
 
  ### useRef Hook
    &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=t2ypzz6gJm0&t=288s)
-&nbsp; &nbsp; - written material: [link](https://www.w3schools.com/react/react_useref.asp)
+- video material: [Youtube link](https://www.youtube.com/watch?v=t2ypzz6gJm0&t=288s)
+- written material: [link](https://www.w3schools.com/react/react_useref.asp)
  
  ### useContext Hook
   &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; - video material: [Youtube link](https://www.youtube.com/watch?v=5LrDIWkK_Bc)
-&nbsp; &nbsp; - written material: [link](https://medium.com/technofunnel/usecontext-in-react-hooks-aa9a60b8a461#:~:text=“useContext”%20hook%20is%20used%20to,components%20without%20involving%20“props”.)
-&nbsp; &nbsp; - written material #2: [link](https://reactjs.org/docs/context.html)
+- video material: [Youtube link](https://www.youtube.com/watch?v=5LrDIWkK_Bc)
+ - written material: [link](https://medium.com/technofunnel/usecontext-in-react-hooks-aa9a60b8a461#:~:text=“useContext”%20hook%20is%20used%20to,components%20without%20involving%20“props”.)
+- written material #2: [link](https://reactjs.org/docs/context.html)
 
 In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application. Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.
 
@@ -490,38 +488,38 @@ https://api.nasa.gov
 
 ### JSX (2)
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -written material: [link](https://www.freecodecamp.org/news/jsx-in-react-introduction/)
+- written material: [link](https://www.freecodecamp.org/news/jsx-in-react-introduction/)
 
 ###  State (2)
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -written material: [link](https://www.freecodecamp.org/news/what-is-state-in-react-explained-with-examples/)
+- written material: [link](https://www.freecodecamp.org/news/what-is-state-in-react-explained-with-examples/)
 
 ###  Props (2)
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -written material: [link](https://www.freecodecamp.org/news/how-to-use-props-in-react/)
+- written material: [link](https://www.freecodecamp.org/news/how-to-use-props-in-react/)
 
 ###  Life cycle (2)
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -video material: [Youtube link](https://www.youtube.com/watch?v=m_mtV4YaI8c)
+- video material: [Youtube link](https://www.youtube.com/watch?v=m_mtV4YaI8c)
 
 ###  Mastering React's useEffect - OPTIONAL
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -video material: [Youtube link](https://www.youtube.com/watch?v=dH6i3GurZW8)
+- video material: [Youtube link](https://www.youtube.com/watch?v=dH6i3GurZW8)
 
 ###  Learn the React useEffect Hook in 24 minutes (for beginners)
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -video material: [Youtube link](https://www.youtube.com/watch?v=UVhIMwHDS7k&t=2s)
+- video material: [Youtube link](https://www.youtube.com/watch?v=UVhIMwHDS7k&t=2s)
 
 ###  API calls with Axios
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -written material: [link](https://www.youtube.com/watch?v=UVhIMwHDS7k&t=2s)
+- written material: [link](https://www.youtube.com/watch?v=UVhIMwHDS7k&t=2s)
 
 ###   DOM / virtual DOM
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -written material: [link](https://programmingwithmosh.com/react/react-virtual-dom-explained/)
+- written material: [link](https://programmingwithmosh.com/react/react-virtual-dom-explained/)
 
 ###  React Router (2)
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
-&nbsp; &nbsp; -written material: [link](https://www.freecodecamp.org/news/learn-react-router/)
+- written material: [link](https://www.freecodecamp.org/news/learn-react-router/)
 
 
