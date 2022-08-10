@@ -1,0 +1,30 @@
+.divCard{
+    box-shadow: 10px 10px 8px gray;
+    transition: 0.3s;
+    width:40%;
+    height: 15rem;
+    margin:20px 50px 20px 60px;
+    text-align: center;
+    float:left;
+    
+}
+
+.container {
+    padding: 2px 16px;
+    
+}
+.container p{
+    font-weight: bold;
+    
+}
+.divCard img{
+    width:25%;
+    margin-top:15px;
+   
+}
+
+
+.container span{
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

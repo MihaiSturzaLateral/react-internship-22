@@ -1,0 +1,35 @@
+input{
+    display:block;
+    margin:50px auto;
+    padding:20px;
+    font-size: 1.5em;
+    box-shadow: 10px 5px 5px black;
+}
+.twoBtns{
+    
+   margin-top: 80px;
+   text-align: center;
+    
+
+}
+.twoBtns button{
+ font-size: 1.5em;
+  font-weight: bold;
+  border: none;
+  padding: 30px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 25px;
+  margin: 10px;
+  box-shadow: 10px 10px 8px #888888;
+  width: 100px;
+}
+#btnone{
+    background-color: darkcyan; 
+}
+#btntwo{
+    background-color: yellowgreen;
+}
+    
+    
+

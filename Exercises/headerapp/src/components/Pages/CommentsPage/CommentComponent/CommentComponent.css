@@ -1,0 +1,20 @@
+.commComp{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+.commComp li{
+    float:left;
+    margin:20px 15px 20px 30px;
+    box-shadow: 10px 10px 8px #888888;
+    width:95%;
+}
+.commComp p{
+    font-weight: bold;
+}
+.commComp span{
+    font-weight: normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
