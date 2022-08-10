@@ -1,0 +1,24 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* add your styles here */
+p {
+  color: rgb(99, 180, 201);
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+  max-width: 100%;
+  height: auto;
+}
