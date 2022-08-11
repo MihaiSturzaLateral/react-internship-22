@@ -609,12 +609,12 @@ Each detail must be displayed using a “label-value” component that can be re
 Also a “go back button” is available to navigate back to the previous screen (“home” in this case).  
   
 
-##About page:
+## About page:
 
 ![](https://lh6.googleusercontent.com/ZysCcdmY8uP8lAP48IZO5YR6Fg1OdocjOD_K2C9EqGOSYYXLExxEdESUa0MOJxkBaHioVEVSuCMlx7q9OAFhXngOyKN_z_dE1TdPQvJgW3dS4viSsqauXUA7rmQnICS37TR1KOrxME3sXGYb4aAkoQA)  
 A simple page where your photo, name, age, contact and description is displayed. Nothing too complicated. Just try to accomplish this layout.
 
-##Contact page:
+## Contact page:
 
 ![](https://lh5.googleusercontent.com/6ZduMxOXBpSB3sDWtemU2aqSJvVRldh38Dci8q8wAcQfLFQ7nSOffSPqfxeEwMH9wIJwpx3KjUiJE1lQhArYle7DOGWkrmoSZW2On33EiVtXsiCQwIM6NM8oio7RnNnOmOdQCASSjTGXZRoBaLYFK84)
 
