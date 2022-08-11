@@ -1,0 +1,29 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.list {
+  padding: 25px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: #d1411e;
+}
+
+.listItem {
+  text-decoration: none;
+  padding: 25px 50px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+.listItem:hover {
+  background-color: #333;
+}
