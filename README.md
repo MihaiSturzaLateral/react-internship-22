@@ -522,7 +522,10 @@ https://api.nasa.gov
 &nbsp; &nbsp; &nbsp; &nbsp;***Resources:***
 - written material: [link](https://www.freecodecamp.org/news/learn-react-router/)
 
+## **Week 3**
 
+> This week an an app presented bellow will be implemented
+ 
 # WorldEarthQuakes
 
 12th August 2022
