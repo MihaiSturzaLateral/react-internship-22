@@ -555,17 +555,11 @@ Create a React application that provides a way to view the recent earthquakes ar
 -   Earthquake color level:
     
 
-Magnitude 1.0+
+	Magnitude 1.0+ <span style="color: green"> green </span>
 
-Magnitude 2.5+
+	Magnitude 2.5+ <span style="color: orange"> orange </span>
 
-Magnitude 4.5+
-
-  
-
-  
-
-  
+	Magnitude 4.5+  <span style="color: red"> red </span>
 
   
 
@@ -612,12 +606,12 @@ Each detail must be displayed using a “label-value” component that can be re
 Also a “go back button” is available to navigate back to the previous screen (“home” in this case).  
   
 
-About page:
+##About page:
 
 ![](https://lh6.googleusercontent.com/ZysCcdmY8uP8lAP48IZO5YR6Fg1OdocjOD_K2C9EqGOSYYXLExxEdESUa0MOJxkBaHioVEVSuCMlx7q9OAFhXngOyKN_z_dE1TdPQvJgW3dS4viSsqauXUA7rmQnICS37TR1KOrxME3sXGYb4aAkoQA)  
 A simple page where your photo, name, age, contact and description is displayed. Nothing too complicated. Just try to accomplish this layout.
 
-Contact page:
+##Contact page:
 
 ![](https://lh5.googleusercontent.com/6ZduMxOXBpSB3sDWtemU2aqSJvVRldh38Dci8q8wAcQfLFQ7nSOffSPqfxeEwMH9wIJwpx3KjUiJE1lQhArYle7DOGWkrmoSZW2On33EiVtXsiCQwIM6NM8oio7RnNnOmOdQCASSjTGXZRoBaLYFK84)
 
@@ -637,15 +631,15 @@ Ps: an endpoint where to submit the form will be provided later on.
 
 ## MILESTONES
 
--   Monday, 15.08.2022 - Have a basic structure for the app, with navigation, Header and Footer
+-[]   Monday, 15.08.2022 - Have a basic structure for the app, with navigation, Header and Footer
     
--   Tuesday, 16.08.2022 - The HomePage should be done.
+-[]  Tuesday, 16.08.2022 - The HomePage should be done.
     
--   Wednesday, 17.08.2022 - Earthquake Details screen
+-[]   Wednesday, 17.08.2022 - Earthquake Details screen
     
--   Thursday, 18.08.2022 - Contact Page should be working
+-[]   Thursday, 18.08.2022 - Contact Page should be working
     
--   Friday, 19.08.2022 - About Page
+-[]   Friday, 19.08.2022 - About Page
     
 
 ----------
