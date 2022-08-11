@@ -1,0 +1,29 @@
+.DIVV {
+  text-align: center;
+}
+
+input {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 150px auto;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgba(250, 29, 184, 0.25);
+  width: 50%;
+  display: block;
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: rgba(250, 29, 184, 0.25) 0px -54px 55px;
+}
+
+button {
+  font-size: 20px;
+  font-weight: bold;
+  border: 5px solid rgba(250, 29, 184, 0.25);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}

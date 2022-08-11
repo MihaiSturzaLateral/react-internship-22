@@ -1,0 +1,24 @@
+.label-value {
+  border-radius: 10px;
+  border: 2px solid rgba(250, 29, 184, 0.25);
+  padding: 10px;
+  width: 50%;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(250, 29, 184, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.value {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 34, 167);
+}
+
+.label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
