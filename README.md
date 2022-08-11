@@ -523,3 +523,134 @@ https://api.nasa.gov
 - written material: [link](https://www.freecodecamp.org/news/learn-react-router/)
 
 
+# WorldEarthQuakes
+
+12th August 2022
+
+## OVERVIEW
+
+Create a React application that provides a way to view the recent earthquakes around the world. The app must be user friendly and responsive. The app must have a visual representation of the earthquakes, the magnitude, and the location (interactive map)
+
+## GOALS
+
+1.  Have a way to view the earthquakes via a map
+    
+2.  Have a way to view the earthquakes via a list
+    
+3.  Possibility to view details of each earthquake separately
+    
+4.  Present a personal info section
+    
+5.  Provide a way to send a contact message using a form
+    
+
+## SPECIFICATIONS
+
+-   The app shall be created using the latest React framework. Follow the best practices for implementing each page and corresponding components (suggestion: functional components + hooks).
+    
+-   For map location visualization use MapboxGl library. Feel free to customize it as you please.
+    
+-   The earthquake data will be provided by The USGS Earthquake Hazards Program, part of the National Earthquake Hazards Reduction Program (NEHRP), and the USGS Advanced National Seismic System (ANSS) documentation available at: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
+    
+-   Earthquake color level:
+    
+
+Magnitude 1.0+
+
+Magnitude 2.5+
+
+Magnitude 4.5+
+
+  
+
+  
+
+  
+
+  
+
+## DESIGN
+
+The design is composed of 4 pages: “Home”, “About”, “Contact” and an “Earthquake details” Page. Each one will be detailed below.![](https://lh6.googleusercontent.com/tue-I1h4XRSro--DFVLCK-Vq_D-X1Hwrm1VXlEuW4WOcJC22JZJIy7gYNOV7OGSidQCu4SchqRdsYE9BN1WzUuceWr5HvfFZGnGp6kAlxCQjk2mg5LR9Haz18KLYnnmki1PXaneLBnW5mVnOneClnCg)
+
+  
+  
+  
+
+## Home page:
+
+![](https://lh5.googleusercontent.com/s14xRX-Iz4hGPyCNzVnbYsbW9zF_STsUMC6KBY76t_1AlSQ5H_1CQQ52QQ0mUxNbZ_jHavT8IQGWpByCciCGAjx4HZbnYCqVmq_7W2BETxZXoHXVzqZz732559GCCdhJ0zhcH1-QgihiUw8kvE8fPLU)
+
+Users are able to view the loaded earthquakes via a map and a list.  
+Different time intervals can be selected using a buttons group section (“Past hour, Past day, Past 7 days and Past 30 days).
+
+-   [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson)
+    
+-   [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson)
+    
+-   [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson)
+    
+-   [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson)
+    
+
+There should be available an option to filter the earthquakes by magnitude levels via a dropdown. Default values should be any, but when changing to another option a new API cal should be executed to fetch the new data (example: for earthquakes in the past day that have a magnitude greater than 2.5 the endpoint is: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson))
+
+PS: all endpoints are available at: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)  
+Each item in the earthquake list has a badge showing the severity of the earthquake using a designated color. (red for earthquakes with magnitude greater or equal to 4.5; orange for magnitude greater or equal to 2.5 and lower than 4.5, and green for magnitudes greater or equal to 1.0 and lower than 2.5).
+
+When the view details button is clicked, a details screen is presented for the selected earthquake. ( more info in the following section)
+
+Nice to have: when a user types something in the search box and clicks on the search button, earthquake options are filtered based on the search term typed.
+
+## Earthquake details page:![](https://lh5.googleusercontent.com/PYJvW8dS4g-ZuOsf3wdTtj7nsPJ0dRp5KLLozIo8_YYi9zIZcJD4KDsLiahc0ZVmoOOh5V6CTWZFhSs962jCbiMw-H0O3E6SP7Qg4lJepgl5jFV2eaDlXA9TUD9-J5tN544urXVttQugi17oGnU8AfA)
+
+  
+
+A new API call shall be made to fetch the details displayed in this screen. ![](https://lh4.googleusercontent.com/9P-yOMB2bN-09jDpX8vEj2fi1w-qaMK_-4Z7-KCCvcbN1CV6_c0xyeMaIa1qKpzjKA0rB97a98EoT7D5tYuT1bazEwH6guMdzMUx5G-hzii9bv3oeTc2ErDPCK4rUkjW62UJce9M5JXAVzKeQRWkhcw)
+
+Each detail must be displayed using a “label-value” component that can be reused.  
+Also a “go back button” is available to navigate back to the previous screen (“home” in this case).  
+  
+
+About page:
+
+![](https://lh6.googleusercontent.com/ZysCcdmY8uP8lAP48IZO5YR6Fg1OdocjOD_K2C9EqGOSYYXLExxEdESUa0MOJxkBaHioVEVSuCMlx7q9OAFhXngOyKN_z_dE1TdPQvJgW3dS4viSsqauXUA7rmQnICS37TR1KOrxME3sXGYb4aAkoQA)  
+A simple page where your photo, name, age, contact and description is displayed. Nothing too complicated. Just try to accomplish this layout.
+
+Contact page:
+
+![](https://lh5.googleusercontent.com/6ZduMxOXBpSB3sDWtemU2aqSJvVRldh38Dci8q8wAcQfLFQ7nSOffSPqfxeEwMH9wIJwpx3KjUiJE1lQhArYle7DOGWkrmoSZW2On33EiVtXsiCQwIM6NM8oio7RnNnOmOdQCASSjTGXZRoBaLYFK84)
+
+On this page a contact form containing the following required fields: name, email and message. Feel free to add any extra fields if you want.
+
+Please use Formik library for implementing this. Suggestion: use yup library for validating the required fields.
+
+[https://formik.org/docs/overview](https://formik.org/docs/overview)
+
+[https://github.com/jquense/yup#schema-basics](https://github.com/jquense/yup#schema-basics)
+
+Nice to have: Add recaptcha to prevent any bots.
+
+Ps: an endpoint where to submit the form will be provided later on.
+
+  
+
+## MILESTONES
+
+-   Monday, 15.08.2022 - Have a basic structure for the app, with navigation, Header and Footer
+    
+-   Tuesday, 16.08.2022 - The HomePage should be done.
+    
+-   Wednesday, 17.08.2022 - Earthquake Details screen
+    
+-   Thursday, 18.08.2022 - Contact Page should be working
+    
+-   Friday, 19.08.2022 - About Page
+    
+
+----------
+
+A basic map component example will be provided by the start of the week.  
+For any questions or unclarities please ask.  
+If you get stuck, also ask for help.
+
