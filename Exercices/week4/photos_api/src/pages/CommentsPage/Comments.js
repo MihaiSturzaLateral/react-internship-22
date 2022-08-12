@@ -24,6 +24,7 @@ const Comments = () => {
       {comments.map((comment) => {
         return (
           <CommentCard
+            key={comment.id}
             name={comment.name}
             email={comment.email}
             body={comment.body}

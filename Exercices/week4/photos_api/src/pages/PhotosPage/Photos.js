@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import PhotoCard from "./components/PhotoCard";
+import PhotoCard from "./components/PhotoCard/PhotoCard";
+import "./Photos.css";
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
@@ -21,7 +22,7 @@ const Photos = () => {
   return (
     <div className="photoContainer">
       {photos.map((photo) => {
-        return <PhotoCard url={photo.url} title={photo.title} />;
+        return <PhotoCard key={photo.id} url={photo.url} title={photo.title} />;
       })}
     </div>
   );
