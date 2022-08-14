@@ -1,0 +1,45 @@
+.App {
+    text-align: center;
+  }
+  
+  input {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    font-size: 1.3rem;
+    margin: 150px auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.6rem;
+    background-color: rgb(235, 232, 232);
+    border: none;
+    width: 40%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    outline: none;
+  }
+  .button-wrapper {
+    margin-top: 150px;
+  }
+  .button-wrapper button {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px;
+    margin: 10px;
+  }
+
+  .button-wrapper .btn-i {
+    background-color: #4caf50;
+    cursor: pointer;
+  }
+  
+  .button-wrapper .btn-d {
+    background-color: #f44336;
+    cursor: pointer;
+  }
