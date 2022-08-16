@@ -1,10 +1,13 @@
 import React from "react";
-// import { ReactDOM } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/GenericNavbar";
 import { useFormik } from "formik";
+import { useState } from "react";
 function Contact() {
   let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+  const [reCaptchaSatus, setReCaptchaSatus] = useState("");
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -12,7 +15,8 @@ function Contact() {
       message: "",
     },
     onSubmit: (values) => {
-      console.log("Form data --> ", values);
+      if (reCaptchaSatus === "true") console.log("Form data --> ", values);
+      else alert("Validate");
     },
     validate: (values) => {
       let errors = {};
@@ -31,6 +35,9 @@ function Contact() {
       return errors;
     },
   });
+  const reCAPTCHA = () => {
+    setReCaptchaSatus("true");
+  };
   return (
     <>
       <Navbar />
@@ -87,6 +94,10 @@ function Contact() {
             ) : null}
           </div>
           <div className="btn-contact">
+            <ReCAPTCHA
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              onChange={reCAPTCHA}
+            />
             <button
               type="button"
               className="btn btn-secondary"
@@ -100,7 +111,6 @@ function Contact() {
           </div>
         </form>
       </div>
-
       <Footer />
     </>
   );
