@@ -597,7 +597,7 @@ Each item in the earthquake list has a badge showing the severity of the earthqu
 
 When the view details button is clicked, a details screen is presented for the selected earthquake. ( more info in the following section)
 
-Nice to have: when a user types something in the search box and clicks on the search button, earthquake options are filtered based on the search term typed.
+** Nice to have: ** when a user types something in the search box and clicks on the search button, earthquake options are filtered based on the search term typed.
 
 ## Earthquake details page:![](https://lh5.googleusercontent.com/PYJvW8dS4g-ZuOsf3wdTtj7nsPJ0dRp5KLLozIo8_YYi9zIZcJD4KDsLiahc0ZVmoOOh5V6CTWZFhSs962jCbiMw-H0O3E6SP7Qg4lJepgl5jFV2eaDlXA9TUD9-J5tN544urXVttQugi17oGnU8AfA)
 
@@ -626,23 +626,23 @@ Please use Formik library for implementing this. Suggestion: use yup library for
 
 [https://github.com/jquense/yup#schema-basics](https://github.com/jquense/yup#schema-basics)
 
-Nice to have: Add recaptcha to prevent any bots.
+** Nice to have: ** Add recaptcha to prevent any bots.
 
-Ps: an endpoint where to submit the form will be provided later on.
+Ps: an endpoint to submit the form values to, will be provided later on.
 
   
 
 ## MILESTONES
 
--[]   Monday, 15.08.2022 - Have a basic structure for the app, with navigation, Header and Footer
+- [ ]   Monday, 15.08.2022 - Have a basic structure for the app, with navigation, Header and Footer
     
--[]  Tuesday, 16.08.2022 - The HomePage should be done.
+- [ ]  Tuesday, 16.08.2022 - The HomePage should be done.
     
--[]   Wednesday, 17.08.2022 - Earthquake Details screen
+- [ ]   Wednesday, 17.08.2022 - Earthquake Details screen
     
--[]   Thursday, 18.08.2022 - Contact Page should be working
+- [ ]   Thursday, 18.08.2022 - Contact Page should be working
     
--[]   Friday, 19.08.2022 - About Page
+- [ ]   Friday, 19.08.2022 - About Page
     
 
 ----------
