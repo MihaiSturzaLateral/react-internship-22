@@ -5,7 +5,7 @@
 
 - [ ] You'll have to create a [mapbox](https://account.mapbox.com) account and obtain an API key (it's free to up 5000 requests/month)
 
-- [ ] In your project "src" folder inside the "components" copy the "MapComponent" from here (either file by file, or download the entire repo and copy the entire MapCompoent folder into your project's folder)
+- [ ] In your project "src" folder inside the "components" copy the "MapComponent" from here (either file by file, or download the entire repo and copy the entire MapComponent folder into your project's folder)
 
 - [ ] Run the following command in the terminal `npm install --save react-map-gl mapbox-gl deck.gl` (make sure to have the terminal opened in the "Your earthquakes project name" directory)
 
