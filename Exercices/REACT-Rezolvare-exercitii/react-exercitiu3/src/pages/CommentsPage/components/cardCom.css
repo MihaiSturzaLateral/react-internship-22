@@ -1,0 +1,22 @@
+.container-comments {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgb(140, 158, 255, 0.4);
+  box-shadow: 0 0 8em rgb(141, 141, 226);
+  border-radius: 15px;
+  padding: 10px;
+}
+.item-comments {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgb(140, 158, 255);
+  text-align: left;
+  border-radius: 20px;
+}
+
+.item-comments p {
+  margin-left: 10px;
+}
+
+.item-comments p b {
+  color: darkblue;
+}

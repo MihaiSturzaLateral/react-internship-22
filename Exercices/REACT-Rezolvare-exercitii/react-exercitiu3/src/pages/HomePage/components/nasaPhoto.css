@@ -1,0 +1,37 @@
+.nasa-photo {
+  display: flex;
+  padding: 40px;
+  margin: 0 auto;
+  max-height: 100%;
+  background-color: rgb(140, 158, 255, 0.4);
+}
+
+.nasa-photo .explanation {
+  margin-left: 25px;
+  font-size: 23px;
+  margin-top: 10%;
+  color: rgb(140, 158, 255);
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(248, 248, 248);
+}
+.nasa-photo h1 {
+  margin-left: 5%;
+  color: rgb(140, 158, 255);
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(248, 248, 248),
+    0 0 5px rgb(255, 255, 255);
+}
+
+.nasa-photo img {
+  border-radius: 15px;
+}
+
+@media (max-width: 1280px) {
+  .nasa-photo {
+    display: block;
+  }
+
+  .nasa-photo img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
