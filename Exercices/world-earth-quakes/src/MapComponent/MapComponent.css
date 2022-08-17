@@ -1,0 +1,54 @@
+.map-container {
+  height: 500px;
+}
+
+.sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+.mapboxgl-popup-content {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 24px;
+  font-family: monospace;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.mapboxgl-popup-close-button {
+  color: red;
+  font-size: 20px;
+}
+
+.label-value {
+  display: flex;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+.label-value .label {
+  font-size: 14px;
+  font-weight: 700;
+  color: orange;
+  margin-right: 5px;
+  text-align: left;
+}
+
+.label-value .value {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: end;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
