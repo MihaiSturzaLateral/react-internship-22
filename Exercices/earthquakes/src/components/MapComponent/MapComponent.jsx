@@ -30,7 +30,7 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
         type: "FeatureCollection",
         features: earthquakes.features,
       };
-    else {
+    else if (earthquakes.type && earthquakes.type === "Feature") {
       geojson = {
         type: "FeatureCollection",
         features: [earthquakes],
@@ -52,7 +52,7 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
         bounds = getMapBounds(points, {
           capZoom: 7,
         });
-      } else {
+      } else if (earthquakes.type && earthquakes.type === "Feature") {
         points.push({
           longitude: earthquakes.geometry.coordinates[0],
           latitude: earthquakes.geometry.coordinates[1],
