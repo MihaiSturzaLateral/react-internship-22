@@ -1,0 +1,57 @@
+.AboutH1 {
+  color: rgb(0, 127, 255);
+  margin-left: 5.5%;
+  margin-top: 2%;
+  font-size: 45px;
+  text-shadow: 5px 5px 10px rgb(178, 178, 248);
+}
+
+.Container .imag {
+  background-image: url("/src/pages/about/img/myPhoto.png");
+  height: 210px;
+  width: 210px;
+  margin-top: 3%;
+  margin-left: 5%;
+  border: 5px solid rgb(0, 106, 201);
+  border-radius: 10px;
+}
+
+.info {
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+  border: 1px solid rgb(0, 106, 201);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgb(0, 106, 201);
+}
+
+.Container {
+  width: 1000px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info p {
+  color: black;
+  padding-left: 150px;
+  font-size: 20px;
+}
+
+.info p span {
+  color: rgb(0, 127, 255);
+}
+.descriere {
+  margin: 10%;
+  border: 1px solid rgb(0, 106, 201);
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgb(0, 106, 201);
+}
+
+.descriere .descP {
+  font-size: 1.1rem;
+}

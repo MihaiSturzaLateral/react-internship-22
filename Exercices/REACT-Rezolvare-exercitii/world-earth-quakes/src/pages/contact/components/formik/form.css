@@ -1,0 +1,115 @@
+.form-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -7.5%;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+  background: rgb(0, 106, 201, 0.2);
+  border-radius: 15px;
+}
+
+.container h3 {
+  color: rgb(0, 106, 201);
+  font-size: 2em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.wrapper .box {
+  width: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+.wrapper .box input {
+  width: 100%;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(0, 106, 201);
+  transition: 0.5s linear;
+}
+
+.wrapper .box input:focus {
+  padding: 20px 10px;
+  background: rgba(0, 107, 201, 0.158);
+  margin-top: 10px;
+}
+
+.wrapper .box label {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  transition: 0.5s linear;
+}
+
+.wrapper .box input:focus ~ label,
+.wrapper .box input:valid ~ label {
+  padding: 0;
+}
+
+.wrapper .box textarea {
+  width: 100%;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(0, 106, 201);
+  transition: 0.5s linear;
+}
+
+.wrapper .box textarea:focus,
+.wrapper .box textarea:valid {
+  padding: 20px 10px;
+  background: rgba(0, 107, 201, 0.158);
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.wrapper .box textarea:focus ~ label,
+.wrapper .box textarea:valid ~ label {
+  padding: 0;
+}
+
+button {
+  background: rgb(0, 106, 201);
+  padding: 15px 23px;
+  float: right;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+input[type="text"] {
+  color: rgba(0, 107, 201);
+}
+
+textarea {
+  color: rgba(0, 107, 201);
+}
