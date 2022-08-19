@@ -1,11 +1,12 @@
 .detailsContainer {
   margin: 0;
-  display: flex;
   margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .leftDiv {
-  margin: 10px 50px;
   padding: 25px;
 }
 
@@ -24,6 +25,10 @@
   border-radius: 20px;
   box-shadow: 5px 5px 5px #888888;
   border: none;
+}
+
+.backButton:active {
+  transform: scale(0.95);
 }
 
 .pageTitle {

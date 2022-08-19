@@ -5,19 +5,21 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import MapComponent from "../../components/MapComponent/MapComponent";
-import TestData from "../../components/MapComponent/TestData";
 import axios from "axios";
 import Card from "./components/Card";
 
 const Home = () => {
   const [magProp, setMagProp] = useState([]);
   const [display, setDisplay] = useState("none");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState("hour");
+  const [mag, setMag] = useState("all");
   const [mapData, setMapData] = useState([]);
 
-  const fetchEarthquakes = (url) => {
+  const fetchEarthquakes = () => {
     axios
-      .get(url)
+      .get(
+        `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/${mag}_${time}.geojson`
+      )
       .then((res) => {
         setMagProp(res.data.features);
         setMapData(res.data);
@@ -27,110 +29,22 @@ const Home = () => {
       });
   };
 
-  const earthquakesFilter = (filterTime, filterMag) => {
-    if ("all_hour" === filterTime) {
-      if (filterMag === "any") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
-        );
-      }
-      if (filterMag === "4.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_hour.geojson"
-        );
-      }
-      if (filterMag === "2.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"
-        );
-      }
-      if (filterMag === "1") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_hour.geojson"
-        );
-      }
-    }
-
-    if ("all_day" === filterTime) {
-      if (filterMag === "any") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
-        );
-      }
-      if (filterMag === "4.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
-        );
-      }
-      if (filterMag === "2.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
-        );
-      }
-      if (filterMag === "1") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson"
-        );
-      }
-    }
-
-    if ("all_week" === filterTime) {
-      if (filterMag === "any")
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
-        );
-      if (filterMag === "4.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
-        );
-      }
-      if (filterMag === "2.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson"
-        );
-      }
-      if (filterMag === "1") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson"
-        );
-      }
-    }
-
-    if ("all_month" === filterTime) {
-      if (filterMag === "any")
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
-        );
-      if (filterMag === "4.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson"
-        );
-      }
-      if (filterMag === "2.5") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"
-        );
-      }
-      if (filterMag === "1") {
-        fetchEarthquakes(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.geojson"
-        );
-      }
-    }
-  };
+  useEffect(() => {
+    fetchEarthquakes();
+  }, [mag, time]);
 
   const loading = () => {
     return (
       <>
         <div className="spinner-grow text-successs status" role="status"></div>
-        <p>Waiting to Choose....</p>
+        <p>Select the interval of time</p>
       </>
     );
   };
 
   const lastItem = (link) => {
-    let linkSplit = link?.split("/");
-    return linkSplit[linkSplit.length - 1]; //if object null doesnt run else splits the object
+    let linkSplit = link?.split("/"); //if object null doesnt run else splits the link
+    return linkSplit[linkSplit.length - 1]; //returns the link without the last part
   };
 
   return (
@@ -142,8 +56,8 @@ const Home = () => {
               <Button
                 id="btnComp"
                 onClick={() => {
-                  setTime("all_hour");
-                  earthquakesFilter("all_hour", "any");
+                  setTime("hour");
+                  setMag("all");
                 }}
               >
                 Past Hour
@@ -151,8 +65,8 @@ const Home = () => {
               <Button
                 id="btnComp"
                 onClick={() => {
-                  setTime("all_day");
-                  earthquakesFilter("all_day", "any");
+                  setTime("day");
+                  setMag("all");
                 }}
               >
                 Past Day
@@ -160,8 +74,8 @@ const Home = () => {
               <Button
                 id="btnComp"
                 onClick={() => {
-                  setTime("all_week");
-                  earthquakesFilter("all_week", "any");
+                  setTime("week");
+                  setMag("all");
                 }}
               >
                 Past 7 Days
@@ -169,8 +83,8 @@ const Home = () => {
               <Button
                 id="btnComp"
                 onClick={() => {
-                  setTime("all_month");
-                  earthquakesFilter("all_month", "any");
+                  setTime("month");
+                  setMag("all");
                 }}
               >
                 Past 30 Days
@@ -190,7 +104,7 @@ const Home = () => {
               <Dropdown.Item
                 id="dropdownBtn"
                 onClick={() => {
-                  earthquakesFilter(time, "any");
+                  setMag("all");
                 }}
               >
                 Any
@@ -198,7 +112,7 @@ const Home = () => {
               <Dropdown.Item
                 id="dropdownBtn"
                 onClick={() => {
-                  earthquakesFilter(time, "4.5");
+                  setMag("4.5");
                 }}
               >
                 4.5+
@@ -206,7 +120,7 @@ const Home = () => {
               <Dropdown.Item
                 id="dropdownBtn"
                 onClick={() => {
-                  earthquakesFilter(time, "2.5");
+                  setMag("2.5");
                 }}
               >
                 2.5+
@@ -214,7 +128,7 @@ const Home = () => {
               <Dropdown.Item
                 id="dropdownBtn"
                 onClick={() => {
-                  earthquakesFilter(time, "1");
+                  setMag("1.0");
                 }}
               >
                 1+

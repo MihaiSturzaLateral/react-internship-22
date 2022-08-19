@@ -23,6 +23,8 @@ const Details = () => {
       });
   }, []);
 
+  console.log(mapData);
+
   const colorFunc = () => {
     let color = "";
     if ((MagProp.mag <= 1 || MagProp.mag >= 1) && MagProp.mag < 2.5)
@@ -47,7 +49,8 @@ const Details = () => {
           <LabelCard title="Place: " content={MagProp.place} />
           <LabelCard
             title="Time: "
-            content={moment(MagProp.time).format("DD.MM.yyyy hh:mm:ss")}
+            //content={moment(MagProp.time).format("DD.MM.yyyy hh:mm:ss")}
+            content={Date(MagProp.time)}
           />
           <LabelCard title="Status: " content={MagProp.status} />
           <LabelCard

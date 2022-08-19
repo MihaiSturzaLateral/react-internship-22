@@ -1,5 +1,6 @@
 .containerHome {
   display: flex;
+  justify-content: center;
 }
 
 .btns {
@@ -18,6 +19,7 @@
 
 #btnComp:active {
   background-color: #1266f1;
+  transform: scale(0.98);
 }
 
 .filterBtn {

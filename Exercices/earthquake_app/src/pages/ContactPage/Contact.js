@@ -26,7 +26,7 @@ const Contact = () => {
         console.log("Form data -->", values);
         alert("Form submitted!");
       } else {
-        alert("Validate");
+        alert("Please validate that you are not a robot");
       }
     },
     validationSchema: Schema,
