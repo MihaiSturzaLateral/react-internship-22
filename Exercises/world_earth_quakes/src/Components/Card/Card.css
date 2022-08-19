@@ -1,0 +1,16 @@
+.divCard{
+    margin:10px;
+    background-color: rgb(153,204,255);
+    border-radius: 8px;
+    color:white;
+}
+.second{
+   font-size: 1 rem;
+   padding:0px 10px 10px 10px;
+    
+}
+.first{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px 10px 0px 10px;
+}

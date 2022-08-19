@@ -1,0 +1,17 @@
+.ulListComponent{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.liListComponent{
+    padding: 30px;
+    background-color: rgb(153,204,255) ;
+    color:white;
+    margin:5px;
+    border-radius: 10px;
+    line-height: 30px;
+    height:5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}

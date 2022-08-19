@@ -1,0 +1,42 @@
+.backBtn{
+    margin:15px 0px 0px 35px;
+    padding:10px;
+    background-color: rgb(225,204,153);
+    color: white;
+    font-weight: bold;
+    border-radius:8px;
+    border:none;
+}
+.header{
+    display: flex;
+}
+.containerCard{
+    width:50%;
+}
+.container{
+    display:flex;
+}
+.divMagnitude{
+    
+    padding:20px;
+    background-color: green;
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.container2{
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    margin-left: 10%;
+}
+.map2{
+
+    width: 100%;
+    margin-bottom: 20px;
+    height:20rem;
+    
+}

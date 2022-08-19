@@ -1,0 +1,43 @@
+.ulHeader {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,133,252);
+  }
+  
+  .ulHeader li {
+    float: left;
+  }
+  .logo{
+    color:white;
+    font-size:1.5rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size:1.5rem;
+    margin:14px;
+    margin-right:50px;
+  }
+  .link{
+    display: block;
+    color: rgb(93,177,253);
+    text-align: center;
+    margin:20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .link:focus{
+    color:white;
+  }
+  .searchBar{
+    display:flex;
+    margin-top:10px;
+    margin-left:40%;
+    
+  }
+  
+  
+  

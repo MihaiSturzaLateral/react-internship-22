@@ -1,0 +1,32 @@
+.footer{
+    
+    background-color: rgb(0,133,252);
+    position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+ 
+  }
+  .ulFooter{
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .ulFooter li{
+    color: white;
+    
+  }
+  .firstli{
+    
+    font-weight: bold;
+    width: 30%;;
+    margin-right: 28%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .secondli{
+   
+    margin-right: 16px;
+    width:75%;
+  }
