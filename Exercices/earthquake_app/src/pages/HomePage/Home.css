@@ -1,0 +1,95 @@
+.containerHome {
+  display: flex;
+}
+
+.btns {
+  display: flex;
+  padding: 2.5em;
+  justify-content: space-between;
+}
+
+#btnComp {
+  background-color: #6c757d;
+}
+
+#btnComp:hover {
+  background-color: #1266f1;
+}
+
+#btnComp:active {
+  background-color: #1266f1;
+}
+
+.filterBtn {
+  padding-left: 10em;
+}
+
+#dropdownBtn {
+  color: #1266f1;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.Map-Component {
+  padding: 0em 2.5em 2.5em;
+}
+
+.List-Component {
+  overflow-y: scroll;
+  height: 550px;
+  width: 600px;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.List-Component::-webkit-scrollbar {
+  width: 12px;
+}
+
+.List-Component::-webkit-scrollbar-track {
+  background: white;
+  border: 1px solid black;
+}
+
+.List-Component::-webkit-scrollbar-thumb {
+  background: #99ccff;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.List-Component::-webkit-scrollbar-thumb:hover {
+  background: #1266f1;
+}
+
+.List-Component::-webkit-scrollbar-button:single-button {
+  background: white;
+  display: block;
+  border: 1px solid black;
+  height: 20px;
+  width: 12px;
+}
+
+.List-Component::-webkit-scrollbar-button:vertical:decrement {
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #99ccff transparent;
+}
+
+.List-Component::-webkit-scrollbar-button:vertical:decrement:hover {
+  border-color: transparent transparent #1266f1 transparent;
+}
+
+.List-Component::-webkit-scrollbar-button:vertical:increment {
+  border-width: 6px 6px 0 6px;
+  border-color: #99ccff transparent transparent transparent;
+}
+
+.List-Component::-webkit-scrollbar-button:vertical:increment:hover {
+  border-color: #1266f1 transparent transparent transparent;
+}

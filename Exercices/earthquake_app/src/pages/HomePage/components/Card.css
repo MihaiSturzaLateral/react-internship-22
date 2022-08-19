@@ -1,0 +1,99 @@
+.cardContainer {
+  display: flex;
+  width: 555px;
+  height: 115px;
+  background-color: #99ccff;
+  border-radius: 20px;
+  margin-top: 15px;
+  position: relative;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.cardLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
+  padding: 35px;
+  margin: 15px;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.circleText {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.cardText {
+  padding-top: 5px;
+  padding-right: 5px;
+  margin-right: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.cardButton {
+  margin-top: 10px;
+  margin-left: 20em;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  width: 7vw;
+}
+
+.cardButton:active {
+  transform: scale(0.98);
+}
+
+.card-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 13px;
+}
+.card-link {
+  text-decoration: none;
+  color: white;
+}
+.card_text {
+  color: white;
+  font-size: 15px;
+}
+.card-link-box {
+  display: flex;
+  justify-content: center;
+  /* position:absolute; 
+     right: 8px;
+    bottom: 10px;  */
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  width: 120px;
+  height: 25px;
+}
+.card-link-flex {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+.card-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

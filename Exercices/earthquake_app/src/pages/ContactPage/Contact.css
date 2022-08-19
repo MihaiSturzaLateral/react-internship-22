@@ -1,0 +1,94 @@
+.contact {
+  display: flex;
+  padding: 2em;
+  margin-left: 4em;
+  color: #1266f1;
+  font-weight: bold;
+}
+
+.ct {
+  font-size: 45px;
+}
+
+.wrapperContact {
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 0em 20em;
+  margin-bottom: 5em;
+  color: black;
+}
+
+.title {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.input {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: flex;
+  padding: 5px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#message {
+  height: 20vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid black;
+  padding: 45px;
+  font-weight: bold;
+  height: 150px;
+}
+
+.recaptcha {
+  margin-right: 10em;
+}
+
+.reset {
+  background-color: #6c757d;
+  color: white;
+  margin-right: 2em;
+  border-radius: 10px;
+  padding: 10px 5px;
+  border: 1px solid #6c757d;
+}
+
+.reset:active {
+  transform: scale(0.95);
+}
+
+.submit {
+  background-color: #1266f1;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #1266f1;
+}
+
+.submit:active {
+  transform: scale(0.95);
+}
+
+.error {
+  color: red;
+}

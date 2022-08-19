@@ -1,0 +1,67 @@
+.detailsContainer {
+  margin: 0;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.leftDiv {
+  margin: 10px 50px;
+  padding: 25px;
+}
+
+.leftTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backButton {
+  background-color: #ffcc99;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #888888;
+  border: none;
+}
+
+.pageTitle {
+  margin: 20px 50px;
+  color: #1266f1;
+  font-weight: bold;
+  font-size: 33px;
+}
+
+.leftBottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightDiv {
+  margin-left: 75px;
+  padding-top: 50px;
+  padding-left: 75px;
+  display: flex;
+  flex-direction: column;
+}
+
+.magnitudeDiv {
+  height: 100px;
+  width: 500px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.magnitudeLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.mapComp {
+}

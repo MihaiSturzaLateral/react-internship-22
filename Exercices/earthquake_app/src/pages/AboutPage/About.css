@@ -1,0 +1,50 @@
+.about {
+  display: flex;
+  padding: 2em;
+  margin-left: 4em;
+  color: #1266f1;
+  font-weight: bold;
+}
+
+.ab {
+  font-size: 45px;
+}
+
+.wrapperAbout {
+  display: flex;
+}
+
+.image {
+  border: 3px solid black;
+  margin-left: 5em;
+  margin-right: 10em;
+  width: 25vw;
+}
+
+.details {
+  padding-top: 5em;
+  text-align: left;
+}
+
+.detail {
+  border: 2px solid black;
+  padding: 10px;
+  color: black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.description {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.desc {
+  border: 2px solid black;
+  color: black;
+  margin-left: 5em;
+  margin-right: 5em;
+  text-align: justify;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
