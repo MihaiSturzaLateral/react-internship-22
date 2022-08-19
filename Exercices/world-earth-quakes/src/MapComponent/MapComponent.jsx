@@ -22,19 +22,45 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
   const mapRef = useRef();
   const [viewport, setViewport] = useState({});
   const [selectedEarthquake, setSelectedEarthquake] = useState(null);
+  let geojson = null;
+
+  if (earthquakes)
+    if (earthquakes.features)
+      geojson = {
+        type: "FeatureCollection",
+        features: earthquakes.features,
+      };
+    else {
+      geojson = {
+        type: "FeatureCollection",
+        features: [earthquakes],
+      };
+    }
 
   // focusing the map on the earthquakes
   useEffect(() => {
     const points = [];
-    earthquakes?.features.forEach((feature) => {
-      points.push({
-        longitude: feature.geometry.coordinates[0],
-        latitude: feature.geometry.coordinates[1],
-      });
-    });
-    const bounds = getMapBounds(points, {
-      capZoom: 16,
-    });
+    let bounds = null;
+    if (earthquakes)
+      if (earthquakes.features) {
+        earthquakes.features.forEach((feature) => {
+          points.push({
+            longitude: feature.geometry.coordinates[0],
+            latitude: feature.geometry.coordinates[1],
+          });
+        });
+        bounds = getMapBounds(points, {
+          capZoom: 7,
+        });
+      } else {
+        points.push({
+          longitude: earthquakes.geometry.coordinates[0],
+          latitude: earthquakes.geometry.coordinates[1],
+        });
+        bounds = getMapBounds(points, {
+          capZoom: 1,
+        });
+      }
     setViewport(bounds);
   }, [earthquakes, mapRef]);
 
@@ -73,6 +99,7 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
   };
 
   console.log("selectedEarthquake", selectedEarthquake);
+  console.log("geojson", geojson);
 
   return (
     <div>
@@ -92,11 +119,11 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
         <NavigationControl position="top-right" />
         <ScaleControl />
 
-        {earthquakes && (
+        {geojson && geojson.features && (
           <Source
             id="earthquakes"
             type="geojson"
-            data={earthquakes || {}}
+            data={geojson}
             cluster={true}
             clusterMaxZoom={14}
             clusterRadius={50}
@@ -106,8 +133,7 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
             <Layer {...unclusteredPointLayer} />
           </Source>
         )}
-
-        {selectedEarthquake && (
+        {selectedEarthquake && geojson && geojson.features && (
           <Popup
             anchor="bottom"
             longitude={Number(selectedEarthquake.lng)}

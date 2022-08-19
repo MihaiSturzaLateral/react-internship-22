@@ -1,7 +1,7 @@
 import { React,useState } from 'react';
 
 const magnitudes = [
-    { label: "Any", value: "any" },
+    { label: "Any", value: "all" },
     { label: "4.5+", value: "4.5" },
     { label: "2.5+", value: "2.5" },
     { label: "1+", value: "1.0" },

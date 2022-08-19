@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  
+}
+
 .App {
   text-align: center;
 }
@@ -38,117 +43,275 @@
 }
 
 /*header*/
-.menu{
+.menu {
   background-color: #348feb;
   display: flex;
+  padding-top: 1em;
 }
-.menu h1{
-  color:white;
+.menu h1 {
+  color: white;
   font-size: 1.25em;
   margin-left: 1em;
 }
-.nav{ list-style-type:none;
-      display: flex;
-     justify-content: space-evenly;
-     
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
 }
-.text-link{
-    color: white;
-    text-decoration: none;
-    margin-top:1em;
-    margin-left: 1em;
+.text-link {
+  color: white;
+  text-decoration: none;
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
 /*footer*/
-.footer{
+.footer {
   display: flex;
   background-color: #348feb;
-  position: fixed;
-  bottom: 0;
-}
-.footer h1{
-  color:white;
-  font-size: 0.75em;
-}
-.footer p{
-  color: white;
-  margin-top: 0.5em;
-}
-/*home*/
-.buttons{display: flex;
-margin-left: 3em;}
-.but-drop{
-  background-color: #348feb;
-  margin-top: 3em;
-  margin-left: 3em;
-  border-radius: 5px;
-  border-color: #348feb;
-  color:white;
-  font-size: 1em;
-  height: 3em;
+  position: absolute;
+  margin-top:90vh;
+  font-size: 1.25em;
   
 }
-.select-drop{
+.footer h1 {
+  color: white;
+  font-size: 1.25em;
+}
+.footer p {
+  color: white;
+  margin-top: 0.5em;
+  
+}
+/*home*/
+.buttons {
+  display: flex;
+  margin-left: 3em;
+  flex-wrap: wrap;
+}
+.but-drop {
+  background-color: #348feb;
+  margin-top: 3em;
+  margin-left: 10em;
+  border-radius: 5px;
+  border-color: #348feb;
+  color: white;
+  font-size: 1em;
+  height: 3em;
+}
+.select-drop {
   margin-left: 0.25em;
   border: 1px;
 }
-.option-drop{
+.option-drop {
   border: 5px solid black;
 }
-.list-quakes{
+.list-quakes {
   max-height: 30em;
+  width: 30%;
   overflow-y: scroll;
+  margin-top: 3em;
+  margin-left: 10em;
+}
+.map-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.map {
+  margin-left: 5em;
   margin-top: 3em;
 }
 
 /*EarthQuakes*/
-.earth-view label{
-   border: 2px solid black;
-   border-radius: 50%;
-   width: 50px;
-   height:50px;
-   display: inline-block;
-   text-align: center;
-   margin-top: 3em;
+.earth-view label {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding-top: 0.5em;
 }
-.earth-view{
+.earth-view {
   display: flex;
   margin-left: 2em;
   margin-top: 2em;
   border: 2px solid;
   border-radius: 10%;
-  background-color:rgb(108, 162, 215)
-  
+  background-color: rgb(108, 162, 215);
 }
-.earth-view button{
+.earth-view button {
   margin-top: 5em;
-  height: 1.35em;
+  height: 1.6em;
   width: 10em;
+  margin-right: 1em;
+   font-size: 1em;
+}
+.earth-view p {
+  margin-top: 1em;
+  width: 10em;
+  height: auto;
+  margin-right: 1em;
 }
 
 /*EarthQuakesDetails*/
-.details{
-  width:40%;
+.quakes-mag {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500em;
+}
+.details {
+  width: 25em;
   margin-left: 2em;
   margin-top: 2em;
-  color:aliceblue;
+  color: aliceblue;
   border: 2px solid;
   border-radius: 10%;
-  background-color:rgb(108, 162, 215)
-  
+  background-color: rgb(108, 162, 215);
+  display: flex;
 }
-.title{
+.title {
   font-weight: bold;
- 
 }
-.magnitude{
-   background-color: #348feb;
-   border-radius: 10%;
-   width:10%;
-   height: 3em;
-   text-align: center;
-   color: white;
-   font-size: 1.5em;
+.magnitude {
+  background-color: #348feb;
+  border-radius: 10%;
+  padding-top: 0.7em;
+  width: 10em;
+  height: 3em;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  margin-left: 3em;
+}
+/* BackBut */
+.back-but {
+  background-color: darksalmon;
+  margin-left: 2em;
+  margin-top: 2em;
+  font-size: 1.5em;
+  border-radius: 15px;
+  color: white;
 }
 
+/* Details */
+.title-details {
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #348feb;
+}
+.magnitude MapComponent{
+  margin-top: 2em;
+}
+/* Form */
+.contact-form{
+  width: 30%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #B0C4DE;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+	font-weight: bold;
+}
+.send-us {
+	width: 30%;
+	margin: 3em auto 0px;
+	color: black;
+	text-align: left;
+	border: 1px solid #B0C4DE;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+	font-weight: bold;
+}
+.form-control {
+	margin: 10px 0px 10px 0px;
+}
+.form-control label {
+	display: block;
+  text-align: left;
+	margin: 3px;
+}
+.form-control input {
+	height: 30px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+#message{
+  height: 100px;
+  width: 93%;
+}
+.btn-sub {
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color:white;
+	background:#348feb;
+	border: none;
+	border-radius: 5px;
+	
+}
+.btn-sub:hover{
+  background-color: green;
+}
+.btn-res {
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	color:white;
+	background:grey;
+	border: none;
+	border-radius: 5px;
+  margin-right: 1em;
+	
+}
+.buts-form{
+  text-align: right;
+}
+/* Contact */
+#title-contact{
+  color:#348feb;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+/* About  */
+#title-about{
+  color:#348feb;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#myImage{
+   width: 15em;
+   margin-left: 2em;
+   margin-top: 2em;
+}
+.photo-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+.info label{
+  border: 1px solid black;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-left: 2em;
+  padding: 0.5em;
+}
+#description{
+  border: 1px solid black;
+  margin-top:2em;
+  margin-left: 2em;
+  width:56%;
+  padding: 0.5em;
+  
+}

@@ -3,20 +3,22 @@ import styled from "styled-components";
 
 
 
-const types = ["Past Hour", "Past Day", "Past 7 Days", "Past 30 Days"];
-
-
+const types = [{label: "Past Hour", value: "hour"},
+{label: "Past Day", value: "day"},
+{label: "Past 7 Days", value: "week"},
+{label: "Past 30 Days", value: "month"}
+];
 
 const ButtonsGroup = ({sendData}) => {
     const [active, setActive] = useState('');
   return (
     <div>
       {types.map((type,key) => (
-        <ButtonCustom key={key} active={active === type} onClick={() => {
-          setActive(type);
-           sendData(type);
+        <ButtonCustom key={key} active={active === type.label} onClick={() => {
+          setActive(type.label);
+           sendData(type.value);
             }}>
-          {type} 
+          {type.label} 
         </ButtonCustom>
       ))}
     </div>

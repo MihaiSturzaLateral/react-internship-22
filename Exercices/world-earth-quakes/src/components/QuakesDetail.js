@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import MapComponent from "../MapComponent/MapComponent";
 
 const QuakesDetail = ({urlEarth}) => {
 
 
   const [details, setDetails] = useState('');
+  const [rawData,setrawData]=useState();
 
   useEffect(() => {
     getAllDetails(`${urlEarth}`)
@@ -17,6 +19,7 @@ const QuakesDetail = ({urlEarth}) => {
         console.log('urlEarth   ',`${urlEarth}`)
         let allDetails = res.data.properties;
         console.log('this is alldetails ',allDetails)
+        setrawData(res.data);
         setDetails(allDetails);
         return allDetails;
       })
@@ -25,9 +28,14 @@ const QuakesDetail = ({urlEarth}) => {
     
   };
   
+  const backgroundChange = () => {
+    if(details.mag>='4.5') return "#ff0000";
+    else if(details.mag<='4.5'&& details.mag>'2.5') return "#FFA500"
+    else if(details.mag<=2.5&& details.mag>'1.0') return "#00D100"
+ };
 
   return (
-    <div>
+    <div className="quakes-mag">
     <div className="quakes-detail">
      {console.log("FRom QUAKESDETAILS: ",{urlEarth})}
      {/* {getAllDetails(`${urlEarth}`)} */}
@@ -41,7 +49,7 @@ const QuakesDetail = ({urlEarth}) => {
       </div>
       <div className="details">
         <label className='title'>Time:</label>
-        <label><br/>{details.time}</label>
+        <label><br/>{new Date(details.time).toLocaleString()}</label>
       </div>
       <div className="details">
         <label className='title'>Status:</label>
@@ -51,15 +59,18 @@ const QuakesDetail = ({urlEarth}) => {
         <label className='title'>Tsunami Risk:</label>
         <label><br/>{details.tsunami}</label>
       </div>
-    </div>
+      </div>
     {/* style={`{{backgroundColor: ${}}}`} */}
-    <div className="magnitude"  >
+    <div className="magnitude" style={{backgroundColor: `${backgroundChange()}`}} >
        <label>Magnitude: </label>
        <label>{details.mag}</label>
-      </div>
+        <MapComponent earthquakes={rawData} width={400}/> 
+       </div>
+       
+       </div>
       
 
-      </div>
+      
   );
  
   }
