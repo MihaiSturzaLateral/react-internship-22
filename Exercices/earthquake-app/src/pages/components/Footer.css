@@ -1,0 +1,39 @@
+.subsol {
+    margin-left: 110px;
+    margin-right: auto;
+    width: 80em;
+    bottom: 0;
+    left:auto;
+    display: flex;
+    font-family: Quicksand Light;
+    align-items: center;
+    background-color: purple;
+    position: fixed;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    list-style-type: none;
+    height: 80px;
+}
+
+.copyright {
+    width: 600px;
+    font-size: 17px;
+    margin-left: 50px;
+}
+
+.copyright:hover {
+    color: white;
+    cursor: default;
+}
+
+.data {
+    width: 100%;
+    font-size: 17px;
+    margin-left: 50px;
+}
+
+.data:hover {
+    color: white;
+    cursor: default;
+}

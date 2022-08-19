@@ -1,0 +1,35 @@
+.hour {
+    background-color: purple;
+    border-color: purple;
+    width: 150px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.day {
+    background-color: purple;
+    border-color: purple;
+    width: 150px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.week {
+    background-color: purple;
+    border-color: purple;
+    width: 150px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.month {
+    background-color: purple;
+    border-color: purple;
+    width: 150px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
