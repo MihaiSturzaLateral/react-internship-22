@@ -1,0 +1,91 @@
+.button{
+    background-color: gray; 
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .button1 {
+    background-color:gray;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 20px;
+  
+  }
+  
+  .button1:hover {
+    background-color:#008CBA;
+    color: white;
+  }
+  
+  .button2 {
+    background-color:gray;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+  .button3 {
+    background-color:gray;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .button3:hover {
+    background-color:#008CBA;
+    color: white;
+  }
+  
+  .button4 {
+    background-color:gray;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .button4:hover {
+    background-color:#008CBA;
+    color: white;
+  }
+
+  .dropdownElement{
+    font-size: 16px;
+    margin-top: -40px;
+    margin-left:30%;
+    margin-bottom:20px;
+  }
+  
+  .dropdown{
+    background-color:#008CBA;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+ aside{
+  width:45%;
+  float:right;
+  background-color: whitesmoke;
+  padding:5px;
+  margin:10px;
+  height:450px;
+  overflow-y: auto;
+ }
+
+ 

@@ -1,0 +1,53 @@
+.title{
+    color:#00a1f4;
+    padding:10px;
+    margin-left:25px;
+}
+
+.about{
+    width:100%;
+    padding:5px 0px;
+}
+
+.about img{
+    height: auto;
+    width:150px;
+    border: 2px solid gray;
+}
+
+.about-text{
+    width:400px;
+    margin-left: 25px;
+    font-size: medium;
+    letter-spacing: auto;
+    
+}
+
+.main{
+    width:auto;
+    max-width:95%;
+    margin: 0 auto;
+    display: flex;
+    
+}
+
+.about-text{
+    width: auto;
+    align-items: center;
+}
+
+.about-text h1{
+    text-align: justify;
+    padding-top: 5px;
+    margin: 0;
+    border: 1px solid gray;
+}
+
+.paragraf{
+    text-align: center;
+    height: auto;
+    width:700px;
+    margin-top: 20px;
+    margin-left: 35px;
+    border: 2px solid gray;
+}
