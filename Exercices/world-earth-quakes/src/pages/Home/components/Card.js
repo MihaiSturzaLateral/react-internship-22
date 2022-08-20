@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Card(props) {
   return (
     <>
@@ -17,9 +18,13 @@ function Card(props) {
             className="card-link-box"
             style={{ backgroundColor: `${props.color}` }}
           >
-            <a href="/" className="card-link">
+            <Link
+              to="./pages/Home/components/EarthquakeDetails"
+              className="card-link"
+              state={props.url}
+            >
               View details
-            </a>
+            </Link>
           </div>
         </div>
       </div>

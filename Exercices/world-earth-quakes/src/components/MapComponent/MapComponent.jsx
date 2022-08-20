@@ -22,19 +22,45 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
   const mapRef = useRef();
   const [viewport, setViewport] = useState({});
   const [selectedEarthquake, setSelectedEarthquake] = useState(null);
+  let geojson = null;
+
+  if (earthquakes)
+    if (earthquakes.features)
+      geojson = {
+        type: "FeatureCollection",
+        features: earthquakes.features,
+      };
+    else if (earthquakes.type && earthquakes.type === "Feature") {
+      geojson = {
+        type: "FeatureCollection",
+        features: [earthquakes],
+      };
+    }
 
   // focusing the map on the earthquakes
   useEffect(() => {
     const points = [];
-     earthquakes.features.forEach((feature) => {
-      points.push({
-        longitude: feature.geometry.coordinates[0],
-        latitude: feature.geometry.coordinates[1],
-      });
-    });
-    const bounds = getMapBounds(points, {
-      capZoom: 16,
-    });
+    let bounds = null;
+    if (earthquakes)
+      if (earthquakes.features) {
+        earthquakes.features.forEach((feature) => {
+          points.push({
+            longitude: feature.geometry.coordinates[0],
+            latitude: feature.geometry.coordinates[1],
+          });
+        });
+        bounds = getMapBounds(points, {
+          capZoom: 7,
+        });
+      } else if (earthquakes.type && earthquakes.type === "Feature") {
+        points.push({
+          longitude: earthquakes.geometry.coordinates[0],
+          latitude: earthquakes.geometry.coordinates[1],
+        });
+        bounds = getMapBounds(points, {
+          capZoom: 1,
+        });
+      }
     setViewport(bounds);
   }, [earthquakes, mapRef]);
 
@@ -72,7 +98,8 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
       });
   };
 
-  console.log("selectedEarthquake", selectedEarthquake);
+  // console.log("selectedEarthquake", selectedEarthquake);
+  // console.log("geojson", geojson);
 
   return (
     <div>
@@ -92,20 +119,21 @@ const MapComponent = ({ earthquakes, width, height = 400 }) => {
         <NavigationControl position="top-right" />
         <ScaleControl />
 
-        <Source
-          id="earthquakes"
-          type="geojson"
-          data={earthquakes}
-          cluster={true}
-          clusterMaxZoom={14}
-          clusterRadius={50}
-        >
-          <Layer {...clusterLayer} />
-          <Layer {...clusterCountLayer} />
-          <Layer {...unclusteredPointLayer} />
-        </Source>
-
-        {selectedEarthquake && (
+        {geojson && geojson.features && (
+          <Source
+            id="earthquakes"
+            type="geojson"
+            data={geojson}
+            cluster={true}
+            clusterMaxZoom={14}
+            clusterRadius={50}
+          >
+            <Layer {...clusterLayer} />
+            <Layer {...clusterCountLayer} />
+            <Layer {...unclusteredPointLayer} />
+          </Source>
+        )}
+        {selectedEarthquake && geojson && geojson.features && (
           <Popup
             anchor="bottom"
             longitude={Number(selectedEarthquake.lng)}

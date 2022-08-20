@@ -1,33 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Card from "./components/Card";
 import axios from "axios";
 import { useState } from "react";
 import MapComponent from "../../components/MapComponent/MapComponent";
-import TestData from "../../components/MapComponent/TestData";
-
 function Home() {
   const [propMag, setPropMag] = useState([]);
   const [display, setDisplay] = useState("none");
   const [time, setTime] = useState("");
   const [mapData, setMapData] = useState([]);
+  const [mag, setMag] = useState("");
+  const [search, setSearch] = useState("");
+  const [filteredCard, setFilteredCard] = useState([]);
 
-  // useEffect(() => {
-  //   if (!apiConnect) {
-  //     axios
-  //       .get(
-  //         `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson`
-  //       )
-  //       .then((res) => {
-  //         setPropMag(res.data.features);
-  //         setApiConnect(!apiConnect);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   }
-  // }, [apiConnect]);
+  useEffect(() => {
+    setFilteredCard(
+      propMag.filter((card) => {
+        if (search === "") return card;
+        else
+          return card.properties.title
+            .toLowerCase()
+            .includes(search.toLocaleLowerCase());
+      })
+    );
+  }, [search, propMag]);
 
   const connectToApi = (url) => {
     axios
@@ -63,110 +60,23 @@ function Home() {
               </div>
             </div>
             <div className="right-side">
-              <input placeholder="Search" className="form-control me-2" />
-              <button className="btn btn-outline-light">Search</button>
+              <input
+                placeholder="Search"
+                className="form-control me-2"
+                onChange={(e) => setSearch(e.target.value)}
+              />
             </div>
           </div>
         </nav>
       </header>
     );
   };
-  // onClick={() =>f {
-  //   i (display == "none") setDisplay("block");
-  //   else setDisplay("none");
-  // }}
+  useEffect(() => {
+    connectToApi(
+      `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/${mag}_${time}.geojson`
+    );
+  }, [mag, time]);
 
-  const selectApiOption = (timeOption, magOption) => {
-    if ("all_hour" === timeOption) {
-      if (magOption === "any") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
-        );
-      }
-      if (magOption === "4.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_hour.geojson"
-        );
-      }
-      if (magOption === "2.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_hour.geojson"
-        );
-      }
-      if (magOption === "1") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_hour.geojson"
-        );
-      }
-    }
-    if ("all_day" === timeOption) {
-      if (magOption === "any")
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
-        );
-      if (magOption === "4.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson"
-        );
-      }
-      if (magOption === "2.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
-        );
-      }
-      if (magOption === "1") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson"
-        );
-      }
-    }
-    if ("all_week" === timeOption) {
-      if (magOption === "any")
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
-        );
-      if (magOption === "4.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
-        );
-      }
-      if (magOption === "2.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson"
-        );
-      }
-      if (magOption === "1") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson"
-        );
-      }
-    }
-    if ("all_month" === timeOption) {
-      if (magOption === "any")
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
-        );
-      if (magOption === "4.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson"
-        );
-      }
-      if (magOption === "2.5") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"
-        );
-      }
-      if (magOption === "1") {
-        connectToApi(
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.geojson"
-        );
-      }
-    }
-  };
-  // const map = () => {
-  //   if (propMag === []) setPropMag(TestData);
-  //   else setPropMag(propMag);
-  // };
   const loading = () => {
     return (
       <>
@@ -184,8 +94,8 @@ function Home() {
               type="button"
               className="btn btn-outline-primary"
               onClick={() => {
-                setTime("all_hour");
-                selectApiOption("all_hour", "any");
+                setTime("hour");
+                setMag("all");
               }}
             >
               Past Hour
@@ -194,8 +104,8 @@ function Home() {
               type="button"
               className="btn btn-outline-primary"
               onClick={() => {
-                setTime("all_day");
-                selectApiOption("all_day", "any");
+                setTime("day");
+                setMag("all");
               }}
             >
               Past Day
@@ -204,8 +114,8 @@ function Home() {
               type="button"
               className="btn btn-outline-primary"
               onClick={() => {
-                setTime("all_week");
-                selectApiOption("all_week", "any");
+                setTime("week");
+                setMag("all");
               }}
             >
               Past 7 Days
@@ -214,8 +124,8 @@ function Home() {
               type="button"
               className="btn btn-outline-primary"
               onClick={() => {
-                setTime("all_month");
-                selectApiOption("all_month", "any");
+                setTime("month");
+                setMag("all");
               }}
             >
               Past 30 Days
@@ -236,7 +146,7 @@ function Home() {
                 <button
                   className="btn btn-secondary"
                   onClick={() => {
-                    selectApiOption(time, "any");
+                    setMag("all");
                   }}
                 >
                   Any
@@ -244,7 +154,7 @@ function Home() {
                 <button
                   className="btn btn-secondary"
                   onClick={() => {
-                    selectApiOption(time, "4.5");
+                    setMag("4.5");
                   }}
                 >
                   4.5+
@@ -252,7 +162,7 @@ function Home() {
                 <button
                   className="btn btn-secondary"
                   onClick={() => {
-                    selectApiOption(time, "2.5");
+                    setMag("2.5");
                   }}
                 >
                   2.5+
@@ -260,10 +170,10 @@ function Home() {
                 <button
                   className="btn btn-secondary"
                   onClick={() => {
-                    selectApiOption(time, "1");
+                    setMag("1.0");
                   }}
                 >
-                  1+
+                  1
                 </button>
               </div>
             </div>
@@ -287,7 +197,7 @@ function Home() {
       <div className="container-main-home container-sm">
         {mapButton()}
         <div className="card-list">
-          {propMag.map((propMag) => {
+          {filteredCard.map((propMag) => {
             let color = "";
             if (
               (propMag.properties.mag <= 1 || propMag.properties.mag >= 1) &&
@@ -307,6 +217,7 @@ function Home() {
                 mag={propMag.properties.mag.toFixed(2)}
                 title={propMag.properties.title}
                 color={color}
+                url={propMag.properties.detail}
               />
             );
           })}

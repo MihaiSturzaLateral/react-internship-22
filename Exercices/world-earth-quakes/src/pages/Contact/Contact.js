@@ -15,8 +15,10 @@ function Contact() {
       message: "",
     },
     onSubmit: (values) => {
-      if (reCaptchaSatus === "true") console.log("Form data --> ", values);
-      else alert("Validate");
+      if (reCaptchaSatus === "true") {
+        formik.resetForm();
+        console.log("Form data --> ", values);
+      } else alert("Validate");
     },
     validate: (values) => {
       let errors = {};
@@ -41,7 +43,7 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="container-sm">
+      <div className="container-sm" style={{ marginBottom: "90px" }}>
         <form onSubmit={formik.handleSubmit}>
           <h1 className="general-h1">Contact</h1>
           <div className="mb-3">

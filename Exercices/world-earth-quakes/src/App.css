@@ -1,119 +1,115 @@
-.left-side{
+.left-side {
   display: flex;
   justify-content: space-between;
 }
-.nav-items{
+.nav-items {
   display: flex;
   padding-left: 32px;
 }
-.nav-items a{
+.nav-items a {
   padding-left: 15px;
-  
-  
 }
-.nav-items a:hover{
+.nav-items a:hover {
   color: white;
   font-weight: bold;
 }
-.logo{
-  color:white;
+.logo {
+  color: white;
   font-weight: bold;
 }
-nav{
-  display:  flex;
+nav {
+  display: flex;
   background-color: rgb(0, 0, 255);
   height: 78px;
 }
-.right-side{
+.right-side {
   display: flex;
 }
-.logo{
-  margin:0 12 0 12;
+.logo {
+  margin: 0 12 0 12;
 }
-footer{
-  position: absolute;
-  display: block;
+footer {
+  /* position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0; */
+  /* margin-bottom: -3.5rem; */
   width: 100%;
   height: 3.5rem;
   background-color: rgb(0, 0, 255);
 }
-.footer-style{
+.footer-style {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-.footer-right-side p{
+.footer-right-side p {
   font-size: 15px;
   color: white;
 }
-.footer-left-side span{
+.footer-left-side span {
   font-weight: bold;
   color: white;
 }
-.img{
+.img {
   width: 250px;
   height: 200px;
 }
-.img-details{
+.img-details {
   display: flex;
   margin-bottom: 20px;
   margin-top: 30px;
 }
-.details{
+.details {
   margin-left: 20px;
-  margin-top:4rem ;
+  margin-top: 4rem;
 }
-.p-about{
+.p-about {
   font-weight: bold;
   line-height: 10px;
   font-size: large;
 }
-.general-h1{
+.general-h1 {
   color: rgb(0, 0, 255);
   margin-top: 20px;
 }
-.btn-contact{
+.btn-contact {
   display: flex;
   justify-content: flex-end;
 }
-.btn-contact button{
+.btn-contact button {
   margin-left: 15px;
 }
-.card-size{
+.card-size {
   width: 320px;
   height: 100px;
-  background-color: #4D5057;
+  background-color: #4d5057;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   margin-top: 5px;
   position: relative;
 }
-.card-circle{
+.card-circle {
   width: 40px;
-  height: 40px; 
-  -moz-border-radius: 20px; 
-  -webkit-border-radius: 20px; 
-  border-radius: 20px; 
+  height: 40px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 5px;
   margin-top: 13px;
- 
 }
-.card-link{
+.card-link {
   text-decoration: none;
   color: white;
-  
 }
-.card_text{
+.card_text {
   color: white;
   font-size: 15px;
 }
-.card-link-box{
+.card-link-box {
   display: flex;
   justify-content: center;
   /* position:absolute; 
@@ -125,25 +121,24 @@ footer{
   width: 120px;
   height: 25px;
 }
-.card-link-flex{
+.card-link-flex {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 5px;
 }
-.card-flex{
+.card-flex {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.btn-container{
+.btn-container {
   display: flex;
   margin-top: 20px;
-  
 }
-.right-side-btn{
+.right-side-btn {
   margin-left: 60px;
 }
-.map{
+.map {
   height: 500px;
   width: 520px;
   margin-top: 20px;
@@ -151,35 +146,32 @@ footer{
   position: relative;
   text-align: center;
 }
-.status{
+.status {
   margin-top: 250px;
- 
-  
 }
-.wrapper{
+.wrapper {
   position: relative;
 }
-.card-list{
+.card-list {
   overflow: scroll;
   height: 500px;
   width: 350px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  background-color: #F1F7ED;
+  background-color: #f1f7ed;
   margin-top: 10px;
   margin-left: 30px;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
-  
 }
-.container-main-home{
+.container-main-home {
   display: flex;
   align-items: center;
 }
 .dropbtn {
-  background-color: #3498DB;
+  background-color: #3498db;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -199,7 +191,7 @@ footer{
   z-index: 1;
 }
 
-.dropdown-content button{
+.dropdown-content button {
   color: black;
   display: inline-block;
   margin-top: 5px;
@@ -218,3 +210,44 @@ footer{
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+.card-details-page-container {
+  width: 500px;
+  margin-right: 50px;
+}
+.mapMag-details-page {
+  width: 500px;
+}
+
+.text-details-page {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 36px -18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 36px -18px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 36px -18px rgba(0, 0, 0, 0.75);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+.btn-details-page {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.btn-details-page span {
+  margin-left: 15px;
+}
+.margin-bottom {
+  margin-bottom: 40px;
+}
+.left-side-btn button{
+  margin-left: 5px;
+}
+

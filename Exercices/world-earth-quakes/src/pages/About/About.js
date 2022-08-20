@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="container-sm">
+      <div className="container-sm" style={{ marginBottom: "90px" }}>
         <h1 className="general-h1">About</h1>
         <div className="img-details">
           <img src={aboutImg} className="img" alt="poza autor" />
