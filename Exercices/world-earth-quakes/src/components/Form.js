@@ -1,19 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useRef } from "react";
 import { useFormik } from 'formik'
+import ReCAPTCHA from "react-google-recaptcha"
+
 
 const Form = () => {
 
     let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    const handleSubmit = () =>{
+        
+        const token = captchaRef.current.getValue();
+        captchaRef.current.reset();
+    }
+    
 
     const formik = useFormik({
         initialValues: {
-            name: 'Your Name',
-            email: 'name@gmail.com',
-            message: 'Your messsage...'
+          
         },
         onSubmit: (values,{resetForm}) => {
             alert("Form submitted!");
             console.log('Form data --> ', values);
+            handleSubmit();
             resetForm();
         },
         validate: values => {
@@ -41,7 +48,7 @@ const Form = () => {
 
 
     console.log("Form errors --> ", formik.errors);
-
+    const captchaRef = useRef(null)
     return (
         <div>
             <div className="send-us">
@@ -51,23 +58,28 @@ const Form = () => {
 
             <div className="form-control">
                     <label htmlFor='email'>Your Email:</label>
-                    <input type='text' id='email' name='email' onChange={formik.handleChange} value={formik.values.email} />
+                    <input type='text'  placeholder="Your Email" onFocus={(e) => e.target.placeholder = "" } id='email' name='email' onChange={formik.handleChange} value={formik.values.email} />
                     {formik.errors.email ? <div className="error">{formik.errors.email}</div> : null}
                 </div>
                 <div className="form-control">
                     <label htmlFor='name'>Name:</label>
-                    <input type='text' id='name' name='name' onChange={formik.handleChange} value={formik.values.name} />
+                    <input type='text' placeholder="Your Name" onFocus={(e) => e.target.placeholder = "" } id='name' name='name' onChange={formik.handleChange} value={formik.values.name} />
                     {/* conditional rendering */}
                     {formik.errors.name ? <div className="error">{formik.errors.name}</div> : null}
                 </div>
 
                 <div className="form-control">
                     <label htmlFor='message'>Message:</label>
-                    <textarea  id='message' name='message' onChange={formik.handleChange} value={formik.values.message} />
+                    <textarea  id='message' placeholder="Your Message" onFocus={(e) => e.target.placeholder = "" } name='message' onChange={formik.handleChange} value={formik.values.message} />
                     {formik.errors.message ? <div className="error">{formik.errors.message}</div> : null}
                 </div>
                 <div className="buts-form">
-                <button className="btn-res" type='reset' onClick={()=>formik.resetForm()}>Reset form</button>
+                <ReCAPTCHA 
+                sitekey={process.env.REACT_APP_SITE_KEY}
+                ref={captchaRef}
+                />
+                <button className="btn-res" type='reset' onClick={()=>{formik.resetForm();
+                                                                  captchaRef.current.reset();}}>Reset form</button>
                 <button className="btn-sub" type='submit' >Send message</button>
                 </div>
             </form>

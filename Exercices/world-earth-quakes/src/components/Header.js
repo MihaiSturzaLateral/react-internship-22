@@ -1,39 +1,52 @@
 import { Link } from "react-router-dom";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
- import 'bootstrap/dist/css/bootstrap.css';
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.css";
+import { useState } from "react";
 
-const Header = () => {
+const Header = ({sendTherm}) => {
+  const [searchTherm, setSearchTheme] = useState();
   return (
     <div className="menu">
       <h1>WorldEarthQuakes</h1>
-    <ul className="nav">
-      <li>
-        <Link to='/' className="text-link">Home</Link>
-      </li>
-      <li>
-        <Link to='/about' className="text-link">About</Link>
-      </li>
-      <li>
-        <Link to='/contact' className="text-link">Contact</Link>
-      </li>
-    </ul>
-    <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-              style={{'margin-left':'2em'}}
-            />
-            <Button variant="outline-success"  style={{'backgroundColor':'white'}}>Search</Button>
-          </Form>
+      <ul className="nav">
+        <li>
+          <Link to="/" className="text-link">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="text-link">
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" className="text-link">
+            Contact
+          </Link>
+        </li>
+      </ul>
+      <Form className="d-flex">
+        <Form.Control
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+          style={{ "margin-left": "2em" }}
+          onChange={(event) => {
+            setSearchTheme(event.target.value);
+            sendTherm(searchTherm);
+          }}
+        />
+        <Button variant="outline-success" style={{ backgroundColor: "white" }}>
+          Search
+        </Button>
+      </Form>
     </div>
   );
 };
 
 export default Header;
-
 
 // import { Link } from "react-router-dom";
 // import Button from 'react-bootstrap/Button';

@@ -6,6 +6,7 @@ import ButtonsGroup from "../components/ButtonsGroup";
 import axios from "axios";
 import MapComponent from "../MapComponent/MapComponent";
 import DropDown from "../components/DropDown";
+import Header from "../components/Header";
 
 
 
@@ -27,6 +28,16 @@ const Home = () => {
       setDrop(value);
       console.log("from drop down ", value);
       return value;
+    }
+  }
+
+  const[therm, setTherm]=useState();
+
+  const sendTherm=(searchTherm)=>{
+    if(searchTherm){
+      setTherm(searchTherm);
+      console.log("from searchTherm ", searchTherm);
+      return searchTherm;
     }
   }
   const [placee, setPlace] = useState("");
@@ -106,6 +117,7 @@ const Home = () => {
   return (
     <>
     <div className="buttons">
+       {/* <Header sendTherm={sendTherm} /> */}
       <ButtonsGroup sendData={sendData} />
       <DropDown sendValue={sendValue}/>
       </div>
