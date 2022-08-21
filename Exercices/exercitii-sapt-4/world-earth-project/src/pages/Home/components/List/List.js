@@ -3,9 +3,15 @@ import React from "react";
 import Card from "./components/Card";
 
 const List = (props) => {
-	return props.earthquakes?.map((el) => {
+	const filteredData = props.earthquakes?.filter((el) => {
+		if (props.searchInput === "") return el;
+		else {
+			return el.properties.place.toLowerCase().includes(props.searchInput);
+		}
+	});
+	return filteredData?.map((el) => {
 		return (
-			<div className="">
+			<div style={{ margin: 5 }}>
 				<div>
 					<div>
 						<Card

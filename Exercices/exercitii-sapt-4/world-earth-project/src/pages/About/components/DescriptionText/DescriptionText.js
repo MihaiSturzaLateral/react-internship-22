@@ -9,9 +9,15 @@ const DescriptionText = () => {
 				marginTop: 50,
 				marginBottom: 50,
 				width: 1105,
+				backgroundColor: "#1f8e2e",
+				fontWeight: "bold",
+				color: "#303631",
 			}}
 		>
-			<div className="card-body" style={{ fontSize: 20 }}>
+			<div
+				className="card-body"
+				style={{ marginLeft: 10, marginRight: 10, fontSize: 20 }}
+			>
 				<p className="card-text" style={{ height: 120 }}>
 					I am studying Computer Science in Cluj-Napoca, looking for a lot of
 					opportunities to get work experience. I am a hardworking person

@@ -3,7 +3,7 @@ import Title from "../../components/Title/Title";
 import SubmitForm from "./components/SubmitForm";
 const Contact = () => {
 	return (
-		<div>
+		<div style={{ backgroundColor: "#b9d1bc", height: 610 }}>
 			<Title name={"Contact"} />
 			<SubmitForm />
 		</div>

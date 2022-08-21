@@ -52,13 +52,14 @@ const SubmitForm = () => {
 			style={{
 				width: 700,
 				margin: "auto",
+				backgroundColor: "#DFE7E0",
 			}}
 		>
 			<div
 				className="card-header text-center "
 				style={{ width: 700, color: "black", fontWeight: "bold", fontSize: 25 }}
 			>
-				My description
+				Send me a message:
 			</div>
 			<form
 				onSubmit={formik.handleSubmit}
@@ -91,7 +92,7 @@ const SubmitForm = () => {
 						name="email"
 						onChange={formik.handleChange}
 						value={formik.values.email}
-						style={{ marginLeft: 15, width: 670 }}
+						style={{ marginLeft: 15, width: 670, backgroundColor: "#F3F8F4" }}
 					/>
 
 					<label htmlFor="name" className="d-flex">
@@ -120,7 +121,7 @@ const SubmitForm = () => {
 						name="name"
 						onChange={formik.handleChange}
 						value={formik.values.name}
-						style={{ marginLeft: 15, width: 670 }}
+						style={{ marginLeft: 15, width: 670, backgroundColor: "#F3F8F4" }}
 					/>
 
 					<label htmlFor="message" className="d-flex">
@@ -154,6 +155,7 @@ const SubmitForm = () => {
 							width: 670,
 							marginBottom: 15,
 							height: 100,
+							backgroundColor: "#F3F8F4",
 						}}
 					/>
 				</div>
@@ -171,20 +173,32 @@ const SubmitForm = () => {
 						<ReCAPTCHA
 							sitekey="6LcQ5XEhAAAAAGCGSKMmAFyUXeEb3qBYrzm_DljH"
 							onChange={handleOnChange}
+							style={{ backgroundColor: "#F3F8F4" }}
 						/>
 					</div>
 					<button
 						className="btn btn-secondary"
 						type="reset"
-						style={{ marginRight: 5 }}
+						style={{
+							marginTop: 25,
+							marginRight: 5,
+							backgroundColor: "#464E47",
+							height: 50,
+						}}
 					>
 						Reset form
 					</button>
 
 					<button
-						className="btn btn-success"
+						className="btn "
 						type="submit"
 						disabled={!formik.values.isValidated}
+						style={{
+							marginTop: 25,
+							height: 50,
+							backgroundColor: "#1f8e2e",
+							color: "white",
+						}}
 					>
 						Send message
 					</button>

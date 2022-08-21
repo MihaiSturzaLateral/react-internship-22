@@ -20,34 +20,68 @@ const EarthquakeDetails = () => {
 		return;
 	}, [location.state.details]);
 	return (
-		<div className="d-flex flex-row justify-content-between">
+		<div
+			className="d-flex flex-row justify-content-between"
+			style={{ backgroundColor: "#b9d1bc", height: 610 }}
+		>
 			<div>
 				<div className="d-flex">
 					<Link to="/">
 						<button
-							className="btn btn-success btn-sm"
+							className="btn btn-sm"
 							style={{
-								marginLeft: 40,
+								marginLeft: 50,
 								height: 35,
 								fontWeight: "bold",
-								marginTop: 10,
+								fontSize: 15,
+								marginTop: 50,
+								borderColor: "#464E47",
+								borderWidth: 3,
+								backgroundColor: "#1f8e2e",
+								color: "black",
 							}}
 						>
-							Go back
+							Back
 						</button>
 					</Link>
 					<Title name={"EarthquakeDetails"} />
 				</div>
-				<EarthquakeSpecs
-					title={earthquake?.properties?.title}
-					place={earthquake?.properties?.place}
-					time={earthquake?.properties?.time}
-					status={earthquake?.properties?.status}
-					tsunamiRisk={earthquake?.properties?.tsunami}
-				/>
+				<div
+					className="d-flex flex-column"
+					style={{
+						marginLeft: 50,
+						marginTop: 58,
+						width: 600,
+						marginBottom: 30,
+						height: 394,
+						backgroundColor: "#464E47",
+						borderRadius: 4,
+					}}
+				>
+					<EarthquakeSpecs
+						titleDisplayed={"Title:"}
+						info={earthquake?.properties?.title}
+					/>
+					<EarthquakeSpecs
+						titleDisplayed={"Place:"}
+						info={earthquake?.properties?.place}
+					/>
+					<EarthquakeSpecs
+						titleDisplayed={"Time:"}
+						info={new Date(earthquake?.properties?.time).toLocaleString()}
+					/>
+					<EarthquakeSpecs
+						titleDisplayed={"Status:"}
+						info={earthquake?.properties?.status}
+					/>
+					<EarthquakeSpecs
+						titleDisplayed={"Tsunami risk:"}
+						info={earthquake?.properties?.tsunami}
+					/>
+				</div>
 			</div>
 			<div>
-				<div>
+				<div style={{ paddingTop: 40 }}>
 					<button
 						className="btn"
 						style={{
@@ -56,21 +90,23 @@ const EarthquakeDetails = () => {
 							fontWeight: "bold",
 							fontSize: 40,
 							marginBottom: 30,
+							color: "#303631",
+							borderColor: "#464E47",
+							borderWidth: 4,
 							backgroundColor:
 								earthquake?.properties?.mag < 2.5
-									? "green"
+									? "#1f8e2e"
 									: earthquake?.properties?.mag < 4.5
 									? "orange"
 									: "red",
 						}}
 					>
-						Magnitude:{earthquake?.properties?.mag}
+						Magnitude:{earthquake?.properties?.mag.toPrecision(3)}
 					</button>
 					<div
 						style={{
 							width: 710,
 							height: 400,
-							backgroundColor: "brown",
 							marginRight: 50,
 						}}
 					>

@@ -6,7 +6,10 @@ import DescriptionText from "./components/DescriptionText/DescriptionText";
 const About = () => {
 	return (
 		<>
-			<div className="d-flex flex-row">
+			<div
+				className="d-flex flex-row"
+				style={{ backgroundColor: "#b9d1bc", height: 610 }}
+			>
 				<div>
 					<Title name={"About"} />
 					<div className="d-flex ">

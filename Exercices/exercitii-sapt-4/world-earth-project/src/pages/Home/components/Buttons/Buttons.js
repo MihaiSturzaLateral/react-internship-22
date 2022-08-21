@@ -1,11 +1,15 @@
 import React from "react";
 const Buttons = ({ childToParentDetail, childToParentMag }) => {
 	return (
-		<div className="d-flex" style={{ marginLeft: 40, marginTop: 55 }}>
+		<div className="d-flex" style={{ paddingLeft: 40, paddingTop: 55 }}>
 			<div className="btn-group" role="group" aria-label="Basic example">
 				<button
 					type="button"
-					className="btn btn-success"
+					className="btn "
+					style={{
+						backgroundColor: "#1f8e2e",
+						color: "#F1FFFA",
+					}}
 					onClick={() => {
 						childToParentDetail("hour");
 						childToParentMag("all");
@@ -15,7 +19,11 @@ const Buttons = ({ childToParentDetail, childToParentMag }) => {
 				</button>
 				<button
 					type="button"
-					className="btn btn-success"
+					className="btn "
+					style={{
+						backgroundColor: "#1f8e2e",
+						color: "#F1FFFA",
+					}}
 					onClick={() => {
 						childToParentDetail("day");
 						childToParentMag("all");
@@ -25,7 +33,11 @@ const Buttons = ({ childToParentDetail, childToParentMag }) => {
 				</button>
 				<button
 					type="button"
-					className="btn btn-success"
+					className="btn "
+					style={{
+						backgroundColor: "#1f8e2e",
+						color: "#F1FFFA",
+					}}
 					onClick={() => {
 						childToParentDetail("week");
 						childToParentMag("all");
@@ -35,7 +47,11 @@ const Buttons = ({ childToParentDetail, childToParentMag }) => {
 				</button>
 				<button
 					type="button"
-					className="btn btn-success"
+					className="btn "
+					style={{
+						backgroundColor: "#1f8e2e",
+						color: "#F1FFFA",
+					}}
 					onClick={() => {
 						childToParentDetail("month");
 						childToParentMag("all");
@@ -44,16 +60,20 @@ const Buttons = ({ childToParentDetail, childToParentMag }) => {
 					Past 30 Days
 				</button>
 			</div>
-			<div className="btn-group dropend" style={{ marginLeft: 200 }}>
+			<div className="btn-group dropend" style={{ paddingLeft: 220 }}>
 				<button
 					type="button"
-					className="btn btn-success dropdown-toggle"
+					className="btn dropdown-toggle"
 					data-bs-toggle="dropdown"
 					aria-expanded="false"
+					style={{ backgroundColor: "#1f8e2e", color: "#F1FFFA" }}
 				>
 					Magnitude
 				</button>
-				<ul className="dropdown-menu dropdown-menu-dark">
+				<ul
+					className="dropdown-menu dropdown-menu-dark"
+					style={{ backgroundColor: "#464E47" }}
+				>
 					<li>
 						<button
 							className="dropdown-item"

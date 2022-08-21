@@ -3,64 +3,78 @@ import { Link } from "react-router-dom";
 
 const Card = (props) => {
 	return (
-		<>
-			<div className="card d-flex flex-column" style={{ margin: 5 }}>
-				<div className="card-body d-flex">
+		<div
+			className="d-flex flex-column"
+			style={{
+				margin: 5,
+			}}
+		>
+			<div
+				className="d-flex flex-row"
+				style={{ borderRadius: 8, backgroundColor: "#b9d1bc", height: 90 }}
+			>
+				<div
+					style={{
+						display: "flex",
+						textAlign: "center",
+						alignItems: "center",
+						justifyContent: "center",
+						fontWeight: "bold",
+						fontSize: 15,
+						borderRadius: 50,
+						backgroundColor:
+							props.magnitude < 2.5
+								? "#1f8e2e"
+								: props.magnitude < 4.5
+								? "orange"
+								: "red",
+						width: 60,
+						height: 60,
+						margin: 15,
+					}}
+				>
+					{props.magnitude === null ? 0 : props.magnitude.toPrecision(3)}
+				</div>
+				<div className="d-flex flex-column">
 					<div
 						style={{
-							display: "flex",
-							textAlign: "center",
-							alignItems: "center",
-							justifyContent: "center",
+							marginLeft: 20,
+							marginTop: 10,
+							color: "#303631",
 							fontWeight: "bold",
-							fontSize: 15,
-							borderRadius: 50,
-							backgroundColor:
-								props.magnitude < 2.5
-									? "green"
-									: props.magnitude < 4.5
-									? "orange"
-									: "red",
-							width: 50,
-							height: 50,
-							marginLeft: 5,
-							marginTop: 5,
-							marginBottom: 5,
+							width: 400,
 						}}
 					>
-						{props.magnitude === null ? 0 : props.magnitude.toPrecision(2)}
+						{props.location}
 					</div>
-					<div>
-						<div
-							className="card-text"
+					<Link
+						to="/EarthquakeDetails"
+						state={{
+							details: props.details,
+						}}
+					>
+						<button
+							className="btn btn-sm btn-secondary"
 							style={{
-								marginLeft: 20,
-
-								width: 400,
+								marginLeft: 315,
+								marginTop: 15,
+								height: 30,
+								color: "#303631",
+								backgroundColor:
+									props.magnitude < 2.5
+										? "#1f8e2e"
+										: props.magnitude < 4.5
+										? "orange"
+										: "red",
+								fontWeight: "bold",
 							}}
 						>
-							{props.location}
-						</div>
-						<Link
-							to="/EarthquakeDetails"
-							state={{
-								details: props.details,
-							}}
-						>
-							<button
-								className="btn btn-success btn-sm"
-								style={{ marginLeft: 340, marginTop: 10, height: 30 }}
-								onClick={() => {
-									console.log(props.details, "test");
-								}}
-							>
-								View Details
-							</button>
-						</Link>
-					</div>
+							View Details
+						</button>
+					</Link>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

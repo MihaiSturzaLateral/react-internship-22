@@ -3,10 +3,11 @@ const Title = (props) => {
 	return (
 		<div
 			style={{
-				color: "#526760",
+				color: "#464E47",
 				fontWeight: "bold",
 				fontSize: 35,
 				marginLeft: 40,
+				paddingTop: 40,
 			}}
 		>
 			{props.name}
