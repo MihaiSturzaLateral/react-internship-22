@@ -1,50 +1,74 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
-import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import { useNavigate, useLocation } from "react-router";
 
-const Form = () => {
+const Update = () => {
+  let navigate = useNavigate();
+
   let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-  const handleSubmit = () => {
-    const token = captchaRef.current.getValue();
-    captchaRef.current.reset();
+
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [ID, setID] = useState("");
+
+  let location = useLocation();
+  const { updatedId, EmailUpdated, NameUpdated, MessageUpdated } =
+    location.state || {};
+
+  //console.log("updateurileee  ", updatedId,EmailUpdated);
+  // console.log("Location State: ",location.state);
+  const sendDatatoAPI = (email, name, message) => {
+    axios
+      .put(`https://6300d36c9a1035c7f8f8c61a.mockapi.io/CrudContact/${ID}`, {
+        email,
+        name,
+        message,
+      })
+      .then(navigate("../read"));
   };
 
   const formik = useFormik({
-    initialValues: {},
+    initialValues: {
+      email: EmailUpdated,
+      name: NameUpdated,
+      message: MessageUpdated,
+    },
     onSubmit: (values, { resetForm }) => {
-      alert("Form submitted!");
-      console.log("Form data --> ", values);
-      handleSubmit();
+      sendDatatoAPI(values.email, values.name, values.message);
       resetForm();
     },
     validate: (values) => {
       let errors = {};
 
-      if (!values.name || values.name === "Your Name") {
+      if (!values.name) {
         errors.name = "Required";
       }
-      if (!values.email || values.email === "name@gmail.com") {
+      if (!values.email) {
         errors.email = "Required";
       } else if (!values.email.match(regex)) {
         errors.email = "Invalid email format";
       }
-      if (!values.message || values.message === "Your message...") {
+      if (!values.message) {
         errors.message = "Required";
       }
       return errors; // must return an object with errors
     },
   });
 
-  // useEffect(() => {
-  //     console.log("Form values --> ", formik.values);
-  // })
+  useEffect(() => {
+    setEmail(EmailUpdated);
+    setName(NameUpdated);
+    setMessage(MessageUpdated);
+    setID(updatedId);
+    //console.log("Valorileee   ", ID, email, name, message);
+  }, []);
 
-  console.log("Form errors --> ", formik.errors);
-  const captchaRef = useRef(null);
   return (
     <div>
       <div className="send-us">
-        <h2>Send us a message</h2>
+        <h2>Update information</h2>
       </div>
       <form className="contact-form" onSubmit={formik.handleSubmit}>
         <div className="form-control">
@@ -94,22 +118,8 @@ const Form = () => {
           ) : null}
         </div>
         <div className="buts-form">
-          <ReCAPTCHA
-            sitekey={process.env.REACT_APP_SITE_KEY}
-            ref={captchaRef}
-          />
-          <button
-            className="btn-res"
-            type="reset"
-            onClick={() => {
-              formik.resetForm();
-              captchaRef.current.reset();
-            }}
-          >
-            Reset form
-          </button>
           <button className="btn-sub" type="submit">
-            Send message
+            Update
           </button>
         </div>
       </form>
@@ -117,4 +127,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Update;

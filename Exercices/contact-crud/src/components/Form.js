@@ -1,46 +1,63 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import {useNavigate} from 'react-router'
+import "./Form.css"
+
 
 const Form = () => {
+let navigate=useNavigate();
   let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+
+  const captchaRef = useRef(null);
   const handleSubmit = () => {
     const token = captchaRef.current.getValue();
     captchaRef.current.reset();
   };
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendDatatoAPI = (email, name, message) => {
+    axios.post("https://6300d36c9a1035c7f8f8c61a.mockapi.io/CrudContact", {
+      email,
+      name,
+      message,
+    }).then(navigate("../read"));
+  };
+
+
 
   const formik = useFormik({
-    initialValues: {},
+    initialValues: { email: "", name: "", message: "" },
     onSubmit: (values, { resetForm }) => {
-      alert("Form submitted!");
-      console.log("Form data --> ", values);
-      handleSubmit();
+      setEmail(email);
+      setName(name);
+      setMessage(message);
+      sendDatatoAPI(values.email, values.name, values.message);
       resetForm();
+      handleSubmit();
+
     },
     validate: (values) => {
       let errors = {};
 
-      if (!values.name || values.name === "Your Name") {
+      if (!values.name) {
         errors.name = "Required";
       }
-      if (!values.email || values.email === "name@gmail.com") {
+      if (!values.email) {
         errors.email = "Required";
       } else if (!values.email.match(regex)) {
         errors.email = "Invalid email format";
       }
-      if (!values.message || values.message === "Your message...") {
+      if (!values.message) {
         errors.message = "Required";
       }
       return errors; // must return an object with errors
     },
   });
 
-  // useEffect(() => {
-  //     console.log("Form values --> ", formik.values);
-  // })
-
-  console.log("Form errors --> ", formik.errors);
-  const captchaRef = useRef(null);
   return (
     <div>
       <div className="send-us">
@@ -108,7 +125,7 @@ const Form = () => {
           >
             Reset form
           </button>
-          <button className="btn-sub" type="submit">
+          <button className="btn-sub" type="submit" >
             Send message
           </button>
         </div>
