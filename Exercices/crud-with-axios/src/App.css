@@ -1,0 +1,12 @@
+.color-form{
+    color:red
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.message{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+}
