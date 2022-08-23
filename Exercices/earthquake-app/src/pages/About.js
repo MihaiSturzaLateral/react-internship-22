@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Poza from './Poza.jpg';
-import './About.css';
+import './About.css'; 
 
 const About = () => {
     return(
@@ -19,7 +19,6 @@ const About = () => {
             </ul>
             </div>
             <Footer />
-            
         </div>
     );
 }

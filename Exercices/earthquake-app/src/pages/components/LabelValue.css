@@ -1,0 +1,28 @@
+.detailsCard {
+    height: 80px;
+    width: 400px;
+    background-color: #A9EAFF;
+    margin-left: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+}
+
+.labelDetail {
+    position:absolute;
+    left: 230px;
+    margin-top: 10px;
+    font-family: Caviar Dreams;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.valueDetail {
+    position:absolute;
+    left: 230px;
+    margin-top: 50px;
+    font-family: Caviar Dreams;
+    font-weight: bold;
+    font-size: 17px;
+}

@@ -1,0 +1,38 @@
+.back {
+    height: 40px;
+    width: 100px;
+    background-color: #00ADE3;
+    border-color: #00ADE3;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+    border-radius: 5px;
+    margin-left: 50px;
+    font-family: Caviar Dreams;
+    font-size: 17px;
+}
+
+.detailsCards {
+    position: absolute;
+    top: 140px;
+}
+
+.hartaDetails {
+    position: absolute;
+    right: 250px;
+    top: 180px;
+}
+
+.titleDetails {
+    position: absolute;
+    top: 58px;
+    margin-left: 200px;
+    font-family: Caviar Dreams;
+}
+
+.magnitudeDetails {
+    position: absolute;
+    top: 75px;
+    margin-left: 900px;
+    font-family: Caviar Dreams;
+    padding: 15px 15px;
+    border-radius: 8px;
+}

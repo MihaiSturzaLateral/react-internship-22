@@ -1,6 +1,8 @@
 import axios from "axios";
 import React from "react";
 import './Time.css';
+import ListCard from "./ListCard";
+import MapComponent from "./MapComponent/MapComponent";
 
 export default function Time() {
   const [post, setPost] = React.useState(null);
@@ -11,11 +13,9 @@ export default function Time() {
       setValue(event.target.value);
     };
 
-
-
   React.useEffect(() => {
     axios.get(`https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/${value}_${timeFrame}.geojson`).then((response) => {
-      setPost(response.data.features);
+      setPost(response.data);
     });
   }, [value, timeFrame]);
 
@@ -39,12 +39,18 @@ export default function Time() {
             <option value="4.5">4.5+</option>
           </select>
         </button>
+
   
       </div>
-        {post.map(post => (
-                  <div key={post.id}>
-       <b>Title: </b> {post.properties.title} <br/>
+      <div className='scrollList'>
+        {post.features.map(post => (
+                  <div key={post.id} className='cards'>
+       <ListCard title={post.properties.title} mag={post.properties.mag} detail={post.properties.detail}/> <br/>
        </div>
-  ))};
+  ))}
+  </div>
+<div className='harta'>
+  <MapComponent earthquakes={post} width={500}/>
+  </div>
   </div>
   )}

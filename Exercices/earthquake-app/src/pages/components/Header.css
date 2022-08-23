@@ -1,5 +1,5 @@
 .meniu {
-    background-color: purple;
+    background-color: #00ADE3;
     margin-top: 0;
     list-style-type: none;
     display: flex;
@@ -11,7 +11,7 @@
     text-align: right;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    font-family: Quicksand Light;
+    font-family: Caviar Dreams;
 }
 
 li {
@@ -33,7 +33,7 @@ li:hover {
     align-items: center;
     margin-top:18px;
     color: white;
-    font-family: Quicksand Light;
+    font-family:Caviar Dreams;
 }
 
 .home {

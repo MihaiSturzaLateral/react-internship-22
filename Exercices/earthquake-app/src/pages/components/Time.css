@@ -1,35 +1,61 @@
-.hour {
-    background-color: purple;
-    border-color: purple;
+.filterbuttons button {
+    background-color: #00ADE3;
+    border-color: #00ADE3;
     width: 150px;
-    height: 30px;
-    margin-left: 30px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+    color: white;
+    font-family: Caviar Dreams;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.filterbuttons {
+    margin-left: 100px;
+}
+
+.scrollList {
+    border: 2px solid grey;
+    width: 400px;
+    position: absolute;
+    right: 130px;
+    border-radius: 8px;
+    height: 500px;
+    overflow: auto;
+    top: 90px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+}
+
+.cards {
+    height: 100px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 77px;
+    left: 800px; 
+    border-color: white;
     border-radius: 5px;
 }
 
-.day {
-    background-color: purple;
-    border-color: purple;
-    width: 150px;
-    height: 30px;
-    margin-left: 30px;
+.dropdown button {
+    font-size: 17px;
+    font-family: Caviar Dreams;
+    font-weight: bold;
+    color: #00ADE3;
     border-radius: 5px;
+    border-color: #A9EAFF;
+    background-color: #A9EAFF;
+    height: 35px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
 }
 
-.week {
-    background-color: purple;
-    border-color: purple;
-    width: 150px;
-    height: 30px;
-    margin-left: 30px;
-    border-radius: 5px;
-}
-
-.month {
-    background-color: purple;
-    border-color: purple;
-    width: 150px;
-    height: 30px;
-    margin-left: 30px;
-    border-radius: 5px;
+.harta {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
 }

@@ -1,29 +1,38 @@
 .formsubmit {
     width: 210px;
     height: 40px;
-    background-color: purple;
+    background-color: #00ADE3;
     color:black;
     font-family: 'Times New Roman', Times, serif;
     border-radius: 3px;
-    font-size: 1.30rem;
+    font-size: 23px;
     align-items: center;
     cursor: pointer;
-    margin-left: 45px;
+    border-color: #00ADE3;
+    font-family: Caviar Dreams;
+    font-weight: bold;
+    color: white;
+    margin-left: 80px;
 }
 
 form {
-    margin-left: 600px;
-    margin-top: 40px;
-    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 20px;
+    font-family: Caviar Dreams;
     font-size: 1.5rem;
 }
 
 label {
-    font-family: 'Times New Roman', Times, serif;
-    color:purple;
+    font-family: Caviar Dreams;
+    color:#00ADE3;
+    font-weight: bold;
+    margin-left: 100px;
 }
 
 input {
+    margin-left: 100px;
+    padding-right: 200px;
     width: 300px;
     height: 30px;
     border-radius: 3px;
@@ -31,7 +40,32 @@ input {
     box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
 }
 
-input .message {
-    height: 50px;
+.robot {
+    margin-left: 100px;
 }
 
+.error {
+    position: absolute;
+    left: 100px;
+    margin-top: 5px;
+    width: 400px;
+    font-size: 18px;
+    color: red;
+}
+
+.formreset {
+    width: 210px;
+    height: 40px;
+    background-color: grey;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 3px;
+    font-size: 23px;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 100px;
+    border-color: grey;
+    font-family: Caviar Dreams;
+    font-weight: bold;
+    color: white;
+}

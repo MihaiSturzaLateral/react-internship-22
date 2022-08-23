@@ -8,11 +8,9 @@ import Header from './pages/components/Header';
 import Footer from './pages/components/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
-//import PastHour from './pages/components/PastHour';
-import PastDay from './pages/components/PastDay';
 import Time from './pages/components/Time';
-import Drop from './pages/components/Drop';
 import Home from './pages/Home';
+import Details from './pages/Details';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,10 +19,12 @@ root.render(
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
+          <Route path="details" element={<Details />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   </React.StrictMode>
 );
