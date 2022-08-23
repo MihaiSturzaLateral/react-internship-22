@@ -1,0 +1,33 @@
+.buton {
+  display: flex;
+  float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.buttonDetails {
+  background-color: #ffcc99;
+  border-radius: 35px;
+  box-shadow: 2px 5px rgb(192, 192, 192, 0.6);
+  font-weight: bold;
+}
+.detpag {
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #007fff;
+  font-weight: bold;
+}
+
+.Mag {
+  margin-top: 40px;
+  margin-right: 160px;
+  margin-bottom: 20px;
+  width: 400px;
+  display: flex;
+  float: right;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 30px;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}

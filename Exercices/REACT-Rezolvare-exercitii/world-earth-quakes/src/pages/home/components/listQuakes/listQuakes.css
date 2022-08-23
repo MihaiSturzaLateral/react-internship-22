@@ -1,0 +1,27 @@
+.containerList {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  background: rgb(153, 204, 255);
+  border-radius: 20px;
+  box-shadow: 2px 4px rgb(191, 192, 192, 0.8);
+  color: white;
+  font-weight: bold;
+  display: flex;
+}
+
+.item-magnitude {
+  border-radius: 50%;
+  width: 120px;
+  height: 90px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.item-title {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.Button-details {
+  font-size: 15px;
+}

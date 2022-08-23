@@ -1,0 +1,15 @@
+.Container-label {
+  margin-top: 100px;
+  margin-left: -40%;
+}
+
+.Container-label label {
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(102, 178, 255);
+  border-radius: 10px;
+  color: white;
+  width: 400px;
+  box-shadow: 2px 5px rgb(192, 192, 192, 0.6);
+}
