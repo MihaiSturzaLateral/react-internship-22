@@ -5,6 +5,7 @@ import "./Details.css";
 import MapComponent from "../../components/MapComponent/MapComponent";
 import axios from "axios";
 import moment from "moment";
+import Header from "../../components/Header/Header";
 
 const Details = () => {
   const [MagProp, setMagProp] = useState({});
@@ -21,7 +22,7 @@ const Details = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   console.log(mapData);
 
@@ -36,43 +37,46 @@ const Details = () => {
   };
 
   return (
-    <div className="detailsContainer">
-      <div className="leftDiv">
-        <div className="leftTop">
-          <Link to="/">
-            <button className="backButton">Go back</button>
-          </Link>
-          <h2 className="pageTitle">EarthQuake Details:</h2>
+    <>
+      <Header />
+      <div className="detailsContainer">
+        <div className="leftDiv">
+          <div className="leftTop">
+            <Link to="/">
+              <button className="backButton">Go back</button>
+            </Link>
+            <h2 className="pageTitle">EarthQuake Details:</h2>
+          </div>
+          <div className="leftBottom">
+            <LabelCard title="Title: " content={MagProp.title} />
+            <LabelCard title="Place: " content={MagProp.place} />
+            <LabelCard
+              title="Time: "
+              //content={moment(MagProp.time).format("DD.MM.yyyy hh:mm:ss")}
+              content={Date(MagProp.time)}
+            />
+            <LabelCard title="Status: " content={MagProp.status} />
+            <LabelCard
+              title="Tsunami risk: "
+              content={MagProp.tsunami === 1 ? "risk" : "no risk"}
+            />
+          </div>
         </div>
-        <div className="leftBottom">
-          <LabelCard title="Title: " content={MagProp.title} />
-          <LabelCard title="Place: " content={MagProp.place} />
-          <LabelCard
-            title="Time: "
-            //content={moment(MagProp.time).format("DD.MM.yyyy hh:mm:ss")}
-            content={Date(MagProp.time)}
-          />
-          <LabelCard title="Status: " content={MagProp.status} />
-          <LabelCard
-            title="Tsunami risk: "
-            content={MagProp.tsunami === 1 ? "risk" : "no risk"}
-          />
+        <div className="rightDiv">
+          <div
+            className="magnitudeDiv"
+            style={{ backgroundColor: `${colorFunc()}` }}
+          >
+            <span className="magnitudeLabel">{`Magnitude: ${MagProp?.mag?.toFixed(
+              2
+            )}`}</span>
+          </div>
+          <div className="mapComp">
+            {<MapComponent earthquakes={mapData} height={500} />}
+          </div>
         </div>
       </div>
-      <div className="rightDiv">
-        <div
-          className="magnitudeDiv"
-          style={{ backgroundColor: `${colorFunc()}` }}
-        >
-          <span className="magnitudeLabel">{`Magnitude: ${MagProp?.mag?.toFixed(
-            2
-          )}`}</span>
-        </div>
-        <div className="mapComp">
-          {<MapComponent earthquakes={mapData} height={500} />}
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

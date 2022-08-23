@@ -95,3 +95,12 @@
 .List-Component::-webkit-scrollbar-button:vertical:increment:hover {
   border-color: #1266f1 transparent transparent transparent;
 }
+
+#btn:hover {
+  background-color: white;
+  color: #1266f1;
+}
+
+#btn:active {
+  transform: scale(0.95);
+}
