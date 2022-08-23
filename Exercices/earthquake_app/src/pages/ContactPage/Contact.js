@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import "./Contact.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import Header from "../../components/Header/Header";
+import axios from "axios";
 
 const Contact = () => {
   const Schema = Yup.object().shape({
@@ -27,8 +28,13 @@ const Contact = () => {
     onSubmit: (values, { resetForm }) => {
       alert("Form submitted!");
       console.log("Form data -->", values);
+      axios.post("https://6304bfbc761a3bce77eebfc9.mockapi.io/fakeData", {
+        email: values.email,
+        name: values.name,
+        message: values.message,
+      });
       handleSubmit();
-      resetForm();
+      formik.resetForm();
     },
     validationSchema: Schema,
   });
