@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -7,31 +7,34 @@ import "../Create/Create.css";
 const Create = () => {
   const navigate = useNavigate();
   const regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendData = (e) => {
-    axios.post("https://62fe9f5a41165d66bfc33c26.mockapi.io/Crud").then(() => {
-      navigate("/Read");
-    });
+    axios
+      .post(
+        "https://6306153fdde73c0f84527f22.mockapi.io/crud-operations/Crud",
+        { email, name, message }
+      )
+      .then(() => {
+        navigate("/Read");
+      });
   };
 
   const formik = useFormik({
-    initialValues: {
-      email: " ",
-      name: " ",
-      message: " ",
+    onSubmit: (email, name, message) => {
+      sendData(email, name, message);
     },
-    onSubmit: (values) => {
-      sendData(values);
-    },
-    validate: (values) => {
+    validate: (email, name) => {
       let errors = {};
 
-      if (!values.email) {
+      if (!email) {
         errors.email = "Required";
-      } else if (!values.email.match(regex)) {
+      } else if (!email.match(regex)) {
         errors.email = "Invalid email format";
       }
-      if (!values.name) {
+      if (!name) {
         errors.name = "Required";
       }
       return errors;
@@ -54,8 +57,8 @@ const Create = () => {
               type="text"
               id="email"
               name="email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
+              onChange={(e) => setEmail(e.target.value)}
+              value={formik.email}
             />
             {formik.errors.email ? (
               <div className="error">{formik.errors.email}</div>
@@ -70,8 +73,8 @@ const Create = () => {
               type="text"
               id="name"
               name="name"
-              onChange={formik.handleChange}
-              value={formik.values.name}
+              onChange={(e) => setName(e.target.value)}
+              value={formik.name}
             />
             {formik.errors.name ? (
               <div className="error">{formik.errors.name}</div>
@@ -87,15 +90,15 @@ const Create = () => {
               type="text"
               id="message"
               name="message"
-              onChange={formik.handleChange}
-              value={formik.values.message}
+              onChange={(e) => setMessage(e.target.value)}
+              value={formik.message}
             />
           </div>
           <br></br>
           <button
             className="button button-reset"
             type="reset"
-            onClick={(values) => formik.resetForm()}
+            onClick={(e) => formik.resetForm()}
           >
             Reset form
           </button>

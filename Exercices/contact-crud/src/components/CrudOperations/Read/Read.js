@@ -9,7 +9,7 @@ const Read = () => {
 
   const getData = () => {
     axios
-      .get("https://62fe9f5a41165d66bfc33c26.mockapi.io/Crud")
+      .get("https://6306153fdde73c0f84527f22.mockapi.io/crud-operations/Crud")
       .then((getData) => {
         setPost(getData.data);
       });
@@ -20,7 +20,9 @@ const Read = () => {
 
   const Delete = (id) => {
     axios
-      .delete("https://62fe9f5a41165d66bfc33c26.mockapi.io/Crud")
+      .delete(
+        `https://6306153fdde73c0f84527f22.mockapi.io/crud-operations/Crud/${id}`
+      )
       .then(() => {
         getData();
       });
@@ -33,7 +35,7 @@ const Read = () => {
           {" "}
           {"<= Go Back"}
         </button>
-        <h1>Data API</h1>
+        <h1>Read</h1>
       </div>
       <section>
         <table>
@@ -45,22 +47,22 @@ const Read = () => {
             <th>Update</th>
             <th>Delete</th>
           </tr>
-          {post?.map((values, key) => {
+          {post?.map((data, key) => {
             return (
               <tr key={key}>
-                <td>{values.id}</td>
-                <td>{values.email}</td>
-                <td>{values.name}</td>
-                <td>{values.message}</td>
+                <td>{data.id}</td>
+                <td>{data.email}</td>
+                <td>{data.name}</td>
+                <td>{data.message}</td>
                 <td>
                   <button
                     onClick={() =>
                       navigate("/Update", {
                         state: {
-                          email: values.email,
-                          name: values.name,
-                          message: values.message,
-                          id: values.id,
+                          updatedId: data.id,
+                          updatedEmail: data.email,
+                          updatedName: data.name,
+                          updatedMessage: data.message,
                         },
                       })
                     }
@@ -69,7 +71,7 @@ const Read = () => {
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => Delete(values.id)}>Delete</button>
+                  <button onClick={() => Delete(data.id)}>Delete</button>
                 </td>
               </tr>
             );

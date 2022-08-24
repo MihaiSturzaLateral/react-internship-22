@@ -17,13 +17,18 @@ td{
 }
 
 td button{
-    background-color: gray;
+    background-color: #00a1f4;
     color:white;
     text-decoration: none;
     border: 2px solid transparent;
     border-radius: 5px;
     height: 30px;
     width: auto;
+}
+
+td button:hover {
+    background-color:#61b6b2;
+    color: white;
 }
 
 .buttonBack{

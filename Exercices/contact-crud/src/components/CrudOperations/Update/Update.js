@@ -7,37 +7,45 @@ const Update = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [id, setId] = useState(null);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
 
-  const sendData = (values) => {
+  const { updatedId, updatedEmail, updatedName, updatedMessage } =
+    location.state || {};
+
+  const sendData = () => {
     axios
-      .put(`https://62fe9f5a41165d66bfc33c26.mockapi.io/Crud/${id}`, values)
+      .put(
+        `https://6306153fdde73c0f84527f22.mockapi.io/crud-operations/Crud/${id}`,
+        { email, name, message }
+      )
       .then(() => {
         navigate("/Read");
       });
   };
+
   useEffect(() => {
-    setId(location.state.id);
+    setId(updatedId);
+    setEmail(updatedEmail);
+    setName(updatedName);
+    setMessage(updatedMessage);
   }, []);
 
   const formik = useFormik({
-    initialValues: {
-      email: location.state.email,
-      name: location.state.name,
-      message: location.state.message,
+    onSubmit: (email, name, message) => {
+      sendData(email, name, message);
     },
-    onSubmit: (values) => {
-      sendData(values);
-    },
-    validate: (values) => {
+    validate: (email, name) => {
       let errors = {};
 
-      if (!values.email) {
+      if (!email) {
         errors.email = "Required";
-      } else if (!values.email.match(regex)) {
+      } else if (!email.match(regex)) {
         errors.email = "Invalid email format";
       }
-      if (!values.name) {
+      if (!name) {
         errors.name = "Required";
       }
       return errors;
@@ -49,7 +57,7 @@ const Update = () => {
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
-        <h1 className="title">Contact</h1>
+        <h1 className="title">Update</h1>
         <div className="form-container">
           <h3 className="mess">Send us a message</h3>
           <br></br>
@@ -60,8 +68,8 @@ const Update = () => {
               type="text"
               id="email"
               name="email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             {formik.errors.email ? (
               <div className="error">{formik.errors.email}</div>
@@ -76,8 +84,8 @@ const Update = () => {
               type="text"
               id="name"
               name="name"
-              onChange={formik.handleChange}
-              value={formik.values.name}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             {formik.errors.name ? (
               <div className="error">{formik.errors.name}</div>
@@ -93,8 +101,8 @@ const Update = () => {
               type="text"
               id="message"
               name="message"
-              onChange={formik.handleChange}
-              value={formik.values.message}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <br></br>
