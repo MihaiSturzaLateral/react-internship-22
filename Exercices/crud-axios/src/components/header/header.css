@@ -1,0 +1,32 @@
+.meniu {
+    background-color: #1A0239;
+    margin-top: 0;
+    padding-top: 0;
+    list-style-type: none;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    text-align: right;
+    font-family: monospace;
+}
+
+li {
+    color: white;
+    width: 120px;
+    font-size: 19px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 21px;
+    position:absolute;
+    margin-left: 40px;
+    align-items: center;
+    margin-top:18px;
+    color: white;
+    font-family:monospace;
+}
+
+.home {
+    margin-left:350px;
+}

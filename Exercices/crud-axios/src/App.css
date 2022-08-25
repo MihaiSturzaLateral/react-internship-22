@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+}
+
+input {
+    margin-left: 100px;
+    padding-right: 200px;
+    width: 500px;
+    height: 30px;
+    border-radius: 3px;
+    border-color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+}
+
+.formbuttons {
+    position: absolute;
+    right: 500px;
+}
+
+Table.Row {
+    width: 500px;
+}
