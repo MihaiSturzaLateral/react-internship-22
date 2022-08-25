@@ -1,42 +1,42 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
-import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import { useNavigate } from "react-router";
-import "./Form.css";
+import { useNavigate, useLocation } from "react-router";
 
-const Form = () => {
+import { update_contactAction } from "./redux/actions/creator";
+import { useDispatch } from "react-redux";
+
+ const Update = () => {
   let navigate = useNavigate();
+  let dispatch = useDispatch();
   let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
-  const captchaRef = useRef(null);
-  const handleSubmit = () => {
-    const token = captchaRef.current.getValue();
-    captchaRef.current.reset();
-  };
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [ID, setID] = useState("");
 
+  let location = useLocation();
+  const { updatedId, EmailUpdated, NameUpdated, MessageUpdated } =
+    location.state || {};
+
+  //console.log("updateurileee  ", updatedId,EmailUpdated);
+  // console.log("Location State: ",location.state);
   const sendDatatoAPI = (email, name, message) => {
-    axios
-      .post("https://6300d36c9a1035c7f8f8c61a.mockapi.io/CrudContact", {
-        email,
-        name,
-        message,
-      })
-      .then(navigate("../read"));
+    update_contactAction(ID, { email, name, message })(dispatch)
+      .then(navigate("../read"))
+      .catch((e) => console.log(e));
   };
 
   const formik = useFormik({
-    initialValues: { email: "", name: "", message: "" },
+    initialValues: {
+      email: EmailUpdated,
+      name: NameUpdated,
+      message: MessageUpdated,
+    },
     onSubmit: (values, { resetForm }) => {
-      setEmail(email);
-      setName(name);
-      setMessage(message);
       sendDatatoAPI(values.email, values.name, values.message);
       resetForm();
-      handleSubmit();
     },
     validate: (values) => {
       let errors = {};
@@ -56,10 +56,18 @@ const Form = () => {
     },
   });
 
+  useEffect(() => {
+    setEmail(EmailUpdated);
+    setName(NameUpdated);
+    setMessage(MessageUpdated);
+    setID(updatedId);
+    //console.log("Valorileee   ", ID, email, name, message);
+  }, []);
+
   return (
     <div>
       <div className="send-us">
-        <h2>Send us a message</h2>
+        <h2>Update information</h2>
       </div>
       <form className="contact-form" onSubmit={formik.handleSubmit}>
         <div className="form-control">
@@ -109,27 +117,12 @@ const Form = () => {
           ) : null}
         </div>
         <div className="buts-form">
-          <ReCAPTCHA
-            sitekey={process.env.REACT_APP_SITE_KEY}
-            ref={captchaRef}
-          />
-          <button
-            className="btn-res"
-            type="reset"
-            onClick={() => {
-              formik.resetForm();
-              captchaRef.current.reset();
-            }}
-          >
-            Reset form
-          </button>
           <button className="btn-sub" type="submit">
-            Send message
+            Update
           </button>
         </div>
       </form>
     </div>
   );
 };
-
-export default Form;
+export default Update;

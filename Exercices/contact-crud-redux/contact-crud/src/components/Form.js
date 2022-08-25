@@ -5,7 +5,11 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import "./Form.css";
 
+import {useDispatch} from 'react-redux'
+import { add_contactAction } from "./redux/actions/creator";
+
 const Form = () => {
+  const dispatch=useDispatch();
   let navigate = useNavigate();
   let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
@@ -19,13 +23,8 @@ const Form = () => {
   const [message, setMessage] = useState("");
 
   const sendDatatoAPI = (email, name, message) => {
-    axios
-      .post("https://6300d36c9a1035c7f8f8c61a.mockapi.io/CrudContact", {
-        email,
-        name,
-        message,
-      })
-      .then(navigate("../read"));
+   add_contactAction({email,name,message})(dispatch)
+      .then(navigate("../read")).catch((e)=>{console.log(e)})
   };
 
   const formik = useFormik({

@@ -1,0 +1,69 @@
+/* Form */
+.contact-form{
+    width: 30%;
+      margin: 0px auto;
+      padding: 20px;
+      border: 1px solid #B0C4DE;
+      background: white;
+      border-radius: 0px 0px 10px 10px;
+      font-weight: bold;
+  }
+  .send-us {
+      width: 30%;
+      margin: 3em auto 0px;
+      color: black;
+      text-align: left;
+      border: 1px solid #B0C4DE;
+      border-bottom: none;
+      border-radius: 10px 10px 0px 0px;
+      padding: 20px;
+      font-weight: bold;
+  }
+  .form-control {
+      margin: 10px 0px 10px 0px;
+  }
+  .form-control label {
+      display: block;
+    text-align: left;
+      margin: 3px;
+  }
+  .form-control input {
+      height: 30px;
+      width: 93%;
+      padding: 5px 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid gray;
+  }
+  
+  #message{
+    height: 100px;
+    width: 93%;
+  }
+  .btn-sub {
+      padding: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      color:white;
+      background:#348feb;
+      border: none;
+      border-radius: 5px;
+      
+  }
+  .btn-sub:hover{
+    background-color: green;
+  }
+  .btn-res {
+      padding: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      color:white;
+      background:grey;
+      border: none;
+      border-radius: 5px;
+    margin-right: 1em;
+      
+  }
+  .buts-form{
+    text-align: right;
+  }
