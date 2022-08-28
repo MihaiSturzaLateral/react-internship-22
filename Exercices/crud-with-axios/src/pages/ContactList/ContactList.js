@@ -22,6 +22,7 @@ function ContactList() {
   const deleteElement = (id) => {
     axios.delete(`https://630120369a1035c7f8fe63c1.mockapi.io/crud/${id}`);
     setReloadPage("true");
+    setSearch("");
   };
   const searchFunction = () => {
     axios
@@ -51,6 +52,7 @@ function ContactList() {
             aria-label="Search by name"
             aria-describedby="button-addon2"
             id="search"
+            value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
           <button
