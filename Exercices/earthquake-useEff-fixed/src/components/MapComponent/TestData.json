@@ -1,0 +1,170 @@
+{
+  "type": "Feature",
+  "properties": {
+    "mag": 4.9,
+    "place": "southern Mid-Atlantic Ridge",
+    "time": 1660893163121,
+    "updated": 1660894358040,
+    "tz": null,
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ic29",
+    "felt": null,
+    "cdi": null,
+    "mmi": null,
+    "alert": null,
+    "status": "reviewed",
+    "tsunami": 0,
+    "sig": 369,
+    "net": "us",
+    "code": "6000ic29",
+    "ids": ",us6000ic29,",
+    "sources": ",us,",
+    "types": ",origin,phase-data,",
+    "nst": 42,
+    "dmin": 7.103,
+    "rms": 1.03,
+    "gap": 49,
+    "magType": "mb",
+    "type": "earthquake",
+    "title": "M 4.9 - southern Mid-Atlantic Ridge",
+    "products": {
+      "origin": [
+        {
+          "indexid": "1894517",
+          "indexTime": 1660894362205,
+          "id": "urn:usgs-product:us:origin:us6000ic29:1660894358040",
+          "type": "origin",
+          "code": "us6000ic29",
+          "source": "us",
+          "updateTime": 1660894358040,
+          "status": "UPDATE",
+          "properties": {
+            "azimuthal-gap": "49",
+            "depth": "10",
+            "depth-type": "operator assigned",
+            "error-ellipse-azimuth": "148",
+            "error-ellipse-intermediate": "14673",
+            "error-ellipse-major": "19068",
+            "error-ellipse-minor": "2835",
+            "error-ellipse-plunge": "0",
+            "error-ellipse-rotation": "269",
+            "evaluation-status": "preliminary",
+            "event-type": "earthquake",
+            "eventParametersPublicID": "quakeml:us.anss.org/eventparameters/6000ic29/1660894359",
+            "eventsource": "us",
+            "eventsourcecode": "6000ic29",
+            "eventtime": "2022-08-19T07:12:43.121Z",
+            "eventtime-error": "2.09",
+            "horizontal-error": "11",
+            "latitude": "-20.4036",
+            "latitude-error": "0.1063",
+            "longitude": "-11.5961",
+            "longitude-error": "0.1010",
+            "magnitude": "4.9",
+            "magnitude-error": "0.09",
+            "magnitude-num-stations-used": "39",
+            "magnitude-source": "us",
+            "magnitude-type": "mb",
+            "minimum-distance": "7.103",
+            "num-phases-used": "42",
+            "num-stations-used": "42",
+            "origin-source": "us",
+            "pdl-client-version": "Version 2.7.10 2021-06-21",
+            "quakeml-magnitude-publicid": "quakeml:us.anss.org/magnitude/6000ic29/mb",
+            "quakeml-origin-publicid": "quakeml:us.anss.org/origin/6000ic29",
+            "quakeml-publicid": "quakeml:us.anss.org/event/6000ic29",
+            "review-status": "reviewed",
+            "standard-error": "1.03",
+            "title": "southern Mid-Atlantic Ridge",
+            "vertical-error": "1.868"
+          },
+          "preferredWeight": 158,
+          "contents": {
+            "contents.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1660894360000,
+              "length": 195,
+              "url": "https://earthquake.usgs.gov/realtime/product/origin/us6000ic29/us/1660894358040/contents.xml"
+            },
+            "quakeml.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1660894358000,
+              "length": 3811,
+              "url": "https://earthquake.usgs.gov/realtime/product/origin/us6000ic29/us/1660894358040/quakeml.xml"
+            }
+          }
+        }
+      ],
+      "phase-data": [
+        {
+          "indexid": "1894516",
+          "indexTime": 1660894361462,
+          "id": "urn:usgs-product:us:phase-data:us6000ic29:1660894358040",
+          "type": "phase-data",
+          "code": "us6000ic29",
+          "source": "us",
+          "updateTime": 1660894358040,
+          "status": "UPDATE",
+          "properties": {
+            "azimuthal-gap": "49",
+            "depth": "10",
+            "depth-type": "operator assigned",
+            "error-ellipse-azimuth": "148",
+            "error-ellipse-intermediate": "14673",
+            "error-ellipse-major": "19068",
+            "error-ellipse-minor": "2835",
+            "error-ellipse-plunge": "0",
+            "error-ellipse-rotation": "269",
+            "evaluation-status": "preliminary",
+            "event-type": "earthquake",
+            "eventParametersPublicID": "quakeml:us.anss.org/eventparameters/6000ic29/1660894359",
+            "eventsource": "us",
+            "eventsourcecode": "6000ic29",
+            "eventtime": "2022-08-19T07:12:43.121Z",
+            "eventtime-error": "2.09",
+            "horizontal-error": "11",
+            "latitude": "-20.4036",
+            "latitude-error": "0.1063",
+            "longitude": "-11.5961",
+            "longitude-error": "0.1010",
+            "magnitude": "4.9",
+            "magnitude-error": "0.09",
+            "magnitude-num-stations-used": "39",
+            "magnitude-source": "us",
+            "magnitude-type": "mb",
+            "minimum-distance": "7.103",
+            "num-phases-used": "42",
+            "num-stations-used": "42",
+            "origin-source": "us",
+            "pdl-client-version": "Version 2.7.10 2021-06-21",
+            "quakeml-magnitude-publicid": "quakeml:us.anss.org/magnitude/6000ic29/mb",
+            "quakeml-origin-publicid": "quakeml:us.anss.org/origin/6000ic29",
+            "quakeml-publicid": "quakeml:us.anss.org/event/6000ic29",
+            "review-status": "reviewed",
+            "standard-error": "1.03",
+            "vertical-error": "1.868"
+          },
+          "preferredWeight": 158,
+          "contents": {
+            "contents.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1660894360000,
+              "length": 195,
+              "url": "https://earthquake.usgs.gov/realtime/product/phase-data/us6000ic29/us/1660894358040/contents.xml"
+            },
+            "quakeml.xml": {
+              "contentType": "application/xml",
+              "lastModified": 1660894358000,
+              "length": 115327,
+              "url": "https://earthquake.usgs.gov/realtime/product/phase-data/us6000ic29/us/1660894358040/quakeml.xml"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-11.5961, -20.4036, 10]
+  },
+  "id": "us6000ic29"
+}
