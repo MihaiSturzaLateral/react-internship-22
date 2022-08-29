@@ -1,30 +1,28 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useFormik } from "formik";
-import axios from "axios";
+import { useDispatch } from "react-redux";
+import { updateContact } from "../../redux/Actions";
 const Update = () => {
 	const location = useLocation();
-
+	let dispatch = useDispatch();
 	let regex = new RegExp("^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$");
+
+	const handleSubmit = (contact, id) => {
+		dispatch(updateContact(contact, id));
+	};
 
 	const formik = useFormik({
 		initialValues: {
-			email: "",
-			name: "",
-			message: "",
+			email: location.state.contact.email,
+			name: location.state.contact.name,
+			message: location.state.contact.message,
 		},
-		onSubmit: (values) => {
+		onSubmit: () => {
 			alert("Message sent!");
-			axios.put(
-				`https://63034c269eb72a839d7d1f7e.mockapi.io/CrudWithAxios/${location.state.id}`,
-				{
-					name: formik.values.name,
-					email: formik.values.email,
-					message: formik.values.message,
-				}
-			);
+			handleSubmit(formik.values, location.state.id);
 		},
-		onReset: (values) => {
+		onReset: () => {
 			alert("Reset form!");
 		},
 		validate: (values) => {
@@ -43,8 +41,6 @@ const Update = () => {
 			return errors;
 		},
 	});
-
-	console.log("Form errors --> ", formik.values);
 
 	return (
 		<div>
@@ -77,7 +73,7 @@ const Update = () => {
 							fontSize: 25,
 						}}
 					>
-						Create entry:
+						Update entry:
 					</div>
 					<form
 						onSubmit={formik.handleSubmit}
