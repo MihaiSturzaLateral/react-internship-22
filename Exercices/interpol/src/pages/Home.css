@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    
+}
+.mare{
+    display:flex;
+ }
+
+.cards-list{
+ display: flex;
+
+}
+.card{
+ 
+}

@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    background-color: #181818;
+    position: absolute;
+    margin-top:90vh;
+    font-size: 1.25em;
+    
+  }
+  .footer h1 {
+    color: white;
+    font-size: 1.10em;
+    width:30%;
+  }
+  .footer p {
+    color: white;
+    margin-top: 0.5em;
+    
+  }
