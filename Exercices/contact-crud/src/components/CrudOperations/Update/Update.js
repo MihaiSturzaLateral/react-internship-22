@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import { actionUpdateContact } from "../Redux/Contact/contactActions";
+import { useDispatch } from "react-redux";
 
 const Update = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const [id, setId] = useState(null);
@@ -16,13 +18,15 @@ const Update = () => {
     location.state || {};
 
   const sendData = () => {
-    axios
-      .put(
-        `https://6306153fdde73c0f84527f22.mockapi.io/crud-operations/Crud/${id}`,
-        { email, name, message }
-      )
+    actionUpdateContact(
+      { email, name, message },
+      id
+    )(dispatch)
       .then(() => {
         navigate("/Read");
+      })
+      .catch((error) => {
+        console.log("Error", error);
       });
   };
 

@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "../Create/Create.css";
+import { actionAddContact } from "../Redux/Contact/contactActions";
 
 const Create = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendData = (e) => {
-    axios
-      .post(
-        "https://6306153fdde73c0f84527f22.mockapi.io/crud-operations/Crud",
-        { email, name, message }
-      )
+  const sendData = () => {
+    actionAddContact({ email, name, message })(dispatch)
       .then(() => {
         navigate("/Read");
+      })
+      .catch((error) => {
+        console.log("Error", error);
       });
   };
 
