@@ -1,0 +1,18 @@
+h1 {
+    font-family: Great Vibes;
+    font-size: 40px;
+    margin-left:630px;
+}
+
+h2 {
+    margin-left: 680px;
+    margin-right: 710px;
+    background-color: darkblue;
+    border-color: darkblue;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    padding-left:43px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}

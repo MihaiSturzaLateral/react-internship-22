@@ -1,0 +1,20 @@
+.meniu {
+    color:darkblue;
+    font-size: 40px;
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+li {
+    margin-top: 0;
+    margin-right: 50px;
+    font-family: Great Vibes;
+    font-weight: bold;
+}
+
+.line {
+    border-bottom: 2px solid darkblue;
+}
