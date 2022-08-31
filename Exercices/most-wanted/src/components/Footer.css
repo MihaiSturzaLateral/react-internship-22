@@ -1,0 +1,34 @@
+.subsol {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    font-family: Caviar Dreams;
+    align-items: center;
+    background-color: darkred;
+    position: fixed;
+    color: white;
+    list-style-type: none;
+    height: 80px;
+}
+
+.copyright {
+    width: 600px;
+    font-size: 17px;
+    margin-left: 50px;
+}
+
+.copyright:hover {
+    color: white;
+    cursor: default;
+}
+
+.data {
+    width: 100%;
+    font-size: 17px;
+    margin-left: 50px;
+}
+
+.data:hover {
+    color: white;
+    cursor: default;
+}
