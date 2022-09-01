@@ -1,0 +1,120 @@
+.main-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.total-wanted{
+    background-color: rgba(0, 0, 0,.2);
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-wanted span{
+    font-weight: bold;
+    font-size: large;
+}
+.photo-box{
+
+    
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.check-tool{
+    height: 600px;
+    width: 400px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.list{
+    overflow: scroll;
+    height: 600px; 
+}
+.person-list h1{
+     width: 600px;
+     display: flex;
+     justify-content: center;
+     border-radius: 10px;
+}
+/* Popup style */
+.popup-box {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    margin-right: 0;
+    z-index: 2;
+  }
+.box {
+    position: relative;
+    background-color: white;
+    width: auto;
+    height: auto;
+    margin-top: calc(100vh - 85vh - 20px);
+    padding: 20px;
+    overflow: auto;
+  }
+  
+.close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #999;
+    font-size: 20px;
+  }
+.details-head{
+    margin-top: 50px;
+    
+}
+.details-notice{
+    width: 250px;
+    height: 50px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+.dt{
+    font-weight:bold;
+    font-size: large;
+}
+.details-table{
+    border: 3px solid ;
+    border-radius: 16px;
+    width: 400px;
+    margin-top: 20px;
+}
+.dt-det{
+    background-color: #999;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+}
+.dt-img{
+    margin-top: 20px;
+    margin-left: 20rem;
+}
+.dt-bottom-det{
+    border: 3px solid red ;
+    border-radius: 10px;
+}
+.dt-bottom{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
