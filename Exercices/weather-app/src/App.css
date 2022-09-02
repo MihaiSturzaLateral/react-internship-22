@@ -1,0 +1,18 @@
+.head{
+  width: 1000px;
+  height: 200px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.51); 
+box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.51);
+}
+main{
+  width: 700px;
+}
+.det{
+  margin-top: 30px;
+  width: 400px;
+  height: 500px;
+  align-items: center;
+}
+.inputs{
+  width: 300px;
+}
