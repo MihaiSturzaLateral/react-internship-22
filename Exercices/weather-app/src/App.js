@@ -1,10 +1,10 @@
-import './App.css';
-import CheckData from './components/CheckData';
+import "./App.css";
+import CheckData from "./components/CheckData";
 
 function App() {
   return (
     <div className="App">
-      <CheckData/>
+      <CheckData />
     </div>
   );
 }

@@ -1,0 +1,63 @@
+.check {
+  margin: 1em;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  width: 50%;
+}
+.but,
+.latitude,
+.longitude,
+.city {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.but {
+  margin-top: 2em;
+}
+#get-loc {
+  border-radius: 10px;
+  border: 1px solid #0080cc;
+  font-size: 1.25em;
+  width: 234px;
+  min-height: 58px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(180deg, #00b8ea 0%, #0080cc 100%);
+  margin: 0.25em;
+}
+.lat-long {
+  display: table-cell;
+}
+.results {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 50%;
+  margin: 1em;
+  padding: 10px;
+  display: flex;
+}
+#get-lat,
+#get-city {
+  border-radius: 10px;
+  border: 1px solid #0080cc;
+  font-size: 1.25em;
+  width: 234px;
+  min-height: 58px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(180deg, #00b8ea 0%, #0080cc 100%);
+  margin: 0.25em;
+}
+.container {
+  margin: 3em;
+  padding: 20px;
+}
+label {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.info {
+  margin-left: 3em;
+}
