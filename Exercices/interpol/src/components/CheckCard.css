@@ -1,0 +1,28 @@
+.image img {
+  width: 100%;
+
+}
+.cardd {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0.5em;
+}
+.image {
+  width: 50%;
+  padding:10px;
+}
+.info {
+  width: 50%;
+}
+.name{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.birth,.age,.nat{
+    border-bottom: 1px solid black;
+    margin:0.5em;
+    font-size: 1.25em;
+}
+

@@ -1,0 +1,19 @@
+.all{
+    display: flex;
+    
+}
+.check{
+    width:40%;
+    border: 1px solid black;
+    margin: 1em;
+    border-radius: 10px;
+}
+.cards-list{
+    max-height: 40em;
+    width: 40%;
+    overflow-y: scroll;
+}
+.total{
+    width:10%;
+}
+

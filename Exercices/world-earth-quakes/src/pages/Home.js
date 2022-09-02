@@ -8,58 +8,57 @@ import MapComponent from "../MapComponent/MapComponent";
 import DropDown from "../components/DropDown";
 import Header from "../components/Header";
 
-
-
 const Home = () => {
   const [button, setButton] = useState("");
   const sendData = (active) => {
     if (active) {
       setButton(active);
       console.log("From home js: ", active);
-      
+
       return active;
     }
   };
 
-  const [drop, setDrop]=useState("")
+  const [drop, setDrop] = useState("");
 
-  const sendValue=(value)=>{
-    if(value){
+  const sendValue = (value) => {
+    if (value) {
       setDrop(value);
       console.log("from drop down ", value);
       return value;
     }
-  }
+  };
 
-  const[therm, setTherm]=useState();
+  const [therm, setTherm] = useState();
 
-  const sendTherm=(searchTherm)=>{
-    if(searchTherm){
+  const sendTherm = (searchTherm) => {
+    if (searchTherm) {
       setTherm(searchTherm);
       console.log("from searchTherm ", searchTherm);
       return searchTherm;
     }
-  }
+  };
   const [placee, setPlace] = useState("");
-  const [rawData,setRawData]=useState();
+  const [rawData, setRawData] = useState();
 
   useEffect(() => {
-    getAllPlaces(`https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/${drop}_${button}.geojson`);
-  },[button,drop]);
+    getAllPlaces(
+      `https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/${drop}_${button}.geojson`
+    );
+  }, [button, drop]);
 
   const getAllPlaces = (url) => {
-    try {axios
-      .get(`${url}`)
-      .then((res) => {
-        let allPlaces = res.data.features.map((arr,key) => arr.properties);
-        console.log('this is allplaces ',allPlaces)
+    try {
+      axios.get(`${url}`).then((res) => {
+        let allPlaces = res.data.features.map((arr, key) => arr.properties);
+        console.log("this is allplaces ", allPlaces);
         setPlace(allPlaces);
         setRawData(res.data);
         return allPlaces;
-      })
-    }catch(error){console.log(error)};
-      
-    
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // const switchButtons = (param) => {
@@ -70,7 +69,7 @@ const Home = () => {
   //         'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson'
   //       );
   //       else {
-  //         const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson' 
+  //         const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson'
   //         const res=str.replace('all',drop)
   //         getAllPlaces(res)}
   //       break;
@@ -80,7 +79,7 @@ const Home = () => {
   //        'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson'
   //      );
   //      else {
-  //        const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson' 
+  //        const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson'
   //        const res=str.replace('all',drop)
   //        getAllPlaces(res)}
   //      break;
@@ -90,7 +89,7 @@ const Home = () => {
   //         'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
   //       );
   //       else {
-  //         const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson' 
+  //         const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
   //         const res=str.replace('all',drop)
   //         getAllPlaces(res)}
   //       break;
@@ -100,7 +99,7 @@ const Home = () => {
   //         'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson'
   //       );
   //       else {
-  //         const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson' 
+  //         const str='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson'
   //         const res=str.replace('all',drop)
   //         getAllPlaces(res)}
   //       break;
@@ -112,26 +111,36 @@ const Home = () => {
   //   switchButtons(button)
   // },[drop]);
 
- console.log(placee);
+  console.log(placee);
 
   return (
     <>
-    <div className="buttons">
-       {/* <Header sendTherm={sendTherm} /> */}
-      <ButtonsGroup sendData={sendData} />
-      <DropDown sendValue={sendValue}/>
+      <div className="buttons">
+        {/* <Header sendTherm={sendTherm} /> */}
+        <ButtonsGroup sendData={sendData} />
+        <DropDown sendValue={sendValue} />
       </div>
       {console.log(button)}
       <div className="map-list">
-      <div className="map">
-       <MapComponent earthquakes={rawData} width={400}/>
-       </div>
-        <div className="list-quakes">  {Array.isArray(placee)?placee.map(obj =>(<EarthQuakes labelEarth={obj.mag} paragraphEarth={obj.place} urlEarth={obj.detail} magEarth={obj.mag} rawData={rawData}/>)): null } </div>
+        <div className="map">
+          <MapComponent earthquakes={rawData} width={400} />
         </div>
-       
-       
-       
-       </>
+        <div className="list-quakes">
+          {" "}
+          {Array.isArray(placee)
+            ? placee.map((obj) => (
+                <EarthQuakes
+                  labelEarth={obj.mag}
+                  paragraphEarth={obj.place}
+                  urlEarth={obj.detail}
+                  magEarth={obj.mag}
+                  rawData={rawData}
+                />
+              ))
+            : null}{" "}
+        </div>
+      </div>
+    </>
   );
 };
 

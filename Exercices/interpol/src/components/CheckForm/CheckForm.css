@@ -1,0 +1,14 @@
+.title{
+    color:red;
+    font-size: 2em;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+}
+.type-check,.form-check{
+    font-size: 1.5em;
+    font-weight: 400;
+    margin:0.25em;
+}
+.but{
+    text-align: right;
+}

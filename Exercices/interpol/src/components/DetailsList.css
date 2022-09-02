@@ -1,0 +1,77 @@
+.container {
+  margin: 3em;
+  padding: 20px;
+}
+
+.notice {
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: white;
+}
+.warants {
+  margin: 3em;
+  margin-left: 2em;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: white;
+}
+.details {
+  width: 60%;
+}
+.detail {
+  border: 1px solid black;
+  width: 100%;
+  margin: 1em;
+  padding: 10px;
+  background-color: #d6d3db;
+  border-radius: 10px;
+  box-shadow: 5px 5px #bcabd1;
+  font-size: 1.25em;
+  color: #2f263b;
+  font-weight: 500;
+}
+.detail label {
+  color: black;
+  font-weight: bold;
+}
+.warants_info {
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 70%;
+}
+.issuing {
+  border-bottom: 2px solid red;
+  background-color: #d6d3db;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.charge {
+  color: red;
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 500;
+}
+.charge label {
+  color: red;
+  font-size: 1.25em;
+  padding: 10px;
+  font-weight: bold;
+}
+.details-image {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#img-detail {
+  width: 400px;
+  margin-left: 5em;
+  margin-top: 1em;
+}

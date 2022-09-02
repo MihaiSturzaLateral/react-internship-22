@@ -1,15 +1,25 @@
-*{
-    box-sizing: border-box;
-    
+* {
+  box-sizing: border-box;
 }
-.mare{
-    display:flex;
- }
-
-.cards-list{
- display: flex;
-
+.all-cards {
+  display: flex;
+  margin:1em;
 }
+
 .card{
- 
+    padding:1em;
+   margin:0.5em;
+
+}
+.container{
+    margin:1em;
+    padding: 0;
+}
+.total{
+    background-color: grey;
+    font-size: 1.25em;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 50%;
 }

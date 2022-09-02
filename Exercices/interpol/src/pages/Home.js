@@ -14,8 +14,11 @@ const Home = () => {
   const [button, setButton] = useState("");
 
   let dispatch = useDispatch();
-  const { persons } = useSelector((state) => state);
 
+  const { dataArray: persons, totalNum } = useSelector(
+    (state) => state.persons
+  );
+  console.log(persons);
   const sendData = (active) => {
     if (active) {
       setButton(active);
@@ -26,7 +29,8 @@ const Home = () => {
     }
   };
   useEffect(() => {
-    if (button === 'all') dispatch(get_allAction(button));
+    //console.log(persons);
+    if (button === "all") dispatch(get_allAction(button));
     else dispatch(get_personsAction(button));
   }, [button]);
 
@@ -49,25 +53,26 @@ const Home = () => {
   //   };
 
   return (
-    <div>
+    <div className="container">
       <ButtonsGroup sendData={sendData} />
-      <div className="mare">
-        <div className="cards-list">
-          <div className="card">
-            {Array.isArray(persons)
-              ? persons.map((obj, key) => (
-                  <Cards
-                    key={key}
-                    imgWanted={obj._links.thumbnail.href}
-                    forenameWanted={obj.forename}
-                    nameWanted={obj.name}
-                    birthWanted={obj.date_of_birth}
-                    natWanted={obj.nationalities}
-                    danger={button}
-                  />
-                ))
-              : null}
-          </div>
+      <label className="total">Total: {totalNum}</label>
+      <div className="all-cards">
+        <div className="row row-cols-1  row-cols-md-3">
+          {Array.isArray(persons)
+            ? persons.map((obj, key) => (
+                <Cards
+                  className="col mb-4"
+                  key={key}
+                  imgWanted={obj?._links?.thumbnail?.href}
+                  forenameWanted={obj?.forename}
+                  nameWanted={obj?.name}
+                  birthWanted={obj?.date_of_birth}
+                  natWanted={obj?.nationalities}
+                  danger={button}
+                  urlDetails={obj?._links?.self?.href}
+                />
+              ))
+            : null}
         </div>
       </div>
     </div>

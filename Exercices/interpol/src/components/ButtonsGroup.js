@@ -19,10 +19,10 @@ function ButtonsGroup({ sendData }) {
           setActive("Yellow Notices");
           sendData("yellow");
         }}>Yellow Notices</Button>{" "}
-        <Button variant="warning" onClick={() => {
-          setActive("Yellow");
+        <Button variant="info" onClick={() => {
+          setActive("ALL");
           sendData("all");
-        }}>Yellow</Button>{" "}
+        }}>ALL</Button>{" "}
     </>
   );
 }
