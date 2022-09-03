@@ -1,0 +1,12 @@
+.App{
+  display:flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.title{
+  color:green;
+}
+.titleDiv{
+  text-align: center;
+  margin-top: 5%;
+}
