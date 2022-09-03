@@ -45,7 +45,6 @@ const Design = () => {
               }
               if (town && !lat && !long) {
                 dispatch(fetchDataByCity(town));
-                dispatch(fetchCoordinates(town));
                 setVisible(true);
                 setCoord(false);
               }
