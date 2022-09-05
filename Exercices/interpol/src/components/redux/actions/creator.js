@@ -1,4 +1,4 @@
-import { get_persons, get_all } from "./dataActions";
+import { get_persons, get_all, add_report } from "./dataActions";
 import axios from "axios";
 
 export const get_personsAction = (button) => {
@@ -48,4 +48,15 @@ export const get_allAction = (button) => {
         console.log("ERoare la afisare red");
       });
   };
+};
+
+export const add_reportAction = (report) => (dispatch) => {
+  const add_reportPromise = axios
+    .post("https://6300d36c9a1035c7f8f8c61a.mockapi.io/interpolRed", report)
+    .then((response) => {
+      dispatch(add_report(response.data));
+    })
+    .catch((error)=>{
+      console.log("Eroare la adaugare raport: ",error);
+    })
 };

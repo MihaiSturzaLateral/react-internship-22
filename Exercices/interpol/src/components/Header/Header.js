@@ -29,7 +29,9 @@ function NavScrollExample() {
               Check Tool
             </Link>
           </Nav>
-          <label style={{ color: "white" }}>My reports</label>
+          <Link to="/myReports" className="text-link">
+              My reports 
+            </Link>
           <button>Submit Report</button>
         </Navbar.Collapse>
       </Container>

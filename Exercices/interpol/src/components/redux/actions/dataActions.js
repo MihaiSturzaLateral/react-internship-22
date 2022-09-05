@@ -16,3 +16,10 @@ export const get_all = (persons, button, total) => {
     totalNum: total,
   };
 };
+
+export const add_report = (report) => {
+  return {
+    type: types.ADD_REPORT,
+    payload: report,
+  };
+};

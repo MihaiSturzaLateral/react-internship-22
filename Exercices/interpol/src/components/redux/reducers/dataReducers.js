@@ -23,6 +23,9 @@ export const dataReducer = (state = initialState, action) => {
         totalNum: action.totalNum,
       };
     }
+    case types.ADD_REPORT:{
+      return [...state,payload];
+    }
 
     default:
       return state;
