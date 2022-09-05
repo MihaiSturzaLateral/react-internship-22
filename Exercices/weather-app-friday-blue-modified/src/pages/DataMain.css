@@ -1,0 +1,77 @@
+.get-location {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 27px -4px #000000;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+label,
+input {
+  font-weight: 700;
+  float: left;
+}
+.latitude,
+.longitude,
+.city {
+  padding-bottom: 0.7rem;
+}
+.city-value {
+  color: rgb(36, 36, 175);
+}
+.lat-long-city-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 800px;
+  height: 400px;
+  margin: 2rem auto;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 27px -4px #000000;
+}
+.buttons-lat-lon-city {
+  display: grid;
+  grid-template-columns: 250px;
+  align-content: center;
+  justify-content: center;
+
+  gap: 2rem;
+}
+.location-title {
+  display: grid;
+  align-content: center;
+  justify-content: left;
+  padding: 0.5rem;
+  background-color: rgb(187, 234, 187);
+  height: 3rem;
+  border: 1px solid rgb(104, 189, 104);
+  color: #555;
+  font-weight: 600;
+}
+.weather-description,
+.sunrise,
+.sunset,
+.vant,
+.temperatura {
+  color: rgb(34, 114, 34);
+  text-align: left;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+}
+.details-container-of-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.details-container-weather {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  /* align-items: center; */
+}

@@ -1,0 +1,112 @@
+.App {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(216, 215, 220) 0%,
+    rgba(223, 189, 200, 1) 33%,
+    rgba(207, 209, 228, 1) 72%,
+    rgb(8, 198, 236) 100%
+  );
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Navbar */
+nav ul a {
+  color: #555;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+nav {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(223, 189, 200, 1) 0%,
+    rgba(0, 212, 255, 1) 16%,
+    rgba(207, 209, 228, 1) 72%
+  );
+}
+
+/* Create */
+.form {
+  display: grid;
+  justify-content: center;
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin-top: 0;
+  width: 40vw;
+  max-width: 800px;
+  min-height: 60vh;
+  margin: 0 auto;
+}
+
+.contact-title {
+  margin-top: 0;
+  text-align: left;
+  margin-left: 5rem;
+  margin: 2rem auto;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 75px);
+}
+
+.form h3 {
+  font-size: 2rem;
+}
+input,
+textarea {
+  width: 100%;
+}
+.read {
+  width: 100%;
+}
+.active {
+  background-color: blue;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+}
+.form-control {
+  background: transparent !important;
+}
+.form-control label {
+  color: white;
+  font-size: 1.3rem;
+}
