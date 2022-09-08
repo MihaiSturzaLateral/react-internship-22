@@ -7,36 +7,46 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import ModalForm from "../ModalForm/ModalForm";
+import { useState } from "react";
 
-function NavScrollExample() {
+function Header() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const getModalState = (modalState) => {
+    setModalIsOpen(modalState);
+  };
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid style={{ backgroundColor: "	#181818" }}>
-        <Navbar.Brand href="#" style={{ color: "	red" }}>
-          Most WANTED
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Link to="/" className="text-link">
-              Home
+    <>
+      <Navbar bg="light" expand="lg">
+        <Container fluid style={{ backgroundColor: "	#181818" }}>
+          <Navbar.Brand href="#" style={{ color: "	red" }}>
+            Most WANTED
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Link to="/" className="text-link">
+                Home
+              </Link>
+              <Link to="/check" className="text-link">
+                Check Tool
+              </Link>
+            </Nav>
+            <Link to="/myReports" className="text-link">
+              My reports
             </Link>
-            <Link to="/check" className="text-link">
-              Check Tool
-            </Link>
-          </Nav>
-          <Link to="/myReports" className="text-link">
-              My reports 
-            </Link>
-          <button>Submit Report</button>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            <button onClick={() => setModalIsOpen(true)}>Submit Report</button>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <ModalForm getModalState={getModalState} modalIsOpen={modalIsOpen} />
+    </>
   );
 }
 
-export default NavScrollExample;
+export default Header;

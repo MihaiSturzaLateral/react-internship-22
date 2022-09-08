@@ -21,11 +21,12 @@ const CheckCard = ({
   const navigateToDetails = () => {
     navigate("../details", { state: { urlDetails } });
   };
+
   return (
     <>
       <div className="cardd">
-        <div className="image">
-          <img alt="img" src={imgWanted} />
+        <div className="image-card">
+          <img  alt="img" src={imgWanted} />
         </div>
         <div className="info">
           <div className="name">

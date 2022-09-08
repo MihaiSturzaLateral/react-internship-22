@@ -11,8 +11,6 @@ const Check = () => {
     (state) => state.persons
   );
 
-  console.log(persons, " --> PERSONS");
-
   useEffect(() => {
     dispatch(get_allAction());
   }, []);
@@ -59,13 +57,11 @@ const Check = () => {
                         getAges(val?.date_of_birth) >= checkFilter[3] ||
                         val?.sex_id === checkFilter[5])
                     ) {
-                      console.log("this is val --> ", val);
                       return val;
                     }
                     return null;
                   })
                   .map((obj, key) => {
-                    console.log("OBJ --> ", obj);
                     return (
                       <CheckCard
                         key={key}

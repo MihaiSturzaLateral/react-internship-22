@@ -1,13 +1,14 @@
 .text-link {
-    color: white;
-    text-decoration: none;
-    margin-left: 1em;
-  }
-  label{
-    margin-right: 1em;
-  }
-button{
-    background-color: #DC143C;
-    color:white;
-    border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  margin-left: 1em;
+}
+label {
+  margin-right: 1em;
+}
+button {
+  background-color: #dc143c;
+  color: white;
+  border-radius: 10px;
+  margin-left: 1em;
 }

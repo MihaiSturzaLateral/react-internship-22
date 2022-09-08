@@ -3,23 +3,26 @@
 }
 .all-cards {
   display: flex;
-  margin:1em;
+  margin: 1em;
 }
 
-.card{
-    padding:1em;
-   margin:0.5em;
-
+.card {
+  padding: 1em;
+  margin: 0.5em;
 }
-.container{
-    margin:1em;
-    padding: 0;
+.container {
+  margin: 1em;
+  padding: 0;
 }
-.total{
-    background-color: grey;
-    font-size: 1.25em;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 50%;
+.total {
+  background-color: rgb(16, 85, 246);
+  font-size: 1.25em;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 50%;
+}
+.pag {
+  text-align: center;
+  margin-left: 5em;
 }

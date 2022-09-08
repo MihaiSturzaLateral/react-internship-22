@@ -1,32 +1,36 @@
 import Modal from "react-modal";
-import { useState, useRef } from "react";
+
 import { useNavigate } from "react-router-dom";
-import { useFormik } from "formik";
+import { FormikProvider, useFormik } from "formik";
 import { useDispatch } from "react-redux";
-import { React } from "react";
+import { React, useEffect, useState } from "react";
 import Select from "react-select";
 import "./ModalForm.css";
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import { add_reportAction } from "../redux/actions/creator";
+import SelectFileButton from "../SelectFileButton";
 
-const ModalForm = () => {
+const ModalForm = ({ getModalState, modalIsOpen }) => {
   const dispatch = useDispatch();
   let navigate = useNavigate();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [nationality, setNationality] = useState("");
-  const [notice, setNotice] = useState("");
-  const [sex, setSex] = useState("");
-
   const options = [
     { value: "Red", label: "RED" },
     { value: "Yellow", label: "YELLOW" },
   ];
-
-  const sendDatatoAPI = (firstName, lastName, nationality, notice, sex) => {
-    add_reportAction({ firstName, lastName, nationality, notice, sex })(
-      dispatch
-    )
+  const urlImage =
+    "https://i.pinimg.com/originals/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg";
+  const sendDatatoAPI = (
+    firstName,
+    lastName,
+    nationality,
+    notice,
+    sex,
+    birthDate
+  ) => {
+    add_reportAction(
+      { firstName, lastName, nationality, notice, sex, birthDate, urlImage },
+      notice
+    )(dispatch)
       .then(navigate("../myReports"))
       .catch((e) => console.log(e));
   };
@@ -38,23 +42,18 @@ const ModalForm = () => {
       nationality: "",
       notice: "",
       sex: "",
+      birthDate: "",
     },
     onSubmit: (values) => {
-      setFirstName(values.firstName);
-      setLastName(values.lastName);
-      setNationality(nationality);
-      setNotice(notice);
-      setSex(sex);
       console.log("VAlues->>>", values);
       sendDatatoAPI(
         values.firstName,
         values.lastName,
         values.nationality,
-        values.notice,
-        values.sex
+        values.notice.value,
+        values.sex,
+        values.birthDate
       );
-
-      //resetForm();
     },
     validate: (values) => {
       let errors = {};
@@ -74,119 +73,145 @@ const ModalForm = () => {
       return errors; // must return an object with errors
     },
   });
+
   return (
-    <div>
-      <div className="send-us">
-        <h2>Create</h2>
-      </div>
-      <form className="contact-form" onSubmit={formik.handleSubmit}>
-        <div className="form-control">
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            type="text"
-            placeholder="First name"
-            onFocus={(e) => (e.target.placeholder = "")}
-            id="firstName"
-            name="firstName"
-            onChange={formik.handleChange}
-            value={formik.values.firstName}
-          />
-          {formik.errors.firstName ? (
-            <div className="error">{formik.errors.firstName}</div>
-          ) : null}
-        </div>
-        <div className="form-control">
-          <label htmlFor="name">Last Name:</label>
-          <input
-            type="text"
-            placeholder="Last name"
-            onFocus={(e) => (e.target.placeholder = "")}
-            id="lastName"
-            name="lastName"
-            onChange={formik.handleChange}
-            value={formik.values.lastName}
-          />
-          {formik.errors.lastName ? (
-            <div className="error">{formik.errors.lastName}</div>
-          ) : null}
+    <Modal isOpen={modalIsOpen}>
+      <div>
+        <div className="send-us">
+          <h2>Create</h2>
         </div>
 
-        <div className="form-control">
-          <label htmlFor="nationality">Nationality:</label>
-          <input
-            type="text"
-            id="nationality"
-            placeholder="Nationality"
-            onFocus={(e) => (e.target.placeholder = "")}
-            name="nationality"
-            onChange={formik.handleChange}
-            value={formik.values.nationality}
-          />
-          {formik.errors.nationality ? (
-            <div className="error">{formik.errors.nationality}</div>
-          ) : null}
-        </div>
-        {/* <div className="form-control">
-          <label htmlFor="Notice">Notice color:</label>
-          <Select
-            options={options}
-            value={options.value}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.notice ? (
-            <div className="error">{formik.errors.notice}</div>
-          ) : null}
-        </div>
-        <div className="form-control">
-          <label>Sex: </label>
-          <RadioGroup
-            aria-labelledby="demo-controlled-radio-buttons-group"
-            name="controlled-radio-buttons-group"
-            value={formik.values.sex}
-            //onChange={formik.handleChange}
-          >
-            <FormControlLabel
-              value="female"
-              control={<Radio />}
-              label="Female"
-            />
-            <FormControlLabel value="male" control={<Radio />} label="Male" />
-          </RadioGroup>
-        </div> */}
-        <div className="buts-form">
-          <button
-            className="btn-res"
-            type="reset"
-            onClick={() => {
-              formik.resetForm();
-            }}
-          >
-            Reset form
-          </button>
-          <button
-            className="btn-sub"
-            type="submit"
-            // onClick={() => {
-            //   console.log(
-            //     "data --> ",
-            //     firstName,
-            //     lastName,
-            //     sex,
-            //     notice,
-            //     nationality
-            //   );
-            // }}
-            onSubmit={formik.handleSubmit}
-            // onClick={() => {
-            //   console.log("CLICKED");
-            //   formik.handleSubmit()
-            // }}
-          >
-            Save Changes
-          </button>
-        </div>
-      </form>
-    </div>
+        <FormikProvider value={formik}>
+          <form className="contact-form" onSubmit={formik.handleSubmit}>
+            <div className="form-control">
+              <label className="inf" htmlFor="firstName">
+                First Name:
+              </label>
+              <input
+                type="text"
+                placeholder="First name"
+                onFocus={(e) => (e.target.placeholder = "")}
+                id="firstName"
+                name="firstName"
+                onChange={formik.handleChange}
+                value={formik.values.firstName}
+              />
+              {formik.errors.firstName ? (
+                <div className="error">{formik.errors.firstName}</div>
+              ) : null}
+            </div>
+            <div className="form-control">
+              <label className="inf" htmlFor="name">
+                Last Name:
+              </label>
+              <input
+                type="text"
+                placeholder="Last name"
+                onFocus={(e) => (e.target.placeholder = "")}
+                id="lastName"
+                name="lastName"
+                onChange={formik.handleChange}
+                value={formik.values.lastName}
+              />
+              {formik.errors.lastName ? (
+                <div className="error">{formik.errors.lastName}</div>
+              ) : null}
+            </div>
+            <div className="form-control">
+              <label className="inf" htmlFor="birthDate">
+                Birth date:
+              </label>
+              <input
+                type="text"
+                placeholder="Birth date"
+                onFocus={(e) => (e.target.placeholder = "")}
+                id="birthDate"
+                name="birthDate"
+                onChange={formik.handleChange}
+                value={formik.values.birthDate}
+              />
+            </div>
+
+            <div className="form-control">
+              <label className="inf" htmlFor="nationality">
+                Nationality:
+              </label>
+              <input
+                type="text"
+                id="nationality"
+                placeholder="Nationality"
+                onFocus={(e) => (e.target.placeholder = "")}
+                name="nationality"
+                onChange={formik.handleChange}
+                value={formik.values.nationality}
+              />
+              {formik.errors.nationality ? (
+                <div className="error">{formik.errors.nationality}</div>
+              ) : null}
+            </div>
+            <div className="form-control">
+              <label className="inf" htmlFor="Notice">
+                Notice color:
+              </label>
+              <Select
+                name="notice"
+                options={options}
+                onChange={(v) => formik.setFieldValue("notice", v)}
+              />
+              {formik.errors.notice ? (
+                <div className="error">{formik.errors.notice}</div>
+              ) : null}
+            </div>
+            <div className="form-control">
+              <label className="inf">Sex: </label>
+              <RadioGroup
+                aria-labelledby="demo-controlled-radio-buttons-group"
+                name="sex"
+                value={formik.values.sex}
+                onChange={(event) => {
+                  formik.setFieldValue("sex", event.currentTarget.value);
+                }}
+              >
+                <FormControlLabel
+                  value="female"
+                  control={<Radio />}
+                  label="Female"
+                />
+                <FormControlLabel
+                  value="male"
+                  control={<Radio />}
+                  label="Male"
+                />
+              </RadioGroup>
+            </div>
+
+            <div className="buts-form">
+              <button
+                className="btn-cls"
+                onClick={() => {
+                  getModalState(!modalIsOpen);
+                }}
+              >
+                Close{" "}
+              </button>
+              <button
+                className="btn-res"
+                type="reset"
+                onClick={() => {
+                  formik.resetForm();
+                }}
+              >
+                Reset form
+              </button>
+              <button className="btn-sub" type="submit">
+                Save Changes
+              </button>
+              <SelectFileButton />
+            </div>
+          </form>
+        </FormikProvider>
+      </div>
+    </Modal>
   );
 };
 

@@ -71,7 +71,7 @@
   flex-wrap: nowrap;
 }
 #img-detail {
-  width: 400px;
+  width: 200%;
   margin-left: 5em;
   margin-top: 1em;
 }

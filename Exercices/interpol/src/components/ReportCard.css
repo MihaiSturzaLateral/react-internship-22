@@ -1,0 +1,28 @@
+.card-report {
+  margin: 1em;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 20%;
+  padding: 10px;
+}
+.name {
+  margin-left: 0.5em;
+}
+#birth,
+#age,
+#nat,
+#sex {
+  font-weight: 500;
+}
+.btn-edit,
+.btn-delete {
+  margin: 0.5em;
+  width: 5em;
+  height: 2.2em;
+}
+.btn-edit {
+  background-color: green;
+}
+.image-rep img{
+  width:230px;
+}

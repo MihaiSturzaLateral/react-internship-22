@@ -15,14 +15,24 @@ function ButtonsGroup({ sendData }) {
       >
         Red Notices
       </Button>{" "}
-      <Button variant="warning" onClick={() => {
+      <Button
+        variant="warning"
+        onClick={() => {
           setActive("Yellow Notices");
           sendData("yellow");
-        }}>Yellow Notices</Button>{" "}
-        <Button variant="info" onClick={() => {
+        }}
+      >
+        Yellow Notices
+      </Button>{" "}
+      <Button
+        variant="info"
+        onClick={() => {
           setActive("ALL");
           sendData("all");
-        }}>ALL</Button>{" "}
+        }}
+      >
+        ALL
+      </Button>{" "}
     </>
   );
 }

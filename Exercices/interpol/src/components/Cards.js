@@ -3,7 +3,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/esm/Button";
 import "./Cards.css";
 import { useNavigate } from "react-router-dom";
-
+import { getEmojiFlag, getUnicode } from "countries-list";
 function Cards({
   imgWanted,
   forenameWanted,
@@ -30,7 +30,9 @@ function Cards({
       <label className="card-label" style={{ backgroundColor: `${danger}` }}>
         Wanted
       </label>
-      <Card.Img variant="top" src={imgWanted} />
+      
+      <Card.Img  className="image" variant="top" src={imgWanted} />
+  
       <Card.Body>
         <Card.Title>
           {forenameWanted} {nameWanted}
@@ -39,7 +41,9 @@ function Cards({
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Date of birth: {birthWanted}</ListGroup.Item>
         <ListGroup.Item>Age: {getAges(birthWanted)}</ListGroup.Item>
-        <ListGroup.Item>Nationalities: {natWanted}</ListGroup.Item>
+        <ListGroup.Item>
+          Nationalities: {natWanted?.map((obj) => getEmojiFlag(obj))}
+        </ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Button

@@ -71,7 +71,11 @@ const DetailsList = ({ urlDetails }) => {
             </div>
           </div>
           <div className="image">
-            <img id="img-detail"src={details?._links?.thumbnail?.href} alt="imagine"></img>
+            <img
+              id="img-detail"
+              src={details?._links?.thumbnail?.href}
+              alt="imagine"
+            ></img>
           </div>
         </div>
       </div>

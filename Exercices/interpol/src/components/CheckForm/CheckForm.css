@@ -1,14 +1,19 @@
-.title{
-    color:red;
-    font-size: 2em;
-    font-weight: 500;
-    border-bottom: 1px solid black;
+.title {
+  color: red;
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: 1px solid #bcabd1;
 }
-.type-check,.form-check{
-    font-size: 1.5em;
-    font-weight: 400;
-    margin:0.25em;
+.type-check,
+.form-check {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0.25em;
 }
-.but{
-    text-align: right;
+.but {
+  text-align: right;
+}
+.formm {
+  box-shadow: 5px 5px #38363a;
+  border-radius: 10px;
 }

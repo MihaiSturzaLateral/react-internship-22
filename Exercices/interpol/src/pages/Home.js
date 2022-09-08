@@ -8,49 +8,35 @@ import {
   get_allAction,
   get_personsAction,
 } from "../components/redux/actions/creator";
+import Pagination from "../components/Pagination";
 
 const Home = () => {
-  // const [wanted, setWanted] = useState();
   const [button, setButton] = useState("");
+
+  const [currentPage, setCurentPage] = useState(1);
 
   let dispatch = useDispatch();
 
   const { dataArray: persons, totalNum } = useSelector(
     (state) => state.persons
   );
-  console.log(persons);
+
   const sendData = (active) => {
     if (active) {
       setButton(active);
 
-      console.log("From home js: ", active);
-
       return active;
     }
   };
+
+  const paginate = (pageNumber) => {
+    setCurentPage(pageNumber);
+  };
+
   useEffect(() => {
-    //console.log(persons);
-    if (button === "all") dispatch(get_allAction(button));
-    else dispatch(get_personsAction(button));
-  }, [button]);
-
-  // GET wanted fara Redux
-
-  //   useEffect(() => {
-  //     getAllWanted(`https://ws-public.interpol.int/notices/v1/${button}`);
-  // }, [button]);
-  //   const getAllWanted = (url) => {
-  //     try {
-  //       axios.get(`${url}`).then((res) => {
-  //         let allWanted = res.data._embedded.notices;
-  //         console.log("this is allWanted ", allWanted);
-  //         setWanted(allWanted);
-  //         return allWanted;
-  //       });
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
+    if (button === "all") dispatch(get_allAction(button, currentPage));
+    else dispatch(get_personsAction(button, currentPage));
+  }, [button, currentPage]);
 
   return (
     <div className="container">
@@ -74,6 +60,9 @@ const Home = () => {
               ))
             : null}
         </div>
+      </div>
+      <div className="pag">
+        <Pagination paginate={paginate} />
       </div>
     </div>
   );

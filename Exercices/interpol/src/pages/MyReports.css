@@ -1,0 +1,10 @@
+.title-reports {
+  background-color: #dc143c;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+}

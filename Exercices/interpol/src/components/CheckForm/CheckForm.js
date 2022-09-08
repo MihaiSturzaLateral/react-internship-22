@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
-import './CheckForm.css'
+import "./CheckForm.css";
 
 const CheckForm = ({ sendCheck }) => {
   const [firstName, setFirstName] = useState("");
@@ -31,7 +31,7 @@ const CheckForm = ({ sendCheck }) => {
 
   return (
     <>
-      <Form style={{ padding: "10px" }}>
+      <Form className="formm" style={{ padding: "10px" }}>
         <div className="title"> Check tool</div>
         <Form.Group className="mb-3">
           <Form.Label className="type-check">First Name</Form.Label>
@@ -97,28 +97,28 @@ const CheckForm = ({ sendCheck }) => {
             </label>
           </div>
           <div className="form-check">
-          <input
-            onChange={(e) => updateSex(e.target.value)}
-            className="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            value="M"
-          />
-          <label className="form-check-label" for="flexRadioDefault2">
-            Male
-          </label>
+            <input
+              onChange={(e) => updateSex(e.target.value)}
+              className="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              value="M"
+            />
+            <label className="form-check-label" for="flexRadioDefault2">
+              Male
+            </label>
           </div>
         </Form.Group>
         <div className="but">
-        <Button 
-          variant="danger"
-          onClick={() =>
-            sendCheck([firstName, lastName, nationality, valMin, valMax, sex])
-          }
-        >
-          Search
-        </Button>
+          <Button
+            variant="danger"
+            onClick={() =>
+              sendCheck([firstName, lastName, nationality, valMin, valMax, sex])
+            }
+          >
+            Search
+          </Button>
         </div>
       </Form>
     </>
