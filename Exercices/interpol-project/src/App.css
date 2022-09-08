@@ -17,17 +17,14 @@
     font-size: large;
 }
 .photo-box{
-
-    
     width: 100px;
     height: 50px;
     position: absolute;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    border: 5px  #1C6EA4;
+    border-radius: 0px 0px 40px 0px;
 }
 .check-tool{
-    height: 600px;
+    height: 550px;
     width: 400px;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
@@ -109,12 +106,24 @@
 .dt-img{
     margin-top: 20px;
     margin-left: 20rem;
+    border: 5px solid #555;
 }
 .dt-bottom-det{
-    border: 3px solid red ;
+    border: 3px solid  ;
     border-radius: 10px;
 }
 .dt-bottom{
     margin-top: 20px;
     margin-bottom: 40px;
+}
+.footer{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer-text{
+    color: white;
+    font-weight: bold;
 }

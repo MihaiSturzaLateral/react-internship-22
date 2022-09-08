@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function CardCheck({ forname, name, date, nat, url, detUrl }) {
+function CardCheck({ forname, name, date, nat, url, detUrl, color }) {
   return (
     <div className="card mb-3" style={{ width: 540 + "px" }}>
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={url} className="img-fluid rounded-start" alt="person" />
+          <img
+            src={url}
+            width="400"
+            height="500"
+            className="img-fluid rounded-start"
+            alt="person"
+          />
         </div>
         <div className="col-md-8">
           <div className="card-body">
@@ -22,7 +28,8 @@ function CardCheck({ forname, name, date, nat, url, detUrl }) {
                 <Link
                   to="../../../components/Details"
                   className="btn btn-secondary"
-                  state={{ detUrl: detUrl }}
+                  style={{ backgroundColor: color, color: "black" }}
+                  state={{ color: color, detUrl: detUrl }}
                 >
                   View more info
                 </Link>

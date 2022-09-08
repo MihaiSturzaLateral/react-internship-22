@@ -4,6 +4,7 @@ import MyReportsCard from "./components/MyReportsCard";
 import { _fetchMyReports } from "../../redux/action";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import Footer from "../../components/Footer";
 function MyReports() {
   const { myReportsList } = useSelector((state) => ({ ...state.data }));
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ function MyReports() {
       _fetchMyReports("https://630120369a1035c7f8fe63c1.mockapi.io/interpol")
     );
   }, [dispatch]);
-  console.log(myReportsList);
+  //console.log(myReportsList);
   return (
     <>
       <NavBar />
@@ -23,16 +24,20 @@ function MyReports() {
             return (
               <MyReportsCard
                 key={e?.id}
-                fullname={e?.firstName}
+                id={e?.id}
+                firstName={e?.firstName}
+                lastName={e?.lastName}
                 nat={e?.nationality}
                 url={e?.imgUrl}
                 sex={e?.sex}
+                date={e?.date}
                 color={e?.noticeColor}
               />
             );
           })}
         </main>
       </div>
+      <Footer />
     </>
   );
 }

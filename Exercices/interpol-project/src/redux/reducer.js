@@ -7,6 +7,7 @@ const initialState = {
   myReportsList: [],
   personDet: [],
   checkList: [],
+  arrLen: 0,
 };
 
 const personReducer = (state = initialState, action) => {
@@ -43,12 +44,16 @@ const personReducer = (state = initialState, action) => {
       return {
         ...state,
         checkList: action.payload,
+        arrLen: action.len,
       };
     case types.FETCH_MY_REPORTS:
       return {
         ...state,
         myReportsList: action.payload,
       };
+    case types.UPDATE_MY_REPORTS:
+      return { ...state, ...action.payload };
+
     default:
       return state;
   }

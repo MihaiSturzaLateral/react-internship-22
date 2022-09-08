@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import Card from "./components/Card";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPerson, _fetchAllPerson } from "../../redux/action";
+import Footer from "../../components/Footer";
 function Home() {
   const { persons, personsAll } = useSelector((state) => ({ ...state.data }));
   const dispatch = useDispatch();
@@ -23,7 +24,9 @@ function Home() {
               setAll("false");
               setColor("red");
               dispatch(
-                fetchPerson("https://ws-public.interpol.int/notices/v1/red")
+                fetchPerson(
+                  `https://ws-public.interpol.int/notices/v1/red?page=1&resultPerPage=20`
+                )
               );
             }}
           >
@@ -36,7 +39,9 @@ function Home() {
               setAll("false");
               setColor("yellow");
               dispatch(
-                fetchPerson("https://ws-public.interpol.int/notices/v1/yellow")
+                fetchPerson(
+                  "https://ws-public.interpol.int/notices/v1/yellow?page=1&resultPerPage=20"
+                )
               );
             }}
           >
@@ -111,6 +116,115 @@ function Home() {
       <NavBar />
       {mainHead()}
       {main()}
+      {all === "true" ? null : (
+        <div className="mt-5">
+          <ul class="pagination justify-content-center ">
+            <li class="page-item">
+              <button className="page-link">1</button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=2&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                2
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=3&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                3
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=4&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                4
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=5&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                5
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=6&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                6
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=7&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                7
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                className="page-link"
+                onClick={() => {
+                  dispatch(
+                    fetchPerson(
+                      `https://ws-public.interpol.int/notices/v1/${color}?page=8&resultPerPage=20`
+                    )
+                  );
+                }}
+              >
+                8
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
+
+      <Footer />
     </>
   );
 }

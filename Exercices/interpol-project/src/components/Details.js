@@ -19,20 +19,25 @@ function Details() {
       )
     );
   }, [dispatch, data.color, id]);
-  // console.log(personDet);
+  //console.log(personDet);
   return (
     <>
       <NavBar />
       <div className="container-sm">
         <div className="details-head">
-          <Link type="button" to="/" className="btn btn-danger">
+          <Link
+            type="button"
+            to="/"
+            className="btn"
+            style={{ backgroundColor: data.color }}
+          >
             Back
           </Link>
           <div
             className="details-notice"
             style={{ backgroundColor: data.color }}
           >
-            Red Notice:{personDet.forename}
+            {data.color.toUpperCase()} Notice:{personDet.forename}
           </div>
         </div>
         <div className="table-img d-flex ">
@@ -64,21 +69,32 @@ function Details() {
           <div>
             <img
               src={personDet._links?.thumbnail?.href}
-              className="img-fluid dt-img"
+              className=" dt-img img"
               alt="person"
+              width="400"
+              height="500"
             ></img>
           </div>
         </div>
         <div className="container-sm dt-bottom">
-          <div className="btn btn-danger mb-3">Arrest warants:</div>
-          <div className="dt-bottom-det">
+          <div className="btn mb-3" style={{ backgroundColor: data.color }}>
+            Arrest warants:
+          </div>
+          <div className="dt-bottom-det" style={{ borderColor: data.color }}>
             {personDet.arrest_warrants?.map((e) => {
               return (
                 <>
-                  <span>Issuing country:{e.issuing_country_id}</span>
+                  <span>
+                    <span className="fw-bold"> Issuing country: </span>
+                    {e.issuing_country_id}
+                  </span>
                   <hr></hr>
-                  <h3 className="text-danger">CHARGE WITH:</h3>
-                  <p className="text-danger">{e.charge}</p>
+                  <h3 className="text" style={{ color: data.color }}>
+                    CHARGE WITH:
+                  </h3>
+                  <p className="text" style={{ color: data.color }}>
+                    {e.charge}
+                  </p>
                 </>
               );
             })}

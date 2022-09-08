@@ -1,18 +1,72 @@
 import React from "react";
-import Popup from "./Popup";
-import { useState } from "react";
-function MyReportsCard({ fullname, date, nat, url, sex, color }) {
-  const [isOpen, setIsOpen] = useState(false);
+import { useState, useEffect } from "react";
+import Modal from "react-modal";
+import { _updateMyReports, _fetchMyReports } from "../../../redux/action";
+import { useDispatch } from "react-redux";
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
+function MyReportsCard({
+  firstName,
+  lastName,
+  date,
+  nat,
+  url,
+  sex,
+  color,
+  id,
+}) {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const [firstName_, setFirstName_] = useState("");
+  const [lastName_, setLastName_] = useState("");
+  const [date_, setDate_] = useState("");
+  const [nat_, setNat_] = useState("");
+  const [url_, setUrl_] = useState("");
+  const [color_, setColor_] = useState("");
+  const [display, setDisplay] = useState("false");
+  const [reload, setReload] = useState("false");
+  useEffect(() => {
+    dispatch(
+      _fetchMyReports("https://630120369a1035c7f8fe63c1.mockapi.io/interpol")
+    );
+    setReload("false");
+  }, [dispatch, reload]);
+
+  //console.log(id);
+  function openModal() {
+    setIsOpen(true);
+  }
+  Modal.setAppElement("#root");
+  function afterOpenModal() {
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+  let subtitle;
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      width: "500px",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      borderRadius: "15px",
+    },
   };
+
   return (
     <div className="card mt-3" style={{ width: 18 + "rem" }}>
       <img src={url} className="card-img-top" alt="person" />
       <div className="photo-box" style={{ backgroundColor: color }}></div>
       <div className="card-body">
-        <h5 className="card-title">Full Name:{fullname}</h5>
+        <h5 className="card-title">
+          Full Name:{firstName} {lastName}
+        </h5>
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Date of Birth:{date}</li>
@@ -20,15 +74,38 @@ function MyReportsCard({ fullname, date, nat, url, sex, color }) {
         <li className="list-group-item">Nationalities:{nat}</li>
       </ul>
       <div className="card-body d-flex justify-content-center">
-        <button className="btn btn-secondary" onClick={() => togglePopup()}>
-          Edit info
-        </button>
-        {isOpen && (
-          <Popup
-            content={
-              <div className="check-tool">
-                <h1 className="text-danger">Create/Edit</h1>
-                <hr></hr>
+        <div>
+          <button
+            className="btn btn-secondary ms-4 "
+            onClick={() => {
+              openModal();
+              setFirstName_(firstName);
+              setLastName_(lastName);
+              setDate_(date);
+              setNat_(nat);
+              setUrl_(url);
+              setColor_(color);
+              setDisplay("false");
+            }}
+          >
+            Edit info
+          </button>
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+          >
+            <h5
+              className="modal-title text-danger"
+              ref={(_subtitle) => (subtitle = _subtitle)}
+            >
+              Edit
+            </h5>
+            <hr></hr>
+            <form>
+              <div className="modal-body">
                 <h4>First name</h4>
                 <div className="input-group input-group-sm mb-3">
                   <input
@@ -36,6 +113,10 @@ function MyReportsCard({ fullname, date, nat, url, sex, color }) {
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"
+                    onChange={(e) => {
+                      setFirstName_(e.target.value);
+                    }}
+                    value={firstName_}
                   />
                 </div>
 
@@ -46,6 +127,23 @@ function MyReportsCard({ fullname, date, nat, url, sex, color }) {
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"
+                    onChange={(e) => {
+                      setLastName_(e.target.value);
+                    }}
+                    value={lastName_}
+                  />
+                </div>
+                <h4>Date of Birth</h4>
+                <div className="input-group input-group-sm mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                    onChange={(e) => {
+                      setDate_(e.target.value);
+                    }}
+                    value={date_}
                   />
                 </div>
                 <div>
@@ -56,17 +154,25 @@ function MyReportsCard({ fullname, date, nat, url, sex, color }) {
                       className="form-control"
                       aria-label="Sizing example input"
                       aria-describedby="inputGroup-sizing-sm"
+                      onChange={(e) => {
+                        setNat_(e.target.value);
+                      }}
+                      value={nat_}
                     />
                   </div>
                 </div>
                 <div>
-                  <h4>Img Url</h4>
+                  <h4>Img url</h4>
                   <div className="input-group input-group-sm mb-3">
                     <input
                       type="text"
                       className="form-control"
                       aria-label="Sizing example input"
                       aria-describedby="inputGroup-sizing-sm"
+                      onChange={(e) => {
+                        setUrl_(e.target.value);
+                      }}
+                      value={url_}
                     />
                   </div>
                 </div>
@@ -78,55 +184,52 @@ function MyReportsCard({ fullname, date, nat, url, sex, color }) {
                       className="form-control"
                       aria-label="Sizing example input"
                       aria-describedby="inputGroup-sizing-sm"
+                      onChange={(e) => {
+                        setColor_(e.target.value);
+                      }}
+                      value={color_}
                     />
                   </div>
-                </div>
-                <div>Sex:</div>
-                <div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      nameName="inlineRadioOptions"
-                      id="inlineRadio1"
-                      value="option1"
-                    />
-                    <label className="form-check-label" for="inlineRadio1">
-                      Female
-                    </label>
-                  </div>
-                  <div className="form-check form-check-inline">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name="inlineRadioOptions"
-                      id="inlineRadio2"
-                      value="option2"
-                    />
-                    <label className="form-check-label" for="inlineRadio2">
-                      Male
-                    </label>
-                  </div>
-                </div>
-                <hr></hr>
-                <div className="d-flex justify-content-end ">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    onClick={() => {
-                      togglePopup();
-                    }}
-                  >
-                    Close
-                  </button>
-                  <button type="button" className="btn btn-danger">
-                    Save
-                  </button>
                 </div>
               </div>
-            }
-          />
-        )}
+              <div className="modal-footer">
+                {display === "true" ? (
+                  <span className="me-5 text-success">Edit done</span>
+                ) : null}
+                <button
+                  type="button"
+                  className="btn btn-secondary me-3"
+                  onClick={() => {
+                    closeModal();
+                  }}
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={() => {
+                    _updateMyReports(
+                      {
+                        firstName: firstName_,
+                        lastName: lastName_,
+                        nat: nat_,
+                        url: url_,
+                        color: color_,
+                        date: date_,
+                      },
+                      id
+                    )(dispatch);
+                    setDisplay("true");
+                    setReload("true");
+                  }}
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </Modal>
+        </div>
       </div>
     </div>
   );

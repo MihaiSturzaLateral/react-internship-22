@@ -2,19 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import Popup from "../pages/MyReports/components/Popup";
 import { _addMyReports } from "../redux/action";
 function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [nat, setNat] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const [noticeColor, setNoticeColor] = useState("");
   const [sex, setSex] = useState("");
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
+  const [date, setDate] = useState("");
   let dispatch = useDispatch();
 
   return (
@@ -41,19 +37,33 @@ function NavBar() {
         <button
           type="button"
           className="btn btn-danger ms-4"
-          onClick={() => {
-            togglePopup();
-          }}
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
         >
           Submit Report
         </button>
       </div>
-      {isOpen && (
-        <Popup
-          content={
-            <div className="check-tool">
-              <h1 className="text-danger">Create/Edit</h1>
-              <hr></hr>
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title text-danger" id="exampleModalLabel">
+                Create
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
               <h4>First name</h4>
               <div className="input-group input-group-sm mb-3">
                 <input
@@ -81,6 +91,20 @@ function NavBar() {
                   value={lastName}
                 />
               </div>
+              <h4>Date of Birth</h4>
+              <div className="input-group input-group-sm mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm"
+                  placeholder="2002/11/09"
+                  onChange={(e) => {
+                    setDate(e.target.value);
+                  }}
+                  value={date}
+                />
+              </div>
               <div>
                 <h4>Nationality</h4>
                 <div className="input-group input-group-sm mb-3">
@@ -89,6 +113,7 @@ function NavBar() {
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"
+                    placeholder="Example: RO"
                     onChange={(e) => {
                       setNat(e.target.value);
                     }}
@@ -97,7 +122,7 @@ function NavBar() {
                 </div>
               </div>
               <div>
-                <h4>Img url:</h4>
+                <h4>Img url</h4>
                 <div className="input-group input-group-sm mb-3">
                   <input
                     type="text"
@@ -119,6 +144,7 @@ function NavBar() {
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"
+                    placeholder="red/yellow"
                     onChange={(e) => {
                       setNoticeColor(e.target.value);
                     }}
@@ -157,38 +183,36 @@ function NavBar() {
                   </label>
                 </div>
               </div>
-              <hr></hr>
-              <div className="d-flex justify-content-end ">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  onClick={() => {
-                    togglePopup();
-                  }}
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-danger"
-                  onClick={() => {
-                    _addMyReports({
-                      firstName: firstName,
-                      lastName: lastName,
-                      nationality: nat,
-                      imgUrl: imgUrl,
-                      noticeColor: noticeColor,
-                      sex: sex,
-                    })(dispatch);
-                  }}
-                >
-                  Save
-                </button>
-              </div>
             </div>
-          }
-        />
-      )}
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={() => {
+                  _addMyReports({
+                    firstName: firstName,
+                    lastName: lastName,
+                    nationality: nat,
+                    imgUrl: imgUrl,
+                    noticeColor: noticeColor,
+                    date: date,
+                    sex: sex,
+                  })(dispatch);
+                }}
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 function Card({ fullname, date, nat, url, age, color, detUrl }) {
   return (
     <div className="card mt-3" style={{ width: 18 + "rem" }}>
-      <img src={url} className="card-img-top" alt="person" />
+      <img
+        src={url}
+        width="300"
+        height="300"
+        className="card-img-top"
+        alt="person"
+      />
       <div className="photo-box" style={{ backgroundColor: color }}></div>
       <div className="card-body">
         <h5 className="card-title">Full Name:{fullname}</h5>
