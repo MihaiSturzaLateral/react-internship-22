@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: changeBg 5s infinite alternate linear;
+}
+
+@keyframes changeBg {
+  0% {
+    background-color: #ee6055;
+  }
+  25% {
+    background-color: #60d394;
+  }
+  50% {
+    background-color: #aaf683;
+  }
+  75% {
+    background-color: #ffd97d;
+  }
+  100% {
+    background-color: #ff9b85;
+  }
+}
+
+.wrapper {
+  padding: 50px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  box-shadow: 3px 3px 3px 3px #888;
+  margin-left: 75px;
+  background-color: lightskyblue;
+}
+
+.latLongCityWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+label {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 5px;
+  width: 10rem;
+  padding: 15px 0px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.btnsDiv {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.header {
+  padding: 20px;
+  border-bottom: 1px solid black;
+  background-color: lightgrey;
+}
+
+.weatherWrapper {
+  padding: 50px;
+  box-shadow: 3px 3px 3px 3px #888;
+  border-radius: 10px;
+  border: 1px solid #888;
+  margin-left: 75px;
+  background-color: lightskyblue;
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.latLongBtn {
+  margin-right: 15px;
+}
+
+.cityBtn {
+  margin-left: 15px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.locBtn {
+  margin-right: 15px;
+}
+
+.reset {
+  margin-left: 15px;
+}

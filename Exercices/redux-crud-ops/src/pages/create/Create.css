@@ -1,0 +1,26 @@
+.create {
+  padding: 20px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: #888;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.bottomDiv {
+  margin-top: 30px;
+}
