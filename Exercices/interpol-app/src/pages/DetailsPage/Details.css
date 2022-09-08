@@ -1,0 +1,146 @@
+.detailsContainer {
+  margin: 0;
+}
+
+.divTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.backDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.backBtn {
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  width: 100px;
+  border-radius: 10px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.detailsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.divLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  margin: 50px 100px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameLabel {
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.lists {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listType {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.listValues {
+  color: #444;
+  font-weight: bold;
+}
+
+.divRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divBot {
+  margin: 75px 200px;
+}
+
+.warrantAlert {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+.warrantLabel {
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.warrantDetail {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+}
+
+.warrantCountry {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #777;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.warrantCharge {
+  border-top: 2px solid #ff0000;
+  text-align: justify;
+  padding: 15px;
+  color: #ff0000;
+}
+
+.warrantCharge p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.spaceDiv {
+  height: 20.7vh;
+}

@@ -1,0 +1,68 @@
+.containerHome {
+  margin: 20px;
+}
+
+.btnsDiv {
+  margin-left: 175px;
+  margin-right: 175px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.threeBtnsDiv {
+}
+
+.red {
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+  margin-right: 20px;
+  padding: 5px;
+  width: 200px;
+}
+
+.yellow {
+  background-color: #ff9900;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #ff9900;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px;
+  width: 200px;
+}
+
+.all {
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #222;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+  margin-left: 20px;
+  padding: 5px;
+  width: 200px;
+}
+
+.labelDiv {
+  color: gray;
+  background-color: #e9ecef;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.cardsDiv {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,12 @@
+.labelContainer {
+  padding: 5px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  margin: 10px 5px;
+  width: 150px;
+  box-shadow: 2px 2px 2px #999999;
+}
+
+.labelTitle {
+  margin: 5px;
+}
