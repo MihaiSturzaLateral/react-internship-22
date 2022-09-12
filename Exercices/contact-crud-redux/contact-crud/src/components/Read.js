@@ -76,7 +76,7 @@ import {
                       <Button className="but" id="update">
                         Update
                       </Button>
-                    </Link>
+                    </Lin=setk>
                   </Table.Cell>
                   <Table.Cell>
                     <Button

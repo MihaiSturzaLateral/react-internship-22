@@ -5,11 +5,11 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 import "./Form.css";
 
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 import { add_contactAction } from "./redux/actions/creator";
 
 const Form = () => {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   let navigate = useNavigate();
   let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
@@ -18,13 +18,16 @@ const Form = () => {
     const token = captchaRef.current.getValue();
     captchaRef.current.reset();
   };
-  const [email, setEmail] = useState("");
+  const [   email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
   const sendDatatoAPI = (email, name, message) => {
-   add_contactAction({email,name,message})(dispatch)
-      .then(navigate("../read")).catch((e)=>{console.log(e)})
+    add_contactAction({ email, name, message })(dispatch)
+      .then(navigate("../read"))
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   const formik = useFormik({
