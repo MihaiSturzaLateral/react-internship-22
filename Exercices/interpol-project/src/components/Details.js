@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPersonDetails } from "../redux/action";
+import countryFlagEmoji from "country-flag-emoji";
 function Details() {
   const location = useLocation();
   const data = location.state;
@@ -64,12 +65,16 @@ function Details() {
             <span className="dt-det">{personDet.place_of_birth}</span>
             <hr></hr>
             <span className="dt">Nationalities:</span>
-            <span className="dt-det">{personDet.nationalities}</span>
+            <span className="dt-det">
+              {personDet.nationalities
+                ? countryFlagEmoji.get(personDet.nationalities[0]).emoji
+                : null}
+            </span>
           </div>
           <div>
             <img
               src={personDet._links?.thumbnail?.href}
-              className=" dt-img img"
+              className=" dt-img-mobile dt-img img "
               alt="person"
               width="400"
               height="500"
@@ -86,7 +91,9 @@ function Details() {
                 <>
                   <span>
                     <span className="fw-bold"> Issuing country: </span>
-                    {e.issuing_country_id}
+                    {e.issuing_country_id
+                      ? countryFlagEmoji.get(e.issuing_country_id).emoji
+                      : null}
                   </span>
                   <hr></hr>
                   <h3 className="text" style={{ color: data.color }}>

@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { _updateMyReports, _fetchMyReports } from "../../../redux/action";
 import { useDispatch } from "react-redux";
-
+import axios from "axios";
+import countryFlagEmoji from "country-flag-emoji";
 function MyReportsCard({
   firstName,
   lastName,
@@ -26,6 +27,7 @@ function MyReportsCard({
   const [color_, setColor_] = useState("");
   const [display, setDisplay] = useState("false");
   const [reload, setReload] = useState("false");
+
   useEffect(() => {
     dispatch(
       _fetchMyReports("https://630120369a1035c7f8fe63c1.mockapi.io/interpol")
@@ -52,7 +54,7 @@ function MyReportsCard({
       left: "50%",
       right: "auto",
       bottom: "auto",
-      width: "500px",
+      width: "350px",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       borderRadius: "15px",
@@ -71,7 +73,9 @@ function MyReportsCard({
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Date of Birth:{date}</li>
         <li className="list-group-item">Sex:{sex}</li>
-        <li className="list-group-item">Nationalities:{nat}</li>
+        <li className="list-group-item">
+          Nationalities: {nat ? countryFlagEmoji.get(nat).emoji : null}
+        </li>
       </ul>
       <div className="card-body d-flex justify-content-center">
         <div>
@@ -90,6 +94,18 @@ function MyReportsCard({
           >
             Edit info
           </button>
+          <button
+            className="btn btn-danger ms-4 "
+            onClick={() => {
+              axios.delete(
+                `https://630120369a1035c7f8fe63c1.mockapi.io/interpol/${id}`
+              );
+              setReload("true");
+            }}
+          >
+            Delete
+          </button>
+
           <Modal
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}

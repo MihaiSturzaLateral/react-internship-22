@@ -84,7 +84,7 @@ function Home() {
   };
   const main = () => {
     return (
-      <main className="container-sm d-flex flex-wrap justify-content-between">
+      <main className="container-sm d-flex flex-wrap justify-content-between mobile">
         {all === "true" ? (
           allPersons()
         ) : persons.length !== 0 ? (
@@ -118,11 +118,11 @@ function Home() {
       {main()}
       {all === "true" ? null : (
         <div className="mt-5">
-          <ul class="pagination justify-content-center ">
-            <li class="page-item">
+          <ul className="pagination justify-content-center ">
+            <li className="page-item">
               <button className="page-link">1</button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {
@@ -136,7 +136,7 @@ function Home() {
                 2
               </button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {
@@ -150,7 +150,7 @@ function Home() {
                 3
               </button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {
@@ -164,7 +164,7 @@ function Home() {
                 4
               </button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {
@@ -178,7 +178,7 @@ function Home() {
                 5
               </button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {
@@ -192,7 +192,7 @@ function Home() {
                 6
               </button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {
@@ -206,7 +206,7 @@ function Home() {
                 7
               </button>
             </li>
-            <li class="page-item">
+            <li className="page-item">
               <button
                 className="page-link"
                 onClick={() => {

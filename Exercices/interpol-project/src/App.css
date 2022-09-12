@@ -127,3 +127,73 @@
     color: white;
     font-weight: bold;
 }
+.range{
+    width: 150px;
+}
+.card-style{
+    width: 540px;
+}
+.my-reports{
+    justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .navbar{
+        display: flex;
+       flex-direction: column;
+       
+    }
+    .total-wanted{
+        width: 250px;
+    }
+    .mobile{
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+        align-items: center;
+    }
+    .mobile-title{
+        margin-left: 26px;
+        align-items: center;
+    }
+    .mobile-check{
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    .check-tool{
+        width: 300px;
+        margin: 0;
+    }
+    .person-list h1{
+        width: 290px;
+
+    }
+    .person-list{
+        margin-top: 20px;
+        width: auto;
+       
+    }
+    .range{
+        width: 75px;
+    }
+    .card-style{
+        width: 300px;
+    }
+    .my-reports {
+        justify-content: center;
+        align-items: center;
+    }
+    .dt-img-mobile{
+        width: 300px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .table-img{
+        flex-wrap: wrap;
+    }
+}

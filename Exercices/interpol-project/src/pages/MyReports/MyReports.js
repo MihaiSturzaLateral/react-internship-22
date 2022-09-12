@@ -19,7 +19,7 @@ function MyReports() {
       <NavBar />
       <div className="container-sm">
         <div className="btn btn-danger mt-5">My Reports:</div>
-        <main className="d-flex flex-wrap justify-content-between ">
+        <main className="d-flex flex-wrap  my-reports ">
           {myReportsList.map((e) => {
             return (
               <MyReportsCard

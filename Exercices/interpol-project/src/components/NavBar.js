@@ -11,12 +11,13 @@ function NavBar() {
   const [noticeColor, setNoticeColor] = useState("");
   const [sex, setSex] = useState("");
   const [date, setDate] = useState("");
+
   let dispatch = useDispatch();
 
   return (
-    <nav className="navbar bg-dark">
-      <div className="d-flex justify-content-start align-items-center">
-        <div className="navbar-brand text-danger">MostWANTED</div>
+    <nav className="navbar bg-dark  ">
+      <div className="d-flex justify-content-start align-items-center mobile ">
+        <div className="navbar-brand text-danger mobile-title">MostWANTED</div>
         <Link to="/" className="nav-link text-light ms-4">
           Home
         </Link>
@@ -27,9 +28,9 @@ function NavBar() {
           Check Tool
         </Link>
       </div>
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center mobile-title">
         <Link
-          className="text-light nav-link "
+          className="text-light nav-link  "
           to="../pages/MyReports/MyReports"
         >
           My reports

@@ -24,7 +24,7 @@ function CheckTool() {
   return (
     <>
       <NavBar />
-      <main className="container-sm d-flex justify-content-between mt-5">
+      <main className="container-sm d-flex justify-content-between mt-5 mobile-check">
         <div className="check-tool">
           <h1 className="text-danger">Check Tool</h1>
           <hr></hr>
@@ -79,9 +79,8 @@ function CheckTool() {
               </label>
               <input
                 type="range"
-                className="form-range"
+                className="form-range   range"
                 id="minAge"
-                style={{ width: "150px" }}
                 min={0}
                 step={1}
                 value={minAge}
@@ -96,9 +95,8 @@ function CheckTool() {
               </label>
               <input
                 type="range"
-                className="form-range"
+                className="form-range  range"
                 id="maxAge"
-                style={{ width: "150px" }}
                 min={0}
                 step={1}
                 value={maxAge}

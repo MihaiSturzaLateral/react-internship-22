@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import countryFlagEmoji from "country-flag-emoji";
 function CardCheck({ forname, name, date, nat, url, detUrl, color }) {
   return (
-    <div className="card mb-3" style={{ width: 540 + "px" }}>
+    <div className="card mb-3 card-style">
       <div className="row g-0">
         <div className="col-md-4">
           <img
@@ -23,7 +24,9 @@ function CardCheck({ forname, name, date, nat, url, detUrl, color }) {
               <li className="list-group-item">
                 Age:{new Date().getFullYear() - new Date(date).getFullYear()}
               </li>
-              <li className="list-group-item">Nationalities:{nat}</li>
+              <li className="list-group-item">
+                Nationalities:{nat ? countryFlagEmoji.get(nat[0]).emoji : null}
+              </li>
               <li className="list-group-item">
                 <Link
                   to="../../../components/Details"
