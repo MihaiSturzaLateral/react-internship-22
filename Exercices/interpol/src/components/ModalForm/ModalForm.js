@@ -43,6 +43,7 @@ const ModalForm = ({ getModalState, modalIsOpen }) => {
       notice: "",
       sex: "",
       birthDate: "",
+      fileImg:""
     },
     onSubmit: (values) => {
       console.log("VAlues->>>", values);
@@ -131,6 +132,22 @@ const ModalForm = ({ getModalState, modalIsOpen }) => {
                 value={formik.values.birthDate}
               />
             </div>
+            {/* <div className="form-control">
+              <label className="inf" htmlFor="birthDate">
+                Image:
+              </label>
+              <input
+                type="file"
+                placeholder="Birth date"
+                onFocus={(e) => (e.target.placeholder = "")}
+                id="fileImg"
+                name="fileImg"
+                onChange={formik.handleChange}
+                value={formik.values.fileImg}
+              />
+              {console.log("fileee-->",formik.values.fileImg)}
+            </div>
+             */}
 
             <div className="form-control">
               <label className="inf" htmlFor="nationality">

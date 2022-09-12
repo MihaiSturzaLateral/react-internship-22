@@ -30,8 +30,7 @@ const MyReports = () => {
       <div className="container">
         <div className="title-reports">My Reports:</div>
         <div className="all_reports">
-          <div className="row row-cols-1  row-cols-md-3">
-            {" "}
+          <div className="cards-reports">
             {Array.isArray(reports)
               ? reports.map((obj, key) => (
                   <ReportCard
@@ -48,8 +47,9 @@ const MyReports = () => {
                 ))
               : null}
           </div>
+          </div>
         </div>
-      </div>
+      
     </>
   );
 };

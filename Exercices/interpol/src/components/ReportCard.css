@@ -24,5 +24,19 @@
   background-color: green;
 }
 .image-rep img{
-  width:230px;
+  width:100%;
 }
+@media screen and (max-width: 800px) {
+
+  .card-report{
+    width:30%;
+  }
+
+}
+@media screen and (max-width: 450px) {
+
+  .card-report{
+    width:100%;
+  }
+}
+

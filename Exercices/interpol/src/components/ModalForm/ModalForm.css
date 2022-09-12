@@ -75,3 +75,16 @@
   font-weight: 500;
   font-size: 1.2em;
 }
+@media screen and (max-width: 800px) {
+  .contact-form {
+    width: 90%;
+  }
+  .send-us {
+    width: 90%;
+  }
+  .btn-res,
+  .btn-res,
+  .btn-sub {
+    margin-top: 1em;
+  }
+}

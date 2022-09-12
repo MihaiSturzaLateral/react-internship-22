@@ -75,3 +75,17 @@
   margin-left: 5em;
   margin-top: 1em;
 }
+@media screen and (max-width: 800px) {
+  .details-image {
+    flex-direction: column;
+  }
+  .details {
+    width: 100%;
+  }
+  .image {
+    width: 50%;
+  }
+  .notice {
+    font-size: 1em;
+  }
+}

@@ -8,3 +8,15 @@
   font-weight: 600;
   text-align: center;
 }
+.cards-reports{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1000px) {
+
+.title-reports{
+  font-size: 75%;
+}
+
+}
+

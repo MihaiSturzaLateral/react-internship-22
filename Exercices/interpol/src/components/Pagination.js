@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 const Pagination = ({ paginate }) => {
   const pageNumbers = [];
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= 8; i++) {
     pageNumbers.push(i);
   }
   const [active, setActive] = useState();

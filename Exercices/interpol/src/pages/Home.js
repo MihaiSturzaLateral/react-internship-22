@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div className="container">
       <ButtonsGroup sendData={sendData} />
-      <label className="total">Total: {totalNum}</label>
+      <label className="total" id="total">Total: {totalNum}</label>
       <div className="all-cards">
         <div className="row row-cols-1  row-cols-md-3">
           {Array.isArray(persons)

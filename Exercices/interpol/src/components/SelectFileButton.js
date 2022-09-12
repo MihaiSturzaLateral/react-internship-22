@@ -10,6 +10,7 @@ function SelectFileButton() {
     <div className="mt-5">
       <input type="file" style={{ display: "none" }} ref={fileInput} />
       <button onClick={selectFile} className="btn btn-primary">
+      
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"

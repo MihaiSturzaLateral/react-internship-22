@@ -26,3 +26,14 @@
   text-align: center;
   margin-left: 5em;
 }
+
+@media screen and (max-width: 1400px) {
+  .total {
+    font-size: auto;
+    width: auto;
+    min-width: 5em;
+    padding:5px;
+    margin-left: 30%;
+    margin-top: 1em;
+  }
+}

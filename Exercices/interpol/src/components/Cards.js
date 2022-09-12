@@ -26,7 +26,7 @@ function Cards({
   };
 
   return (
-    <Card style={{ width: "25rem" }}>
+    <Card style={{ width: "24rem" }} className="carddd">
       <label className="card-label" style={{ backgroundColor: `${danger}` }}>
         Wanted
       </label>
