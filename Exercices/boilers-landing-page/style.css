@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+}
+
+p {
+  font-size: 1.25rem;
+}
+h1 {
+  padding: 1rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+
+.section-center {
+  padding: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  margin: 0rem;
+}
+.header {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background: linear-gradient(rgba(0, 0, 0, 0.374), rgba(0, 0, 0, 0.306)),
+    url(./images/background/bath-tub.jpg) center/cover no-repeat;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.btn-contact {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  background-color: #01c2a9;
+  padding: 1rem;
+  transition: all 0.3s linear;
+}
+.address h5 {
+  display: none;
+}
+.btn-contact:hover {
+  background-color: #00ffd9;
+}
+@media screen and (min-width: 576px) {
+  .contact h5 {
+    font-size: 1rem;
+  }
+  .contact li a {
+    font-size: 0.8rem;
+  }
+  .contact h4 {
+    font-size: 0.9rem;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background-color: #555;
+  padding: 1rem;
+  color: white;
+  justify-content: end;
+}
+.fa-facebook {
+  color: #01c2a9;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+}
+.fa-facebook:hover {
+  color: #0acfb5;
+}
+.call-number {
+  font-size: 1.3rem;
+  background-color: #01c2a9;
+  padding: 0.3rem;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
+
+.navbar ul li {
+  padding: 0.5rem;
+  background-color: #01c2a9;
+  transition: all 0.3s linear;
+}
+.navbar ul li:hover {
+  background-color: #00ffd9;
+}
+.navbar ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: rgba(85, 85, 85, 0.605);
+  /* width: 100%; */
+  /* position: sticky;
+  top: 172px; */
+}
+.contact {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+}
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.section {
+  /* width: 100vw; */
+  margin: 0 auto;
+}
+.section-center {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.img-boiler {
+  object-fit: cover;
+  max-width: 25rem;
+  /* margin: 2rem; */
+  padding: 2rem;
+}
+
+.images {
+  display: grid;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+  .address h5 {
+    display: grid;
+  }
+}
+.description {
+  display: grid;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+.description-details {
+  padding: 1rem;
+}
+.description-img-details {
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+  /* width: 100%; */
+}
+
+.image-100-description {
+  object-fit: cover;
+  width: 100%;
+}
+
+.general-presentation {
+  display: grid;
+  align-items: center;
+  padding: 2rem;
+  /* width: 100%; */
+  background-color: #01c2a9;
+  color: white;
+  gap: 1rem;
+}
+.benefits h4 {
+  text-align: center;
+  padding: 1rem;
+}
+.benefits-details {
+  display: grid;
+  gap: 3rem;
+  padding: 1.5rem;
+}
+.user-benefits h5,
+.technology h5 {
+  margin-bottom: 1rem;
+}
+
+.instalare-boiler {
+  border-bottom: 0.5px solid #555;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+.instalare-boiler p {
+  align-self: center;
+}
+
+.general-characteristics h2,
+.technical-characteristics h2 {
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  /* max-width: 45%; */
+}
+@media screen and (min-width: 748px) {
+  .header {
+    height: calc(100vh - 75px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-details {
+    flex-direction: row;
+  }
+  .description-img-details {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .general-presentation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefits-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .technical-specifications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+.footer {
+  background-color: #01c2a9;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  /* width: 100%; */
+}
