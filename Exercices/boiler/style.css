@@ -1,0 +1,399 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  padding: 10px;
+}
+header {
+  display: flex;
+}
+.titlu {
+  font-size: 1.25em;
+  margin-left: 2em;
+  color: #355af0;
+  font: italic 1.2em "Fira Sans", serif;
+}
+.topnav {
+  display: none;
+}
+.mainrapper {
+  width: 80%;
+  margin: auto;
+}
+.homebutton {
+  width: 10%;
+}
+.homebutton img {
+  width: 100%;
+  margin: 1em;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+}
+.img-banner {
+  width: 50%;
+  margin-top: 2em;
+}
+.img-banner img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 5px 10px 5px 2px #ccc;
+}
+.mesaj {
+  width: 50%;
+  text-align: center;
+  font: italic 1.2em "Fira Sans", serif;
+  font-size: 3em;
+  padding-left: 1em;
+  color: black;
+  margin-top: 1em;
+}
+nav {
+  width: 100%;
+  margin-top: 1em;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2f6ed4 0%, #05a0fa 100%);
+}
+
+nav li {
+  width: 33%;
+  float: left;
+}
+.line1,
+.line2 {
+  border-right-style: solid;
+  border-color: white;
+  border-width: thin;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+li.line2,
+li.line3 {
+  display: inline-block;
+}
+
+#despre-noi {
+  text-align: center;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#produse {
+  text-align: center;
+}
+.descriere {
+  display: flex;
+}
+.imagBoil {
+  width: 40%;
+}
+.imagBoil img {
+  width: 80%;
+}
+.textBoil {
+  width: 50%;
+  font-size: 1.25em;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 5px 10px 5px 2px #ccc;
+  padding: 5px;
+}
+.caracteristici {
+  font-size: 1.5em;
+}
+#aristonImg img {
+  width: 70%;
+  padding-left: 20%;
+}
+footer {
+  color: white;
+  background: linear-gradient(180deg, #2f6ed4 0%, #05a0fa 100%);
+  text-align: center;
+}
+footer label {
+  font-size: 0.5em;
+}
+#despre-noi h1 {
+  font: italic 1.2em "Fira Sans", serif;
+  font-size: 3em;
+  color: #355af0;
+}
+#despre-noi p {
+  font: italic 1.2em "Fira Sans", serif;
+  font-size: 1.5em;
+}
+
+#produse h1 {
+  font: italic 1.2em "Fira Sans", serif;
+  font-size: 3em;
+  color: #355af0;
+}
+#but {
+  border-radius: 10px;
+  border: 1px solid #0080cc;
+  font-size: 1.25em;
+  width: 234px;
+  min-height: 58px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(180deg, #2f6ed4 0%, #05a0fa 100%);
+  margin: 0.25em;
+}
+.ariston30,
+.ariston100 {
+  text-align: center;
+}
+.ariston30 h1,
+.ariston100 h1 {
+  color: #355af0;
+  font: italic 1.2em "Fira Sans", serif;
+  font-size: 3em;
+}
+.caracteristici {
+  text-align: left;
+  font-size: 1.25em;
+}
+.caracteristici h1 {
+  color: black;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .homebutton img {
+    width: 50%;
+  }
+
+  .titlu {
+    font-size: 1em;
+    width: 50%;
+  }
+  nav {
+    font-size: 0.75em;
+    width: 70%;
+    margin-right: 4em;
+  }
+  .mesaj {
+    font-size: 1.75em;
+  }
+  #despre-noi h1,
+  #produse h1,
+  #ariston30 h1,
+  #ariston100 h1 {
+    font-size: 2em;
+  }
+  .caracteristici h1 {
+    font-size: 0.75;
+  }
+  .descriere {
+    display: flex;
+    flex-direction: column;
+  }
+  .textBoil {
+    order: 2;
+    width: 100%;
+  }
+  .imagBoil {
+    order: 1;
+    width: 80%;
+  }
+  .descriere {
+    text-align: center;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+  .caracteristici {
+    box-shadow: 5px 10px 5px 2px #ccc;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .homebutton {
+    width: 50%;
+  }
+  .homebutton img {
+    width: 70%;
+  }
+  .titlu {
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 0.75em;
+    margin-left: 3em;
+    width: 50%;
+  }
+  nav {
+    display: none;
+  }
+  .topnav {
+    display: inline-table;
+  }
+  .ham img {
+    width: 2em;
+  }
+  .topnav {
+    width: 50%;
+    overflow: hidden;
+    background-color: none;
+    position: right;
+    margin-left: 3em;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+  #myLinks li {
+    list-style-type: none;
+    background: linear-gradient(180deg, #2f6ed4 0%, #05a0fa 100%);
+  }
+  .line4 {
+    margin-top: 5em;
+  }
+
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    top: 2em;
+  }
+
+  .topnav a:hover {
+    background: linear-gradient(180deg, #2f6ed4 0%, #05a0fa 100%);
+  }
+  .slideshow-container,
+  .dot {
+    display: none;
+  }
+  .mesaj {
+    font-size: 1em;
+  }
+  #despre-noi h1,
+  #produse h1 {
+    font-size: 2em;
+  }
+  #despre-noi p {
+    font-size: 1em;
+  }
+  #ariston30 h1,
+  #ariston100 h1 {
+    font-size: 1.5em;
+  }
+  .descriere {
+    display: flex;
+    flex-direction: column;
+  }
+  .textBoil {
+    order: 2;
+    width: 100%;
+    font-size: 1em;
+  }
+  .imagBoil {
+    order: 1;
+    width: 80%;
+  }
+  .descriere {
+    text-align: center;
+  }
+  .caracteristici {
+    font-size: 1em;
+  }
+  footer {
+    font-size: 0.6em;
+  }
+}

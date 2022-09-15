@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<title>Boilerul favorit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+   <link type="text/css" rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="./index.js"></script>
+</head>
+<body>
+  
+
+  <header>
+    <div class="homebutton">
+      <a href="index.html">
+        <img id="imgHome"src="./images/logo.png" alt="logo">
+       </a>
+    </div>
+    <div class="titlu">
+      <h1>Boilerul favorit</h1>
+      </div>
+      <div class="topnav">
+
+        <div id="myLinks">
+  
+          <li class="line4"><a href="#despre-noi"><b>Despre Noi</b></a></li>
+          <li class="line5"><a href="#produse"><b>Produse</b></a></li>
+          <li class="line6"><a href="#footer"><b>Contact</b></a></li>
+        
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <div class="ham"><img src="./images/ham.png"></div>
+        </a>
+      </div>
+      <nav>
+
+        <ul>
+  
+          <li class="line1"><a href="#despre-noi"><b>Despre Noi</b></a></li>
+          <li class="line2"><a href="#produse"><b>Produse</b></a></li>
+          <li class="line3"><a href="#footer"><b>Contact</b></a></li>
+        </ul>
+    </nav>
+
+</header>
+<div class="mainrapper">
+   <div class="banner">
+     <div class="img-banner">
+   <img src="./images/coldd.jpg">
+    </div>
+    <div class="mesaj">
+        <p>Nu mai duce grija apei calde! Alege boilerul de care ai nevoie!</p>
+       </div>
+  </div>
+
+   <div id="despre-noi">
+     <h1>Despre noi</h1>
+     <p>Suntem o echipa tanara de ingineri , specializati in instalatii sanitare, care ne-am gandit sa incepem o afacere de comercializat boilere. Va garantam ca produsele noastre sunt de cea mai buna calitate, fiecare fiind verificat inainte de a fi pus la vanzare si totodata sunt disponibile la cele mai mici preturi de pe piata, fiind luate direct de la producatori. Va multumim ca ati ales sa ne ajutati sa ne dezvoltam afacerea, prin cumpararea produselor noastre.</p>
+   </div>
+
+   <div id="produse">
+    <h1>Produsele noastre</h1>
+   <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="boiler-image">
+      <img src="./images/boiler1.jpg" style="width:100%">
+      <button id="but" onclick="location.href='#ariston30'">Detalii</button>
+      </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="./images/boiler.jpg" style="width:100%">
+      <button id="but" onclick="location.href='#ariston100'">Detalii</button>
+    </div>
+  
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+  </div>
+
+  <div class="ariston30" id="ariston30">
+    <h1>Ariston Regent REG 30 EU</h1>
+    <div class="descriere">
+      <div class="imagBoil">
+    <img src="./images/ariston30.jpg">
+    </div>
+    <div class="textBoil">
+    <p><b>Ariston Regent REG 30 EU</b>, este un incalzitor de apa electric, mural, cu o calitate superioara datorita componentelor de inalt standard folosite.<br/><br/>
+
+      Pentru a preveni coroziunea din interiorul boilerului si pentru a imbunatati durabilitatea aparatului, acesta este protejat cu un strat de email aplicat la temperaturi de 850 ºC care izoleaza complet otelul de apa.<br/><br/>
+      
+      Boilerul REG30 are inclusa supapa de siguranta, pentru prevenirea cresterii presiunii din interiorul acestuia ca urmare a maririi volumului apei in timpul incalzirii, evitand astfel ruperea rezervorului.<br/><br/>
+      
+      Izolatie groasa din poliuretan cu densitate ridicata garanteaza pierderi de caldura reduse si asigura un consum scazut de energie.
+    </p>
+  </div>
+  </div>
+  <div class="caracteristici">
+     <h1> Caracteristici generale: </h1>
+      <ul>
+      <li>Brand: Ariston</li>
+      <li>Model: Regent</li>
+      <li>Capacitate (l): 30</li>
+      <li>Tip incalzire boiler: Electric</li>
+      <li>Tip instalare: Deasupra chiuvetei, pe perete</li>
+      <li>Putere (W): 1500</li>
+      <li>Inaltime (mm): 39</li>
+      <li>Latime (mm): 36</li>
+      <li>Adancime (mm): 36</li>
+      <li>Greutate (kg): 10</li>
+      <li>Presiune maxima de functionare (Bar): 8</li>
+      <li>Temperatura maxima de functionare (°C ): 80</li>
+      <li>Timp de incalzire ΔT=45°C (h:min): 0:60</li>
+      </ul>  
+ </div>
+  </div>
+  <div class="ariston100" id="ariston100">
+    <h1>Ariston Regent REG 100</h1>
+    <div class="descriere">
+    <div class="textBoil">
+    <p><b>Ariston Regent REG 100</b>, este un incalzitor de apa electric, mural, cu o calitate superioara datorita componentelor de inalt standard folosite.<br/><br/>
+
+      Pentru a preveni coroziunea din interiorul boilerului si pentru a imbunatati durabilitatea aparatului, acesta este protejat cu un strat de email aplicat la temperaturi de 850 ºC care izoleaza complet otelul de apa.<br/><br/>
+      
+      Boilerul REG100 are inclusa supapa de siguranta, pentru prevenirea cresterii presiunii din interiorul acestuia ca urmare a maririi volumului apei in timpul incalzirii, evitand astfel ruperea rezervorului.<br/><br/>
+      Izolatie groasa din poliuretan cu densitate ridicata garanteaza pierderi de caldura reduse si asigura un consum scazut de energie.
+    </p>
+  </div>
+    <div class="imagBoil" id="aristonImg">
+      <img src="./images/ariston100.jpg">
+      </div>
+  
+  </div>
+  <div class="caracteristici">
+     <h1 > Caracteristici generale:</h1>
+      <ul>
+      <li>Brand: Ariston</li>
+      <li>Model: Regent</li>
+      <li>Capacitate (l): 100</li>
+      <li>Tip incalzire boiler: Electric</li>
+      <li>Tip instalare: Vertical</li>
+      <li>Putere (W): 1500</li>
+      <li>Greutate (kg): 27</li>
+      <li>Presiune maxima de functionare (Bar): 8</li>
+      <li>Temperatura maxima de functionare (°C ): 80</li>
+      <li>Timp de incalzire ΔT=45°C (h:min): 3:49</li>
+      </ul>  
+ </div>
+  </div>
+
+
+
+</div>
+<footer id="footer">
+    <h1>Contact/Comenzi<h1>
+      <p>Email: office@boilerulpreferat.ro</p>
+      <p>Telefon: 0752177211</p>
+  <label>© Copyright 2022, Toate drepturile rezervate</label>
+     </footer>
+ </body>
+ 
+      
+</html>
