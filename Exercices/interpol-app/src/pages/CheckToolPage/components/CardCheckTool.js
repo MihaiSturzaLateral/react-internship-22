@@ -1,34 +1,66 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./CardCheckTool.css";
+import CardCheckToolFlag from "./CardCheckToolFlag";
 
-const CardCheck = ({ forname, name, date, nat, url, detUrl }) => {
+const CardCheckTool = ({
+  imgWanted,
+  forenameWanted,
+  nameWanted,
+  birthWanted,
+  nationalityWanted,
+  url,
+  Color,
+  Warning,
+  imgDetails,
+}) => {
+  const getAge = (birthday) => {
+    let today = new Date();
+    let birthDate = new Date(birthday);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+
+  const navigate = useNavigate();
+  const navigateToDetails = () => {
+    navigate("/details", { state: { url, Warning, imgDetails } });
+  };
+
   return (
     <div className="cardContainer">
       <div className="cardWrapper">
         <div className="imgWrapper">
-          <img src={url} className="imgCard" alt="person" />
+          <div className="noticeClr" style={{ backgroundColor: Color }}>
+            <span className="noticeTxt">{`${Warning} notice`}</span>
+          </div>
+          <img src={`${imgWanted}`} className="imgCard" alt="person" />
         </div>
         <div className="cardContent">
           <div className="cardBody">
-            <h5 className="cardName">
-              Full Name:{forname} {name}
-            </h5>
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">Date of Birth:{date}</li>
-              <li className="list-group-item">
-                Age:{new Date().getFullYear() - new Date(date).getFullYear()}
-              </li>
-              <li className="list-group-item">Nationalities:{nat}</li>
-              <li className="list-group-item">
-                <Link
-                  to="../../../components/Details"
-                  className="btn btn-secondary"
-                  state={{ detUrl: detUrl }}
-                >
-                  View details
-                </Link>
-              </li>
-            </ul>
+            <div className="cardNameDiv">
+              <h5 className="cardName">
+                {forenameWanted} {nameWanted}
+              </h5>
+            </div>
+            <div className="listWrapper">
+              <span className="listText">Date of Birth: {birthWanted}</span>
+              <span className="listText">Age: {getAge(birthWanted)}</span>
+              <CardCheckToolFlag flag={nationalityWanted} />
+            </div>
+          </div>
+          <div className="cardBtnDiv">
+            <button
+              className="cardButton"
+              onClick={() => {
+                navigateToDetails();
+              }}
+            >
+              View details
+            </button>
           </div>
         </div>
       </div>
@@ -36,4 +68,4 @@ const CardCheck = ({ forname, name, date, nat, url, detUrl }) => {
   );
 };
 
-export default CardCheck;
+export default CardCheckTool;

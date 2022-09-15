@@ -1,8 +1,13 @@
 .labelTypeContainer {
-  padding: 5px;
-  margin: 5px;
+  margin: 10.5px;
+  width: 14rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .labelTypeTitle {
-  margin: 5px;
+  font-size: 18px;
+  margin-left: 1rem;
 }

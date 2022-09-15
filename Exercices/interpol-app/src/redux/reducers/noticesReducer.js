@@ -5,6 +5,9 @@ import {
   FETCH_CHECK_LIST,
   FETCH_DETAILS,
   FETCH_DETAILS_PHOTO,
+  FETCH_MY_REPORTS,
+  ADD_MY_REPORTS,
+  UPDATE_MY_REPORTS,
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -12,6 +15,8 @@ const initialState = {
   totalResults: 0,
   details: {},
   photoDet: {},
+  checkList: [],
+  myReportsList: [],
 };
 
 export const noticesReducer = (state = initialState, action) => {
@@ -48,6 +53,21 @@ export const noticesReducer = (state = initialState, action) => {
       return {
         ...state,
         photoDet: action.payload,
+      };
+    case FETCH_MY_REPORTS:
+      return {
+        ...state,
+        myReportsList: action.payload,
+      };
+    case ADD_MY_REPORTS:
+      return {
+        ...state,
+        myReports: action.payload,
+      };
+    case UPDATE_MY_REPORTS:
+      return {
+        ...state,
+        ...action.payload,
       };
     default:
       return state;

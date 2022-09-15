@@ -1,0 +1,23 @@
+.containerReports {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.reportsDiv {
+  color: white;
+  background-color: #ff0000;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.reportsCardsDiv {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

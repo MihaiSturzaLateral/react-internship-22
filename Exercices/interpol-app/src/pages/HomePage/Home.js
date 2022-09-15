@@ -14,6 +14,7 @@ const Home = () => {
   const [color, setColor] = useState("");
   const [warning, setWarning] = useState("");
   const dataFromStore = useSelector((state) => state);
+  console.log(dataFromStore);
   let colour = "";
   let noticeWarning = "";
 
@@ -42,12 +43,7 @@ const Home = () => {
   useEffect(() => {
     getAllNoticeFromApi()(dispatch);
   }, []);
-  /*
-  const lastItem = (url) => {
-    let urlSplit = url?.split("/"); //if object null doesnt run else splits the lurl
-    return urlSplit[urlSplit.length - 1]; //returns the url without the last part
-  };
-*/
+
   return (
     <div className="containerHome">
       <div className="btnsDiv">
@@ -73,7 +69,7 @@ const Home = () => {
               getColor(key);
               return (
                 <ProfileCard
-                  id={key}
+                  key={key}
                   imgWanted={notice?._links?.thumbnail?.href}
                   forenameWanted={notice?.forename}
                   nameWanted={notice?.name}
@@ -88,7 +84,7 @@ const Home = () => {
             } else {
               return (
                 <ProfileCard
-                  id={key}
+                  key={key}
                   imgWanted={notice._links.thumbnail.href}
                   forenameWanted={notice.forename}
                   nameWanted={notice.name}

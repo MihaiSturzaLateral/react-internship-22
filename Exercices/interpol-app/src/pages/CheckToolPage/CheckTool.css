@@ -1,0 +1,147 @@
+.pageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.checkContainer {
+  padding: 20px;
+  border: 2px solid #343a40;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+  width: 30rem;
+}
+
+.checkTitleDiv {
+  border-bottom: 1px solid #343a40;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.checkTitle {
+  color: #ff0000;
+  padding: 5px;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+h4 {
+  margin: 10px;
+}
+
+.detInput {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.formInput {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+
+.formInput:active {
+  border: 1px solid #343a40;
+}
+
+.form-check-input {
+  margin: 10px 0px;
+}
+
+.form-check-label {
+  font-weight: bold;
+  margin: 5px 0px;
+}
+
+.formLabel {
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top: 1px solid #343a40;
+  padding-top: 15px;
+}
+
+.searchBtn {
+  background-color: #ff0000;
+  padding: 10px 30px;
+  margin: 15px;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.searchBtn:hover {
+  background-color: darkred;
+  border: 1px solid darkred;
+  color: #e9ecef;
+}
+
+.resetBtn {
+  background-color: gray;
+  padding: 10px 30px;
+  margin: 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.resetBtn:hover {
+  color: #e9ecef;
+  background-color: #343a40;
+  border: 1px solid #343a40;
+}
+
+.searchBtn:active {
+  transform: scale(0.95);
+}
+
+.resultsTitle {
+  background-color: #ff0000;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 0px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.searchList {
+  width: 45rem;
+  height: 45rem;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+}
+
+.resultsList {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 47rem;
+  height: 90vh;
+  border: 2px solid #343a40;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  box-shadow: 2px 2px 2px #888888;
+}

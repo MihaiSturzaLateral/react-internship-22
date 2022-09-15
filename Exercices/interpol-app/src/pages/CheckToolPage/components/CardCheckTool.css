@@ -1,20 +1,35 @@
-.profileContainer {
-  width: 25rem;
+.cardContainer {
   border: 2px solid #343a40;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   border-radius: 10px;
-  margin: 25px;
-}
-
-.imgContainer {
+  box-shadow: 3px 3px 3px #888888;
+  margin-bottom: 2rem;
+  display: flex;
   position: relative;
 }
 
-.noticeColor {
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgWrapper {
+  position: relative;
+  background-color: #999;
+  width: 15rem;
+  height: 20rem;
+  border-right: 2px solid #343a40;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.noticeClr {
   background-color: #343a40;
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 50%;
   height: 12.5%;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -23,74 +38,80 @@
   justify-content: center;
 }
 
-.noticeText {
+.noticeTxt {
   color: white;
   font-weight: bold;
 }
 
-.imageCard {
+.imgCard {
+  width: 14.9rem;
   height: 20rem;
-  width: 24.7rem;
-  border-bottom: 2px solid #343a40;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   object-fit: fill;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.cardText {
+.cardContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.cardHeader {
+.cardBody {
   margin: 20px 40px;
 }
 
-.cardTitle {
+.cardNameDiv {
+  margin-bottom: 20px;
+  width: 24rem;
+  display: flex;
+  align-items: center;
+}
+
+.cardName {
   text-align: justify;
   font-weight: bold;
   font-size: 18px;
 }
 
-.cardList {
+.listWrapper {
   list-style: none;
   text-align: justify;
   display: flex;
   flex-direction: column;
 }
 
-.text {
+.listText {
   color: #343a40;
   border-bottom: 2px solid #343a40;
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 15px;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  width: 300px;
+  width: 24rem;
   font-weight: bold;
 }
 
-.divBtn {
-  padding: 15px;
-  border-top: 2px solid #343a40;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: #e9ecef;
+.cardBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.infoBtn {
+.cardButton {
   background-color: #343a40;
-  color: whitesmoke;
+  color: white;
   border-radius: 10px;
   border: 1px solid #343a40;
   font-weight: bold;
   padding: 10px;
-  box-shadow: 3px 3px 3px #888888;
+  box-shadow: 2px 2px 2px #888888;
+  margin-left: 20rem;
+  margin-bottom: 10px;
 }
 
-.infoBtn:hover {
+.cardButton:hover {
   background-color: black;
   color: wheat;
 }

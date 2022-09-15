@@ -1,7 +1,8 @@
-.labelValueContainer {
+.labelContainer {
+  padding: 5px;
   background-color: #e9ecef;
   border-radius: 10px;
-  margin: 10px 0px;
+  margin: 15px 5px;
   width: 25rem;
   height: 3rem;
   box-shadow: 3px 3px 3px #999999;
@@ -10,7 +11,6 @@
   justify-content: flex-start;
 }
 
-.labelValueTitle {
-  font-size: 17px;
+.langSpoken {
   margin-left: 1rem;
 }

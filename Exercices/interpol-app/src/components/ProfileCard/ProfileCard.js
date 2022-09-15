@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./ProfileCard.css";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+import FlagProfileCard from "./components/FlagProfileCard";
 
 const ProfileCard = ({
   forenameWanted,
@@ -35,18 +33,22 @@ const ProfileCard = ({
   return (
     <div className="profileContainer">
       <div className="imgContainer">
-        <div className="noticeColor" style={{ backgroundColor: Color }}></div>
+        <div className="noticeColor" style={{ backgroundColor: Color }}>
+          <span className="noticeText">{`${Warning} notice`}</span>
+        </div>
         <img className="imageCard" src={imgWanted} alt="" />
       </div>
       <div className="cardText">
-        <h5 className="cardTitle">
-          {forenameWanted} {nameWanted}
-        </h5>
-        <ul>
-          <li className="text">Date of birth: {birthWanted}</li>
-          <li className="text">Age: {getAge(birthWanted)}</li>
-          <li className="text">Nationalities: {nationalityWanted}</li>
-        </ul>
+        <div className="cardHeader">
+          <h5 className="cardTitle">
+            {forenameWanted} {nameWanted}
+          </h5>
+        </div>
+        <div className="cardList">
+          <span className="text">Date of birth: {birthWanted}</span>
+          <span className="text">Age: {getAge(birthWanted)}</span>
+          <FlagProfileCard flag={nationalityWanted} />
+        </div>
       </div>
       <div className="divBtn">
         <button
@@ -59,33 +61,6 @@ const ProfileCard = ({
         </button>
       </div>
     </div>
-    /*
-    <Card className="profileContainer">
-      <div
-        className="noticeColor"
-        style={{ backgroundColor: `${Color}` }}
-      ></div>
-      <Card.Img className="imgC" variant="top" src={imgWanted} />
-      <Card.Body className="cardText">
-        <Card.Title className="cardTitle">
-          {forenameWanted} {nameWanted}
-        </Card.Title>
-        <Card.Text className="text">Date of birth: {birthWanted}</Card.Text>
-        <Card.Text className="text">Age: {getAge(birthWanted)}</Card.Text>
-        <Card.Text className="text">
-          Nationalities: {nationalityWanted}
-        </Card.Text>
-        <Button
-          variant="dark"
-          onClick={() => {
-            navigateToDetails();
-          }}
-        >
-          View more info
-        </Button>
-      </Card.Body>
-    </Card>
-    */
   );
 };
 

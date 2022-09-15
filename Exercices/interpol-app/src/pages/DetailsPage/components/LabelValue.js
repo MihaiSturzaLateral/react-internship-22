@@ -3,8 +3,8 @@ import "./LabelValue.css";
 
 const LabelValue = ({ content }) => {
   return (
-    <div className="labelContainer">
-      <span className="labelTitle">{content}</span>
+    <div className="labelValueContainer">
+      <span className="labelValueTitle">{content}</span>
     </div>
   );
 };

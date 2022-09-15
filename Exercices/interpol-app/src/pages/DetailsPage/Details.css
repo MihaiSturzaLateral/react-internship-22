@@ -56,31 +56,43 @@
   font-weight: bold;
   font-size: 20px;
   padding: 15px;
-  width: 400px;
+  width: 40rem;
   border-radius: 10px;
   box-shadow: 3px 3px 3px #888888;
 }
 
 .lists {
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 3px solid #343a40;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   padding: 15px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 3px #888888;
+  width: 50vw;
+  height: 70vh;
+  overflow-y: scroll;
+  padding-top: 55vh;
 }
 
 .listType {
+  color: #343a40;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .listValues {
-  color: #444;
+  color: #343a40;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .divRight {
@@ -95,7 +107,6 @@
 
 .warrantAlert {
   display: flex;
-  flex-direction: row;
   justify-content: left;
   align-items: left;
 }
@@ -118,15 +129,27 @@
   flex-direction: column;
   border: 2px solid #ff0000;
   border-radius: 10px;
+  margin-bottom: 5rem;
+  box-shadow: 3px 3px 3px #888888;
 }
 
-.warrantCountry {
+.warrantTop {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e9ecef;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.warrantCountryTitle {
   display: flex;
   align-items: center;
   padding: 15px;
-  color: #777;
+  color: #555;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .warrantCharge {
@@ -136,11 +159,66 @@
   color: #ff0000;
 }
 
-.warrantCharge p {
-  margin-top: 20px;
-  font-size: 18px;
+.warrantChargeTitle {
+  margin: 1rem;
+  font-weight: bold;
 }
 
-.spaceDiv {
-  height: 20.7vh;
+.warrantChargeText {
+  margin: 2rem 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.yellowNoticeDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 10rem;
+  background-color: #e9ecef;
+  border: 2px solid #343a40;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.yellowNoticeImg {
+  height: 15rem;
+  border-right: 2px solid #343a40;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.yellowNoticeText {
+  font-weight: bold;
+  font-size: 22px;
+  color: #ff9900;
+  margin: 5rem;
+  text-align: justify;
+}
+
+.redNoticeDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0rem;
+  background-color: #e9ecef;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.redNoticeImg {
+  height: 20rem;
+  border-right: 2px solid #ff0000;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.redNoticeText {
+  font-weight: bold;
+  font-size: 22px;
+  color: #ff0000;
+  margin: 5rem;
+  text-align: justify;
 }

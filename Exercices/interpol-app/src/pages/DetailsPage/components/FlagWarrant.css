@@ -1,0 +1,21 @@
+.warrantDet {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.warrantFlagIcon {
+  height: 2.2rem;
+  margin: 0rem 0.5rem;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+.warrantCountry {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 20px;
+}

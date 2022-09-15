@@ -1,0 +1,463 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #4fa3a5;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navList {
+  list-style: none;
+  font-weight: 500;
+  padding: 0.4rem;
+}
+
+.navList a {
+  list-style: none;
+  text-decoration: none;
+  color: #fdae38;
+}
+
+.carouselDiv {
+  background-image: url("/images/boiler4.jpg");
+  background-position: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  min-height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #264248;
+  border-bottom: 1px solid #264248;
+}
+
+.carouselText {
+  color: #264248;
+  padding: 2rem;
+  font-size: clamp(1rem, 1rem + 2vw, 4rem);
+}
+
+.sectionTitle {
+  color: #264248;
+  padding: 1rem;
+  font-size: clamp(1rem, 1rem + 2vw, 4rem);
+  font-weight: bold;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImg {
+  max-width: 80%;
+  margin-bottom: 1rem;
+  border: 2px solid #264248;
+  border-radius: 2rem;
+  opacity: 0.8;
+}
+
+.aboutText {
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  font-size: clamp(0.6rem, 0.6rem + 1vw, 10rem);
+  color: #264248;
+  opacity: 0.8;
+  text-align: justify;
+}
+
+.boilersBackground {
+  margin: 0 auto;
+  background-color: #fdae38;
+  display: flex;
+  min-height: 6.5rem;
+  border: 1px solid #264248;
+}
+
+.boilersText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 0;
+  width: 65%;
+}
+
+.boilerSpan {
+  font-weight: 600;
+  font-size: clamp(0.6rem, 0.6rem + 1vw, 10rem);
+  color: #264248;
+  opacity: 0.75;
+}
+
+.boilersDiv {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.boiler1 {
+  max-width: 70%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgProduct {
+  padding: 1rem;
+  border: 1px solid #264248;
+  border-radius: 30px;
+  margin: 1rem auto;
+  max-width: 50%;
+}
+
+.productContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  color: #264248;
+  opacity: 0.8;
+}
+
+.productTitle {
+  padding: 1rem;
+  font-size: clamp(1rem, 0.75rem + 1vw, 4rem);
+  font-weight: bold;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productDescription {
+  margin: 1rem 0;
+  font-size: clamp(1rem, 0.75rem + 0.75vw, 4rem);
+  font-weight: 500;
+}
+
+.list {
+  margin: 1rem 0;
+}
+
+.listItem {
+  margin: 1rem 0;
+  font-size: clamp(1rem, 0.75rem + 0.75vw, 4rem);
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+td {
+  padding: 0.5rem 1.5rem;
+}
+
+.detailsTable {
+  width: 50vw;
+  margin: 1rem 0;
+  border: 1px solid #264248;
+  font-size: clamp(1rem, 0.5rem + 0.5vw, 4rem);
+}
+
+.priceDiv {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.priceTxt {
+  width: 50vw;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.priceBtn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #264248;
+  font-weight: 600;
+  background-color: #fdae38;
+  color: #264248;
+  width: 30vw;
+}
+
+.priceBtn:hover {
+  background-color: #4fa3a5;
+  color: #fdae38;
+}
+
+.priceBtn:active {
+  transform: scale(0.95);
+}
+
+.contentImg {
+  width: 100%;
+  border-right: 1px solid #264248;
+}
+
+.contentText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 50%;
+  font-size: clamp(0.6rem, 0.6rem + 1vw, 10rem);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact span {
+  margin-bottom: 1rem;
+  color: #264248;
+  opacity: 0.8;
+  font-weight: 600;
+  font-size: clamp(0.5rem, 1rem + 1vw, 10rem);
+}
+
+.form-container {
+  background-color: #4fa3a5;
+  padding: 1rem 1.25rem;
+  border: 1px solid #264248;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subform {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formLabel {
+  color: #fdae38;
+  opacity: 0.8;
+  padding: 0.3rem;
+  font-size: clamp(0.5rem, 1rem + 1vw, 10rem);
+  font-weight: bold;
+}
+
+.formInput {
+  padding: 0.3rem;
+  border: 1px solid #264248;
+  border-radius: 0.75rem;
+  width: 50vw;
+}
+
+.formSubmit {
+  margin: 1.5rem auto;
+  padding: 0.25rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #264248;
+  font-weight: 600;
+  background-color: #fdae38;
+  color: #264248;
+}
+
+.formSubmit:hover {
+  background-color: #4fa3a5;
+  color: #fdae38;
+}
+
+.formSubmit:active {
+  transform: scale(0.95);
+}
+
+.map-responsive {
+  margin: 3rem 0rem;
+  overflow: hidden;
+  padding: 25% 45%;
+  margin-left: 10%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 90%;
+  position: absolute;
+}
+
+footer {
+  background-color: #4fa3a5;
+  color: #fdae38;
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 1rem + 10vw, 5rem);
+}
+
+.ftDiv {
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ftDiv h3 {
+  padding: 1rem;
+}
+
+.ftSpanDiv {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0rem 1rem;
+}
+
+.ftSpan {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 1rem 2rem;
+}
+
+@media screen and (min-width: 426px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navList {
+    padding: 1rem;
+  }
+
+  .boilerSpan {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .aboutText {
+    padding: 1.5rem 2rem;
+  }
+  .carouselDiv {
+    height: 65vh;
+    background-position: 15%;
+  }
+  .productDescription {
+    margin: 2rem 1rem;
+  }
+  .boilerSpan {
+    padding: 2rem;
+  }
+  .formSubmit {
+    margin: 2rem auto;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    width: 30vw;
+  }
+  .ftSpanDiv {
+    flex-direction: row;
+  }
+  .ftSpan {
+    margin: 0.5rem;
+  }
+  .sectionTitle {
+    padding: 2rem;
+  }
+  .navList {
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .aboutText {
+    padding: 3rem;
+  }
+  .sectionTitle {
+    padding: 3rem;
+  }
+  .productContent {
+    padding: 1.5rem 5rem;
+  }
+  .imgProduct {
+    padding: 2rem;
+    border: 2px solid #264248;
+  }
+  .contact span {
+    padding-bottom: 1.5rem;
+  }
+  .form-container {
+    margin-bottom: 2rem;
+    border: 2px solid #264248;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-top: 2px solid #264248;
+  }
+  .formSubmit {
+    border: 2px solid #264248;
+  }
+  .formInput {
+    border: 2px solid #264248;
+  }
+  .carouselDiv {
+    border-top: 2px solid #264248;
+    border-bottom: 2px solid #264248;
+  }
+  .boilersBackground {
+    border: 2px solid #264248;
+  }
+  .priceBtn {
+    border: 2px solid #264248;
+  }
+  .contentImg {
+    border-right: 2px solid #264248;
+  }
+  .detailsTable {
+    font-weight: 500;
+    border: 2px solid #264248;
+  }
+  .navList {
+    padding: 1rem 5rem;
+  }
+}
