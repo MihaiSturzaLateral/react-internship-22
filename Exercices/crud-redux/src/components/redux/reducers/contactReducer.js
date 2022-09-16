@@ -1,17 +1,18 @@
-import { ActionTypes } from "../actions/contactActions";
+import { types } from "../actions/contactTypes";
 
 const initialState = [];
 
 export const contactReducer = (state = initialState, action) => {
   const { type, payload } = action;
+
   switch (type) {
-    case ActionTypes.GET_CONTACTS:
-      return payload;
-    case ActionTypes.ADD_CONTACT:
+    case types.ADD_CONTACT: {
       return [...state, payload];
-    case ActionTypes.DELETE_CONTACT:
-      return state.filter(({ id }) => id !== payload);
-    case ActionTypes.UPDATE_CONTACT:
+    }
+    case types.GET_CONTACTS: {
+      return payload;
+    }
+    case types.UPDATE_CONTACT: {
       return state.map((contact) => {
         if (contact.id === payload.id) {
           return { ...contact, ...payload };
@@ -19,8 +20,10 @@ export const contactReducer = (state = initialState, action) => {
           return contact;
         }
       });
-    case ActionTypes.SEARCH_CONTACT:
-      return payload;
+    }
+    case types.DELETE_CONTACT:{
+        return state.filter(({id})=>id!==payload);
+    }
     default:
       return state;
   }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Warm Solutions</title>
+        <link rel="stylesheet" type="text/css" href="Design.css">
+    </head>
+    <body>
+      <div class="coloredBack"><br><br><br>Find the best heating boiler for your home!</div>
+        <div>
+            <img src="LOGO.png" alt="Warm Solutions" class="logo">
+        </div>
+        <!-- <img src="LOGO.png" alt="Warm Solutions" id="logo"> -->
+        <!-- <div class="lv3">
+            <img id="img_oferta" src="oferta2.png" alt="Oferta >image">
+            <a href="oferta.html" title="Ofertă Specială" ><div class="oferta">OFERTĂ <br>SPECIALĂ</div></a>
+            <img id="img_retete" src="retete1.png" alt="Retete >image">
+            <a href="Retete.html" title="Retete"><div class="retete">REȚETE</div></a>
+        </div> -->
+        <div class="produse"> 
+          <h2>Logic Max System Boiler</h2>
+          <div class="boiler1">
+            <div class="container">
+            <img id="img_paine" src="Logic-MAX-System-RF-Ideal-Filter-WEB-product-page.png" alt="Logic >image" class="image">
+            <div class="overlay">
+                <div class="text">
+                  <h3>- Made in the UK<br><br>- 12 year parts & labour warranty*<br><br>- Multi-function buttons for ease of use<br><br>- High quality brass system filter<br><br>- Compact cupboard fit<br><br>- Low lift weight</h3>
+                </div>
+              </div>
+            </div>
+            <div class="boilertext1">With a 10 year warranty, it's a compact cupboard fit,<br> making it a discrete and reliable option for your home. <br>The Logic Max System Boiler is compatible with our Ideal controls<br> and displays a service reminder, helping you to get the most out of our boiler.</div>
+          </div><br><br><br><br><br><br><br>
+            <h2>Vogue Max System Boiler</h2>
+            <div class="boiler2">
+            <div class="container">
+            <img id="img_croissant" src="Vogue-MAXSYstem-RF-Ideal-Filter-WEB-product-page.png" alt="Vogue >image" class="image">
+            <div class="overlay">
+                <div class="text">
+                  <h3>- Made in the UK<br><br>- 10 year parts & labour warranty*<br><br>
+                  - High quality brass system filter<br><br>
+                  - Compact cupboard fit, discrete install<br><br>
+                  - Easy to install (Low lift weight) & easy to use<br><br>
+                  - Service timer with telephone number display / service display</h3>
+                </div>
+              </div>
+            </div>
+            <div class="boilertext2">This boiler is made with superior components and features a simple interface,<br> giving you constant peace of mind. Choose a Max Accredited Installer<br> to fit and service your Vogue Max System Boiler<br> to increase your warranty up to 12 years.</div>
+          </div>
+        </div><br><br><br>
+
+
+        <h1 class = "contact">Order now</h1>
+
+        <div class="form">
+          <form onsubmit="return false">
+         </form>
+         <label>Name<br>
+         <input type="text"  id="name"/>
+         </label><br><br>
+         <label>Adress<br>
+         <input type="text" id="address"/>
+         </label><br><br>
+         <label>Email<br>
+         <input type="email" id="email"/>
+         </label><br><br>
+         <label>Phone number<br>
+         <input type="text" id="phone"/>
+         </label><br><br>
+         <label>Desired product<br>
+         <input type="text"  id="prducts"/>
+         </label><br><br>
+         <button onclick="sendContact();">Place order</button>
+ 
+         <script>
+             var fields={};
+     document.addEventListener("DOMContentLoaded",function(){
+         fields.name=document.getElementById('name');
+         fields.address=document.getElementById('address');
+         fields.email=document.getElementById('email');
+         fields.phone=document.getElementById('phone');
+         fields.products=document.getElementById('products');
+     })
+     
+     function isNotEmpty(value){
+         if(value==null || typeof value =='undefined') {
+             alert("Complete all fields!");
+             return false;
+         }
+     
+         return (value.length > 0);
+     }
+     
+     function isNumber(num){
+         if( (num.length==10) && !isNaN(num) ==1){
+             return 1;
+         }
+         else alert("Incorrect phone number!");
+     }
+     
+     
+     function isMail(mail) 
+     {
+      if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(mail))
+       {
+         return (true)
+       }
+         alert("Incorrect email address!")
+         return (false)
+     }
+     
+     function fieldValidation(field, validationFunction) {
+         if(field==null) return false;
+         let isFieldValid = validationFunction(field.value)
+         if(!isFieldValid){
+             field.className='placeholderRed';
+         } else {
+             field.className = '';
+         }
+         return isFieldValid;
+     }
+     
+     function isValid(){
+         var valid=true;
+     
+         valid &=fieldValidation(fields.name,isNotEmpty);
+         valid &=fieldValidation(fields.address,isNotEmpty);
+         valid &=fieldValidation(fields.email,isMail);
+         valid &=fieldValidation(fields.phone,isNumber);
+         valid &=fieldValidation(fields.products,isNotEmpty);
+     
+         return valid;
+     }
+     
+     class User {
+         constructor(name, address, email, phone, products){
+             this.name=name;
+             this.address=address;
+             this.email=email;
+             this.phone=phone;
+             this.products=products;
+         }
+     }
+     
+     function sendContact(){
+         if(isValid()){
+             let usr = new User(name.value, address.value, email.value, phone.value, products.value);
+             alert("Name: " + usr.name + "\n" + "Address: " + usr.address + "\n" + "Email: " + usr.email+ "\n" + "Phone: " + usr.phone + "\n" + "Ordered products: " + usr.products);
+         }
+     }
+         </script>
+
+
+        <nav class="footer">
+          <ul class="subsol">
+              <li class="copy">Address:<br>Street:  96 Thompsons Lane<br>City:  Meirheath<br>Phone number:  077 6943 8827
+              </li>
+              <li><h3>
+                  <img src="Facebook.png" alt="Facebook">
+                  <img src="Instagram.png" alt="Instagram">
+                  <img src="Twitter.png" alt="Twitter">
+              </h3></li>
+         </ul>
+      </nav>
+    </body>
+</html>

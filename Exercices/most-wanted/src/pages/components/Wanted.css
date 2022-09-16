@@ -1,0 +1,28 @@
+.filterbuttons {
+    display: flex;
+    margin-left: 80px;
+    list-style-type:none;
+    width: 350px;
+}
+
+.filterbuttons Button {
+    margin-left: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+/* .btn-danger {
+    color: black;
+} */
+
+/* .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: darkred;
+    color:white;
+    border-color: darkred;
+} */
+    

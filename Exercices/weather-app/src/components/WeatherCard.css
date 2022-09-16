@@ -1,0 +1,10 @@
+.weatherCard {
+    margin-top: 200px;
+    margin-left: 300px;
+    width: 400px;
+}
+
+.weatherCard .list-group-item {
+    border-color: green;
+    border-width: 2px;
+}

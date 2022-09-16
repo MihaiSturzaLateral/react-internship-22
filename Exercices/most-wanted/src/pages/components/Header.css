@@ -1,0 +1,44 @@
+.meniu {
+    background-color: #1E1E1E;
+    margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    text-align: right;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.meniu li {
+    color: white;
+    width: 200px;
+    font-size: 19px;
+}
+
+.meniu li:hover {
+    color:darkred;
+    cursor:pointer;
+}
+
+.title {
+    font-weight: lighter;
+    font-size: 40px;
+    position:absolute;
+    margin-left: 100px;
+    align-items: center;
+    margin-top:10px;
+    color: darkred;
+    font-family:Storm Gust;
+}
+
+.home {
+    margin-left:250px;
+}
+
+.reportstitle {
+    margin-left: 500px;
+}
+
+.submittitle {
+    margin-right: 20px;
+}

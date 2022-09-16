@@ -9,7 +9,7 @@ const counterReducer = (state = INITIAL_STATE, action) => {
       case ADD:
         return {
           ...state,
-           countValue: parseInt(state.countValue) + parseInt(action.payload)
+           countValue: parseInt(state.countValue + parseInt(action.payload))
         }
       default:
         return state;

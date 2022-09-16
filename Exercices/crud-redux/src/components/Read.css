@@ -1,0 +1,46 @@
+.row-head{
+    background-color:#3f88fc;
+    font-size: 1.25em;
+    text-align: center;
+}
+.table {
+    width: 30%;
+    margin: 3em auto 0px;
+    color: black;
+    text-align: left;
+    border: 1px solid #B0C4DE;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    font-weight: bold;
+}
+.header{
+    border: 1px solid black;
+}
+.cells{
+    border: 2px solid black;
+    margin:5px;
+    width: auto;
+    font-size: 2em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+.row{
+    background-color: #3f88fc;
+    font-size: 1.20em;
+    text-align: center;
+    
+}
+.but{
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin:5px;
+}
+#update{
+    background-color: yellow;
+}
+#delete{
+    background-color: red;
+}
+#form{
+    background-color: orange;
+}

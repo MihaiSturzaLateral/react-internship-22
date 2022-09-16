@@ -1,0 +1,39 @@
+.card {
+    border: 2px solid lightgrey;
+    width: 254px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+
+.profilephoto {
+    height: 200px;
+    width: 250px;
+    background-color: grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.personalinfo h2 {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.personalinfo h4 {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.moreinfo {
+    width: 140px;
+    margin-left: 39px;
+    margin-bottom: 5px;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    width: 70px;
+    height: 30px;
+    color: transparent;
+    cursor: default;
+    position: absolute;
+}

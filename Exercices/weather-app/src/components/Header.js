@@ -11,14 +11,10 @@ const Header = () => {
 
     return (
         <>
-    <nav>
-         <h1 className='title'>MostWanted</h1>
-        <ul className='meniu'>
-            <li className='home'>Home</li>
-            <li>Check Tool</li>
-            <li class='reports'>My reports</li>
-        </ul>
-    </nav>
+    <div>
+         <h1 className='title'>WeatherNOW</h1>
+        
+    </div>
     </>
     );
 }

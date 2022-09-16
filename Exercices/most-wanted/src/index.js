@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './pages/components/Header';
+import Details from './pages/Details';
+import Wanted from './pages/components/Wanted';
+import CheckTool from './pages/components/CheckTool';
+import Footer from './pages/components/Footer';
+import Modal from './pages/components/Modal';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    {/* <Details /> */}
+    {/* <Wanted /> */}
+    {/* <CheckTool /> */}
+    {/* <Modal /> */}
     <Footer />
   </React.StrictMode>
 );

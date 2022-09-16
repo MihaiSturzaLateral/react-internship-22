@@ -1,0 +1,44 @@
+.checkcard {
+    border: 2px solid lightgrey;
+    width: 600px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    display: flex;
+    height: 245px;
+    border-radius: 5px;
+}
+
+.checkprofilephoto {
+    height: 242px;
+    width: 200px;
+    background-color: grey;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.checkpersonalinfo h2 {
+    font-size: 25px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.checkpersonalinfo h4 {
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.checkmoreinfo {
+    width: 140px;
+    margin-left: 260px;
+    margin-top: 3px;
+    height: 40px;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    width: 70px;
+    height: 30px;
+    color: transparent;
+    cursor: default;
+    position: absolute;
+}
