@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GT Boilers</title>
+    <!------GOOGLE FONTS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="slider">
+      <input type="radio" name="slide" id="slide-1" checked />
+      <input type="radio" name="slide" id="slide-2" />
+      <input type="radio" name="slide" id="slide-3" />
+      <img src="./images/logo.png" />
+      <div class="slides">
+        <div class="slide slide-1">
+          <div class="slide-data">
+            <h1>GT Boilers - Our Name Says it All!</h1>
+            <p>
+              GT Boilers is the global expet in water heating and thermal
+              comfort. We provide wordwide with an extensive of innovative and
+              energy-conscious products designed to improve and simplify home
+              life.
+            </p>
+            <button onclick="scroll_to_target1()">Discover GT Boilers</button>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="slide-data">
+            <h1>Strict Quality Control</h1>
+            <p>
+              We firmly believe in the quality and longevity of our products.
+            </p>
+            <button onclick="scroll_to_target2()">Our Products</button>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="slide-data">
+            <h1>Research And Development Team</h1>
+            <p>
+              Our company has more than 80 years of product development
+              technical personnel, to assist customers to develop new functions
+              to meet market demand.
+            </p>
+            <button onclick="scroll_to_target3()">Contact us</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows arrow-left">
+        <label for="slide-3">
+          <span><i class="fas fa-angle-left"></i></span>
+        </label>
+        <label for="slide-1">
+          <span><i class="fas fa-angle-left"></i></span>
+        </label>
+        <label for="slide-2">
+          <span><i class="fas fa-angle-left"></i></span>
+        </label>
+      </div>
+
+      <div class="arrows arrow-right">
+        <label for="slide-2">
+          <span><i class="fas fa-angle-right"></i></span>
+        </label>
+        <label for="slide-3">
+          <span><i class="fas fa-angle-right"></i></span>
+        </label>
+        <label for="slide-1">
+          <span><i class="fas fa-angle-right"></i></span>
+        </label>
+      </div>
+
+      <div class="dots">
+        <label for="slide-1"></label>
+        <label for="slide-2"></label>
+        <label for="slide-3"></label>
+      </div>
+    </div>
+
+    <div class="about-div" id="target1">
+      <img class="img-about1" src="./images/aboutus.jpg" />
+      <div class="descriere-div">
+        <h1>ABOUT US</h1>
+        <p>
+          GT Boilers is the global specialist in heating boilers. We provide
+          people all over the world with an extensive range of innovative and
+          energy-conscious products designed to improve and simplify home life
+          white being distinctive for:
+          <span><img class="img-about2" src="./images/abouteff.png" /></span>
+          <span id="dots"></span>
+          <br />
+          <span id="more">
+            At GT Boilers, we develop the latest, most efficient technologies
+            and turn them into accessibe and connected solutions that use as
+            little energy as possible and are designed for easy installation,
+            operation and maintenance. Creating more comfort from less enery, is
+            the challenge we set ourselves every day. Romanian in origin, we
+            cherish home as the centre of the family, so we make sure that every
+            component is safe and reliabe, that every product can be configured
+            for the needs of each family member, is supportes by expert advice
+            and service throughout its life and looks good in even the most
+            stylish settings.</span
+          >
+        </p>
+      </div>
+      <button class="about-butt" onclick="myFunction()" id="myBtn">
+        Read more
+      </button>
+    </div>
+    <button onclick="topFunction()" id="myBtnTop" title="Go to top">Top</button>
+    <div class="products-div" id="target2">
+      <h1>Our Products</h1>
+      <div class="product1">
+        <h1><span style="color: #2b2a2c">GT Boilers </span><span style=" -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;"> ALCANTARA ONE</span> </h1>
+        <div class="product1-container">
+          <img class="mySlides" src="./images/1.png" />
+          <img class="mySlides" src="./images/2.png" />
+          <img class="mySlides" src="./images/3.png" />
+          <img class="mySlides" src="./images/4.png" />
+
+          <button class="product1-butt-left" onclick="plusDivs(-1)">
+            &#10094;
+          </button>
+          <button class="product1-butt-right" onclick="plusDivs(1)">
+            &#10095;
+          </button>
+        </div>
+        <p class="scroll1">
+          <span style="font-size: 20px;">GT Boilers </span> top of the range <span style="font-size: 20px; color:rgb(157, 152, 95);  -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;">Alcantara One </span> gas boiler pushes efficiency
+          boundaries with its A+ ErP rating, comes Boiler Plus ready straight
+          out of the box and offers a 12-year warranty as standard.
+          <br />
+          Award-winning for its sleek design with its ultrasafe black glass
+          front panel, Alcantara One comes ready with our modulating Cube RF
+          wireless thermostat all included in the box.
+          <br /><span style="font-size:20px; font-weight:bolder;">ADVANTAGES AND BENEFITS</span> <br />- XtraTech Stainless Steel Heat
+          Exchanger <br />
+          -12 year warranty <br />
+          - Built-in Wi-Fi and digital timer programming
+        </p>
+      </div>
+      <div class="product2">
+        <h1><span style="color: #2b2a2c">GT Boilers</span> </span><span style=" -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;">ERANIUM ONEPlus</span></h1>
+        <div class="product2-container">
+          <img class="mySlide" src="./images/11.png" />
+          <img class="mySlide" src="./images/22.png" />
+          <img class="mySlide" src="./images/33.png" />
+          <img class="mySlide" src="./images/44.png" />
+
+          <button class="product2-butt-left" onclick="plusDivss(-1)">
+            &#10094;
+          </button>
+          <button class="product2-butt-right" onclick="plusDivss(1)">
+            &#10095;
+          </button>
+        </div>
+        <p class="scroll2">
+          <span style="font-size: 20px;">GT Boilers </span> top of the range <span style="font-size: 20px; color:rgb(157, 152, 95);  -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;">Eranium OnePlus </span> gas condensing boiler
+          pushes efficiency boundaries with its A+ ErP rating, comes Boiler Plus
+          ready straight out of the box and offers a 12-year warranty as
+          standard.
+          <br />
+          The Eranium OnePlus comes ready with our modulating Cube RF wireless
+          thermostat all included in the box.
+          <br /><span style="font-size:20px; font-weight:bolder;">ADVANTAGES AND BENEFITS</span> <br />- XtraTech Stainless Steel Heat
+          Exchanger <br />
+          -12 year warranty <br />
+          - Built-in Wi-Fi and digital timer programming
+        </p>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="contact-div" id="target3">
+      
+        <div class="container">
+          <div class="box"><h3>Contact us</h3>
+            <div class="name">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name" id="name">
+          </div>
+          <div class="email">
+            <i class="fas fa-envelope"></i>
+            <input type="text" placeholder="Email" id="email" >
+          </div>
+          <div class="message-box">
+            <textarea id="msg" cols="30" rows="10" placeholder="Message"></textarea>
+          </div>
+          <div class="button">
+            <button id="send" onclick="message()">Send</button>
+          </div>
+          <div class="message">
+            <div class="success" id="success">Your Message Successfully Sent!</div>
+            <div class="danger" id="danger">Feilds Can't be Empty!</div> 
+          </div>
+        </div>
+      </h1></div>
+      
+    </div>
+    <div class="footer">
+      <p class="f1">We Believe In Providing Customers High Quality Products</p>
+      <p class="f2">~80 years experience, intensive product development and technical innovation~</p>
+      <p> Copyright ©2022 GT Boilers
+        <br>Via Oradea - Romania
+        <br>Phone: +40 0734424476</p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
