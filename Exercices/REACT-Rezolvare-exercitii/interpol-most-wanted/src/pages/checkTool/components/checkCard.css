@@ -1,0 +1,23 @@
+.Card {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  background: rgba(107, 107, 107, 0.6);
+  border-radius: 20px;
+  box-shadow: 2px 4px rgb(191, 192, 192, 0.8);
+  color: white;
+  font-weight: bold;
+  display: flex;
+}
+
+.Title {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  color: rgb(231, 52, 52);
+}
+.Button-cards {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+}

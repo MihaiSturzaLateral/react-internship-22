@@ -1,0 +1,35 @@
+.total-wanted {
+  display: flex;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgb(233, 236, 239);
+  width: 165px;
+  margin-left: 1260px;
+  border-radius: 5px;
+  color: rgb(135, 143, 149);
+}
+
+.buttons {
+  margin-left: 30px;
+  margin-top: 25px;
+}
+.buttons button {
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+  width: 200px;
+  box-shadow: 0px 2px 10px black;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.redB {
+  background-color: rgb(219, 40, 67);
+  margin-right: 10px;
+}
+
+.yellowB {
+  background-color: #ffb570;
+}

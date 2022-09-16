@@ -1,0 +1,12 @@
+.cardsList {
+  padding: 5px;
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 40%;
+  height: 550px;
+  overflow: auto;
+  text-align: justify;
+  float: right;
+  margin-top: 0px;
+  margin-right: 80px;
+}
