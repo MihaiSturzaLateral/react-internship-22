@@ -1,0 +1,18 @@
+.Label{
+    margin: 30px 20px 20px 30px;
+    box-shadow: 2px 2px 15px #ffaa6b inset;
+    padding:10px;
+    margin-left:20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.labelText{
+    display: flex;
+    gap: 2px;
+    background-color: whitesmoke;
+    box-shadow: 6px 6px 12px #ffffff,
+                -6px -6px 12px #c5c5c5;
+    border-radius: 4px;
+    padding: 5px;
+}

@@ -1,0 +1,38 @@
+.buttons{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.button-red{
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 20px;
+    border:none;
+    padding:10px;
+}
+
+.button-red:hover{
+    background-color:rgb(228, 108, 108);
+    color: white;
+}
+
+.button-yellow{
+    background-color: yellow;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 20px;
+    border:none;
+    padding: 10px;
+}
+
+.button-yellow:hover{
+    background-color:rgb(221, 221, 66);
+    color: white;
+}
+
+.paginate{
+    margin-bottom: 150px;
+}

@@ -1,0 +1,4 @@
+export const GET_REPORTS = "GET_REPORTS";
+export const ADD_REPORTS = "ADD_REPORTS";
+export const DELETE_REPORTS = "DELETE_REPORTS";
+export const UPDATE_REPORTS = "UPDATE_REPORTS";

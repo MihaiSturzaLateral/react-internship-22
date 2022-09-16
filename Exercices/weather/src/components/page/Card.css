@@ -1,0 +1,7 @@
+.cardStyle{
+    background-color: azure;
+    border-radius: 1rem;
+    border: transparent 0.1rem solid;
+    transition: all 0.4s ease-in;
+    box-shadow: 2px 2px 15px #6be9ff inset;
+}

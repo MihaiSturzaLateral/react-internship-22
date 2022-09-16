@@ -1,0 +1,69 @@
+.weather {
+  padding: 20px;
+  margin: 10px;
+  background-color: azure;
+  width: 500px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  border: transparent 0.1rem solid;
+  transition: all 0.4s ease-in;
+  box-shadow: 2px 2px 15px #6be9ff inset;
+}
+
+.mb-3 {
+  padding: 10px;
+}
+
+.label {
+  padding: 5px;
+}
+
+.input-text {
+  background-color: rgb(202, 201, 201);
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.button-blue {
+  background-color: #00a1f4;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 20px;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.button-blue:hover {
+  background-color: rgb(78, 215, 219);
+  color: white;
+}
+
+.button-green {
+    background-color: rgb(84, 194, 84);
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 20px;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+}
+  
+.button-green:hover {
+    background-color: rgb(78, 204, 78);
+    color: white;
+}
+
+.card {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 150px;
+}
+
