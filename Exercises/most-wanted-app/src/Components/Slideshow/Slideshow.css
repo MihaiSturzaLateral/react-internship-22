@@ -1,0 +1,10 @@
+.each-slide-effect > div {
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+  }
+  .react-slideshow-container{
+   width:100%;
+  }

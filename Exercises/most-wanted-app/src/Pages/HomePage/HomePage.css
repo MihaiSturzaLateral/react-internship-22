@@ -1,0 +1,41 @@
+.buttons{
+    margin:20px;
+    display:flex;
+}
+.wantedBadge{
+    margin-left: auto;
+    padding:10px;
+    width:10rem;
+}
+.divCard{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+@media screen and (max-width: 600px){
+   .buttons{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+   }
+   .nav-link{
+    margin-left: 20px;
+   }
+   .navbar-nav button{
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+}
+@media screen and (max-width: 960px)
+{
+    .nav-link{
+        margin-left: 20px;
+       }
+       .navbar-nav button{
+        margin-left: 20px;
+        margin-right: 20px;
+       }
+
+}

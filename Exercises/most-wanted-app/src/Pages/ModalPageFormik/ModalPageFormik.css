@@ -1,0 +1,35 @@
+.modalDialog{
+        width: 30%;
+        border: 2px solid grey;
+        background-color: #f2f2f2;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);       
+}
+.modalBody{
+    display:flex;
+    justify-content: center;
+}
+.form2{
+    width:100%;
+    background-color: #f2f2f2;
+    padding:10px; 
+  }
+  .inputForm{
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.nationality{
+    float: right;
+}
+.notice{
+    margin-top: 10px;
+}
+.genderDiv{
+    margin-top: 10px;
+}

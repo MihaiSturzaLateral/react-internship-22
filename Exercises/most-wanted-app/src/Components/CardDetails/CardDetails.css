@@ -1,0 +1,8 @@
+.listGroup{
+    font-weight: bold;
+
+}
+.listGroup span{
+    font-weight: normal;
+    float:right;
+}

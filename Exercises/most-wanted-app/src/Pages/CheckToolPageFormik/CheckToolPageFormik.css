@@ -1,0 +1,49 @@
+.checkDiv{
+    margin-top: 5%;
+    display:flex;
+    justify-content: center;
+    
+}
+.form{
+    width:30%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid grey;
+    margin-bottom: 5%;
+    
+  }
+  .inputForm{
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.nationality{
+    float: right;
+}
+.searchBtn{
+   margin-top: 2%;
+    text-align: center;
+  }
+.error{
+    color:red;
+}
+.headerList{
+  width:40%;
+}
+.scrollable{
+  text-align: center;
+  margin:5px 15px;
+  padding:5px;
+  border:1px solid black;
+  border-radius: 4px;
+  height:490px;
+  overflow:auto;
+  text-align:justify;  
+}
+
+
+  
