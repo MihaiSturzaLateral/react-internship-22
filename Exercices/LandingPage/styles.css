@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #4fa3a5;
+  background-color: #d1411e;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -22,7 +22,7 @@ body {
 .navList a {
   list-style: none;
   text-decoration: none;
-  color: #fdae38;
+  color: white;
 }
 
 .carouselDiv {
@@ -35,18 +35,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #264248;
-  border-bottom: 1px solid #264248;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .carouselText {
-  color: #264248;
+  color: black;
   padding: 2rem;
   font-size: clamp(1rem, 1rem + 2vw, 4rem);
 }
 
 .sectionTitle {
-  color: #264248;
+  color: black;
   padding: 1rem;
   font-size: clamp(1rem, 1rem + 2vw, 4rem);
   font-weight: bold;
@@ -66,7 +66,7 @@ body {
 .aboutImg {
   max-width: 80%;
   margin-bottom: 1rem;
-  border: 2px solid #264248;
+  border: 2px solid black;
   border-radius: 2rem;
   opacity: 0.8;
 }
@@ -75,14 +75,14 @@ body {
   padding: 1rem 1.5rem;
   font-weight: 500;
   font-size: clamp(0.6rem, 0.6rem + 1vw, 10rem);
-  color: #264248;
+  color: black;
   opacity: 0.8;
   text-align: justify;
 }
 
 .boilersBackground {
   margin: 0 auto;
-  background-color: #fdae38;
+  background-color: #333;
   display: flex;
   min-height: 6.5rem;
   border: 1px solid #264248;
@@ -100,7 +100,7 @@ body {
 .boilerSpan {
   font-weight: 600;
   font-size: clamp(0.6rem, 0.6rem + 1vw, 10rem);
-  color: #264248;
+  color: white;
   opacity: 0.75;
 }
 
@@ -125,7 +125,7 @@ body {
 
 .imgProduct {
   padding: 1rem;
-  border: 1px solid #264248;
+  border: 1px solid black;
   border-radius: 30px;
   margin: 1rem auto;
   max-width: 50%;
@@ -138,7 +138,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: justify;
-  color: #264248;
+  color: black;
   opacity: 0.8;
 }
 
@@ -178,7 +178,7 @@ td {
 .detailsTable {
   width: 50vw;
   margin: 1rem 0;
-  border: 1px solid #264248;
+  border: 1px solid black;
   font-size: clamp(1rem, 0.5rem + 0.5vw, 4rem);
 }
 
@@ -202,15 +202,15 @@ td {
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 0.75rem;
-  border: 1px solid #264248;
+  border: 1px solid black;
   font-weight: 600;
-  background-color: #fdae38;
-  color: #264248;
+  background-color: teal;
+  color: white;
   width: 30vw;
 }
 
 .priceBtn:hover {
-  background-color: #4fa3a5;
+  background-color: #264248;
   color: #fdae38;
 }
 
@@ -220,7 +220,7 @@ td {
 
 .contentImg {
   width: 100%;
-  border-right: 1px solid #264248;
+  border-right: 1px solid #333;
 }
 
 .contentText {
@@ -241,14 +241,14 @@ td {
 
 .contact span {
   margin-bottom: 1rem;
-  color: #264248;
+  color: black;
   opacity: 0.8;
   font-weight: 600;
   font-size: clamp(0.5rem, 1rem + 1vw, 10rem);
 }
 
 .form-container {
-  background-color: #4fa3a5;
+  background-color: teal;
   padding: 1rem 1.25rem;
   border: 1px solid #264248;
   border-radius: 1rem;
@@ -272,7 +272,6 @@ td {
 
 .formLabel {
   color: #fdae38;
-  opacity: 0.8;
   padding: 0.3rem;
   font-size: clamp(0.5rem, 1rem + 1vw, 10rem);
   font-weight: bold;
@@ -296,7 +295,7 @@ td {
 }
 
 .formSubmit:hover {
-  background-color: #4fa3a5;
+  background-color: #264248;
   color: #fdae38;
 }
 
@@ -322,7 +321,7 @@ td {
 }
 
 footer {
-  background-color: #4fa3a5;
+  background-color: #222;
   color: #fdae38;
   min-height: 5rem;
   display: flex;
@@ -357,6 +356,51 @@ footer {
   font-weight: 500;
   font-size: 14px;
   padding: 1rem 2rem;
+}
+
+.wrapper a {
+  color: #fff;
+}
+
+.hover-fx {
+  font-size: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  margin: 15px;
+  width: 80px;
+  height: 80px;
+  line-height: 84px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 300ms;
+}
+
+.hover-fx:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: "";
+  box-sizing: content-box;
+  box-shadow: 0 0 0 3px #fff;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.hover-fx:hover {
+  background-color: #fff;
+  color: #151515;
+}
+
+.hover-fx:hover:after {
+  opacity: 1;
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 426px) {
@@ -428,6 +472,7 @@ footer {
   .form-container {
     margin-bottom: 2rem;
     border: 2px solid #264248;
+    padding: 5rem 0;
   }
   footer {
     margin-top: 2rem;
@@ -435,27 +480,33 @@ footer {
     border-top: 2px solid #264248;
   }
   .formSubmit {
+    margin-top: 5rem;
     border: 2px solid #264248;
+  }
+  .formLabel {
+    padding: 1rem;
   }
   .formInput {
     border: 2px solid #264248;
+    padding: 0.5rem;
   }
   .carouselDiv {
-    border-top: 2px solid #264248;
-    border-bottom: 2px solid #264248;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
   }
   .boilersBackground {
-    border: 2px solid #264248;
+    border: 2px solid #333;
   }
   .priceBtn {
-    border: 2px solid #264248;
+    border: 2px solid black;
+    font-weight: bold;
   }
   .contentImg {
-    border-right: 2px solid #264248;
+    border-right: 2px solid #333;
   }
   .detailsTable {
     font-weight: 500;
-    border: 2px solid #264248;
+    border: 2px solid black;
   }
   .navList {
     padding: 1rem 5rem;
