@@ -23,6 +23,7 @@ const App = () => {
 		},
 		userDecisionTimeout: 5000,
 	});
+	console.log("test");
 
 	return (
 		<div className="App" style={{ backgroundColor: "#a6a6a6" }}>
